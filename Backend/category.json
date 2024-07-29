@@ -1,0 +1,22 @@
+[
+    { "value": "smartphones", "label": "smartphones" },
+    { "value": "laptops", "label": "laptops" },
+    { "value": "fragrances", "label": "fragrances" },
+    { "value": "skincare", "label": "skincare" },
+    { "value": "groceries", "label": "groceries" },
+    { "value": "home-decoration", "label": "home decoration" },
+    { "value": "furniture", "label": "furniture" },
+    { "value": "tops", "label": "tops" },
+    { "value": "womens-dresses", "label": "womens dresses" },
+    { "value": "womens-shoes", "label": "womens shoes" },
+    { "value": "mens-shirts", "label": "mens shirts" },
+    { "value": "mens-shoes", "label": "mens shoes" },
+    { "value": "mens-watches", "label": "mens watches" },
+    { "value": "womens-watches", "label": "womens watches" },
+    { "value": "womens-bags", "label": "womens bags" },
+    { "value": "womens-jewellery", "label": "womens jewellery" },
+    { "value": "sunglasses", "label": "sunglasses" },
+    { "value": "automotive", "label": "automotive" },
+    { "value": "motorcycle", "label": "motorcycle" },
+    { "value": "lighting", "label": "lighting" }
+]

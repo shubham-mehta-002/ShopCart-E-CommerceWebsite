@@ -1,0 +1,30 @@
+1. Use of validateBeforeSave ? where ? when ? and then test
+2. Add Footer
+3. React Spinners for loaders
+4. Navbar shows items count 
+5. optimizations like when user switches the page, prev api should stop
+6. if state has some products, then the on going back and coming again on sam epage  it should not call the api again
+7. Dark mode
+
+
+// Learning
+1. EJS 
+2. Aggrestion pipelines
+3. Dynamic fields add in ecommerce application
+
+
+
+
+
+
+//-------------    ADMIN       --------------//
+
+XXXXx1. upload on cloudinary options
+XXXXX2. orders page pr pagination
+XXXXX3. filter and sorting of order page 
+XXXXXX4. whne user edit the prodct show some message coming form the backend and also  naviagte or do something about it to acknwledge user for success message
+XXXXx5. Delete - Add state change on the frontend 
+
+XXXXX6. Create product mai bhi cloudinary add karo
+7. Filters and sorting for mobilevew also
+8. Price filter add karo

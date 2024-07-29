@@ -1,0 +1,5212 @@
+[
+  {
+    "id": 1,
+    "title": "YIOSI Product 1",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 439,
+    "discountPercentage": 0.5,
+    "rating": 2.74,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 24
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 21
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 35
+          }
+        ]
+      }
+    ],
+    "stock": 98,
+    "brand": "YIOSI",
+    "category": "tops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "title": "W1209 DC12V Product 2",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 388,
+    "discountPercentage": 4.61,
+    "rating": 0.33,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 42
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 14
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 18
+          }
+        ]
+      }
+    ],
+    "stock": 30,
+    "brand": "W1209 DC12V",
+    "category": "womens-jewellery",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "title": "Rubber Product 3",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 610,
+    "discountPercentage": 16.7,
+    "rating": 4.55,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 36
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 50
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 47
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 40
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 42
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 47
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 17
+          }
+        ]
+      }
+    ],
+    "stock": 39,
+    "brand": "Rubber",
+    "category": "womens-dresses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 4,
+    "title": "LED Lights Product 4",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 641,
+    "discountPercentage": 19.52,
+    "rating": 3.54,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 39
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 49
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 36
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 19
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 35
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 30
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 5
+          }
+        ]
+      }
+    ],
+    "stock": 42,
+    "brand": "LED Lights",
+    "category": "sunglasses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 5,
+    "title": "Infinix Product 5",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 868,
+    "discountPercentage": 12.47,
+    "rating": 3.37,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 13
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 33
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 27
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 7
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 31
+          }
+        ]
+      }
+    ],
+    "stock": 31,
+    "brand": "Infinix",
+    "category": "home-decoration",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 6,
+    "title": "Sneakers Product 6",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 156,
+    "discountPercentage": 12.54,
+    "rating": 0.01,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 49
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 18
+          }
+        ]
+      }
+    ],
+    "stock": 54,
+    "brand": "Sneakers",
+    "category": "sunglasses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 7,
+    "title": "L'Oreal Paris Product 7",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 778,
+    "discountPercentage": 18.13,
+    "rating": 1.96,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 14
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 32
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 49
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 47
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 29
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 40
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 50
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 26
+          }
+        ]
+      }
+    ],
+    "stock": 74,
+    "brand": "L'Oreal Paris",
+    "category": "tops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 8,
+    "title": "Xiangle Product 8",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1002,
+    "discountPercentage": 9.09,
+    "rating": 1.53,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 37
+          }
+        ]
+      }
+    ],
+    "stock": 99,
+    "brand": "Xiangle",
+    "category": "laptops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 9,
+    "title": "Rubber Product 9",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1056,
+    "discountPercentage": 0.11,
+    "rating": 2.2,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 15
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 5
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 35
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 22
+          }
+        ]
+      }
+    ],
+    "stock": 58,
+    "brand": "Rubber",
+    "category": "sunglasses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 10,
+    "title": "METRO 70cc Motorcycle - MR70 Product 10",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 215,
+    "discountPercentage": 19.04,
+    "rating": 1.48,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 49
+          }
+        ]
+      }
+    ],
+    "stock": 74,
+    "brand": "METRO 70cc Motorcycle - MR70",
+    "category": "home-decoration",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 11,
+    "title": "Ghazi Fabric Product 11",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 725,
+    "discountPercentage": 6.39,
+    "rating": 1.24,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 6
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 46
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 23
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 20
+          }
+        ]
+      }
+    ],
+    "stock": 88,
+    "brand": "Ghazi Fabric",
+    "category": "furniture",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 12,
+    "title": "Darojay Product 12",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 720,
+    "discountPercentage": 3.87,
+    "rating": 0.9,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 32
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 44
+          }
+        ]
+      }
+    ],
+    "stock": 12,
+    "brand": "Darojay",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 13,
+    "title": "Luxury Digital Product 13",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 942,
+    "discountPercentage": 4.63,
+    "rating": 1.47,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 20
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 28
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 40
+          }
+        ]
+      }
+    ],
+    "stock": 16,
+    "brand": "Luxury Digital",
+    "category": "home-decoration",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 14,
+    "title": "Cuff Butterfly Product 14",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 476,
+    "discountPercentage": 2.52,
+    "rating": 1.11,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 39
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 35
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 14
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 7
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 39
+          }
+        ]
+      }
+    ],
+    "stock": 20,
+    "brand": "Cuff Butterfly",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 15,
+    "title": "Bake Parlor Big Product 15",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 430,
+    "discountPercentage": 11.42,
+    "rating": 3.36,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 35
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 20
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 11
+          }
+        ]
+      }
+    ],
+    "stock": 2,
+    "brand": "Bake Parlor Big",
+    "category": "fragrances",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 16,
+    "title": "Flying Wooden Product 16",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 908,
+    "discountPercentage": 5.95,
+    "rating": 1.6,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 49
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 7
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 4
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 10
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 32
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 31
+          }
+        ]
+      }
+    ],
+    "stock": 86,
+    "brand": "Flying Wooden",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 17,
+    "title": "OPPO Product 17",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 663,
+    "discountPercentage": 12.46,
+    "rating": 3.52,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 42
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 27
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 50
+          }
+        ]
+      }
+    ],
+    "stock": 80,
+    "brand": "OPPO",
+    "category": "automotive",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 18,
+    "title": "Fair & Clear Product 18",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1076,
+    "discountPercentage": 11.27,
+    "rating": 2.19,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 41
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 34
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 31
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 5
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 30
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 29
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 6
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 46
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 12,
+    "brand": "Fair & Clear",
+    "category": "womens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 19,
+    "title": "The Warehouse Product 19",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 104,
+    "discountPercentage": 1.81,
+    "rating": 4.29,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 38
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 34
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 42
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 5
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 20
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 38
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 38
+          }
+        ]
+      }
+    ],
+    "stock": 5,
+    "brand": "The Warehouse",
+    "category": "womens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 20,
+    "title": "Microsoft Surface Product 20",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 722,
+    "discountPercentage": 14.85,
+    "rating": 3.75,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 25
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 40
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 26
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 10
+          }
+        ]
+      }
+    ],
+    "stock": 1,
+    "brand": "Microsoft Surface",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 21,
+    "title": "Fair & Clear Product 21",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 575,
+    "discountPercentage": 4.05,
+    "rating": 1.7,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 9
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 10
+          }
+        ]
+      }
+    ],
+    "stock": 66,
+    "brand": "Fair & Clear",
+    "category": "home-decoration",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 22,
+    "title": "SKMEI 9117 Product 22",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 122,
+    "discountPercentage": 7.94,
+    "rating": 4.02,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 44
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 18
+          }
+        ]
+      }
+    ],
+    "stock": 19,
+    "brand": "SKMEI 9117",
+    "category": "womens-bags",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 23,
+    "title": "RED MICKY MOUSE.. Product 23",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 730,
+    "discountPercentage": 1.06,
+    "rating": 1.11,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 31
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 19
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 6
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 14
+          }
+        ]
+      }
+    ],
+    "stock": 6,
+    "brand": "RED MICKY MOUSE..",
+    "category": "furniture",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 24,
+    "title": "Vintage Apparel Product 24",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 166,
+    "discountPercentage": 5.95,
+    "rating": 1.03,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 36
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 12
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 13
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 3
+          }
+        ]
+      }
+    ],
+    "stock": 91,
+    "brand": "Vintage Apparel",
+    "category": "mens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 25,
+    "title": "Baking Food Items Product 25",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1021,
+    "discountPercentage": 10.23,
+    "rating": 4.46,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 22
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 37
+          }
+        ]
+      }
+    ],
+    "stock": 33,
+    "brand": "Baking Food Items",
+    "category": "groceries",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 26,
+    "title": "Professional Wear Product 26",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 691,
+    "discountPercentage": 18.82,
+    "rating": 3.91,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 50
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 46
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 7
+          }
+        ]
+      }
+    ],
+    "stock": 80,
+    "brand": "Professional Wear",
+    "category": "laptops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 27,
+    "title": "TC Reusable Product 27",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 211,
+    "discountPercentage": 3.9,
+    "rating": 2.41,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 48
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 33
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 24
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 48
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 10
+          }
+        ]
+      }
+    ],
+    "stock": 79,
+    "brand": "TC Reusable",
+    "category": "automotive",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 28,
+    "title": "Sandals Flip Flops Product 28",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 264,
+    "discountPercentage": 17.27,
+    "rating": 3.79,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 9
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 47
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 44
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 34
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 19
+          }
+        ]
+      }
+    ],
+    "stock": 93,
+    "brand": "Sandals Flip Flops",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 29,
+    "title": "fauji Product 29",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 676,
+    "discountPercentage": 16.18,
+    "rating": 1.36,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 24
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 21
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 25
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 40
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 3
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 13
+          }
+        ]
+      }
+    ],
+    "stock": 71,
+    "brand": "fauji",
+    "category": "mens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 30,
+    "title": "Eastern Watches Product 30",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 508,
+    "discountPercentage": 18.16,
+    "rating": 3.71,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 2
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 13
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 17
+          }
+        ]
+      }
+    ],
+    "stock": 27,
+    "brand": "Eastern Watches",
+    "category": "mens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 31,
+    "title": "Designer Sun Glasses Product 31",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 897,
+    "discountPercentage": 11.24,
+    "rating": 3.84,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 9
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 42
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 49
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 11
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 37
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 49
+          }
+        ]
+      }
+    ],
+    "stock": 50,
+    "brand": "Designer Sun Glasses",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 32,
+    "title": "TC Reusable Product 32",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 372,
+    "discountPercentage": 0.63,
+    "rating": 3.99,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 36
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 7,
+    "brand": "TC Reusable",
+    "category": "lighting",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 33,
+    "title": "Copenhagen Luxe Product 33",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 696,
+    "discountPercentage": 5.48,
+    "rating": 2.51,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 36
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 23
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 32
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 32
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 8
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 28
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 9,
+    "brand": "Copenhagen Luxe",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 34,
+    "title": "Kitchen Shelf Product 34",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 714,
+    "discountPercentage": 9.4,
+    "rating": 3.9,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 30
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 27
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 28
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 28
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 28
+          }
+        ]
+      }
+    ],
+    "stock": 86,
+    "brand": "Kitchen Shelf",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 35,
+    "title": "IELGY Product 35",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 652,
+    "discountPercentage": 6.56,
+    "rating": 4.91,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 33
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 43
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 32
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 43
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 42
+          }
+        ]
+      }
+    ],
+    "stock": 9,
+    "brand": "IELGY",
+    "category": "tops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 36,
+    "title": "Synthetic Leather Product 36",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 143,
+    "discountPercentage": 19.49,
+    "rating": 3.21,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 97,
+    "brand": "Synthetic Leather",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 37,
+    "title": "Lord - Al-Rehab Product 37",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 345,
+    "discountPercentage": 19.73,
+    "rating": 4.92,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 8
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 25
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 26
+          }
+        ]
+      }
+    ],
+    "stock": 9,
+    "brand": "Lord - Al-Rehab",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 38,
+    "title": "Dermive Product 38",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 738,
+    "discountPercentage": 17.73,
+    "rating": 4.96,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 16
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 26
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 28
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 9
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 3
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 50
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 35
+          }
+        ]
+      }
+    ],
+    "stock": 69,
+    "brand": "Dermive",
+    "category": "lighting",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 39,
+    "title": "Fair & Clear Product 39",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 673,
+    "discountPercentage": 5.2,
+    "rating": 3.6,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 32
+          }
+        ]
+      }
+    ],
+    "stock": 91,
+    "brand": "Fair & Clear",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 40,
+    "title": "Hemani Tea Product 40",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 581,
+    "discountPercentage": 10.3,
+    "rating": 1.54,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 27
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 40
+          }
+        ]
+      }
+    ],
+    "stock": 35,
+    "brand": "Hemani Tea",
+    "category": "fragrances",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 41,
+    "title": "YIOSI Product 41",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 360,
+    "discountPercentage": 17.5,
+    "rating": 4.11,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 47
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 70,
+    "brand": "YIOSI",
+    "category": "mens-watches",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 42,
+    "title": "Samsung Product 42",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 223,
+    "discountPercentage": 8.29,
+    "rating": 1.45,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 19
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 10
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 5
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 12
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 31
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 15
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 26
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 22
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 9
+          }
+        ]
+      }
+    ],
+    "stock": 73,
+    "brand": "Samsung",
+    "category": "sunglasses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 43,
+    "title": "Watch Pearls Product 43",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 640,
+    "discountPercentage": 14.97,
+    "rating": 4.91,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 39
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 30
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 9
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 30
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 44
+          }
+        ]
+      }
+    ],
+    "stock": 8,
+    "brand": "Watch Pearls",
+    "category": "laptops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 44,
+    "title": "DADAWU Product 44",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 144,
+    "discountPercentage": 6.22,
+    "rating": 0.85,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 19
+          }
+        ]
+      }
+    ],
+    "stock": 27,
+    "brand": "DADAWU",
+    "category": "mens-watches",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 45,
+    "title": "Sneakers Product 45",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 914,
+    "discountPercentage": 3.21,
+    "rating": 1.99,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 13
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 10
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 50
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 1
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 50
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 20
+          }
+        ]
+      }
+    ],
+    "stock": 14,
+    "brand": "Sneakers",
+    "category": "furniture",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 46,
+    "title": "METRO 70cc Motorcycle - MR70 Product 46",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 867,
+    "discountPercentage": 7.98,
+    "rating": 0.84,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 37
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 18
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 15
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 45
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 40
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 14
+          }
+        ]
+      }
+    ],
+    "stock": 6,
+    "brand": "METRO 70cc Motorcycle - MR70",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 47,
+    "title": "Huawei Product 47",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 524,
+    "discountPercentage": 4.33,
+    "rating": 0.04,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 19
+          }
+        ]
+      }
+    ],
+    "stock": 46,
+    "brand": "Huawei",
+    "category": "womens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 48,
+    "title": "Cuff Butterfly Product 48",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 266,
+    "discountPercentage": 4.39,
+    "rating": 3.15,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 15
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 48
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 17
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 10
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 8
+          }
+        ]
+      }
+    ],
+    "stock": 46,
+    "brand": "Cuff Butterfly",
+    "category": "automotive",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 49,
+    "title": "luxury palace Product 49",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 941,
+    "discountPercentage": 15.1,
+    "rating": 0.56,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 42
+          }
+        ]
+      }
+    ],
+    "stock": 17,
+    "brand": "luxury palace",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 50,
+    "title": "HP Pavilion Product 50",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 708,
+    "discountPercentage": 0.54,
+    "rating": 3,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 41
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 35
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 41
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 28
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 33
+          }
+        ]
+      }
+    ],
+    "stock": 73,
+    "brand": "HP Pavilion",
+    "category": "mens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 51,
+    "title": "luxury palace Product 51",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 871,
+    "discountPercentage": 16.44,
+    "rating": 2.76,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 7
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 31
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 10
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 32
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 23
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 26
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 16,
+    "brand": "luxury palace",
+    "category": "home-decoration",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 52,
+    "title": "Sneakers Product 52",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 564,
+    "discountPercentage": 15.89,
+    "rating": 3.44,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 6
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 7
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 1
+          }
+        ]
+      }
+    ],
+    "stock": 50,
+    "brand": "Sneakers",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 53,
+    "title": "TC Reusable Product 53",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1066,
+    "discountPercentage": 9.98,
+    "rating": 0.25,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 11
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 35
+          }
+        ]
+      }
+    ],
+    "stock": 63,
+    "brand": "TC Reusable",
+    "category": "womens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 54,
+    "title": "Fashion Jewellery Product 54",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 438,
+    "discountPercentage": 5.18,
+    "rating": 0.58,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 30
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 17
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 2
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 2
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 30
+          }
+        ]
+      }
+    ],
+    "stock": 88,
+    "brand": "Fashion Jewellery",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 55,
+    "title": "IELGY fashion Product 55",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 266,
+    "discountPercentage": 14.79,
+    "rating": 2.17,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 17
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 29
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 13
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 20
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 36
+          }
+        ]
+      }
+    ],
+    "stock": 69,
+    "brand": "IELGY fashion",
+    "category": "laptops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 56,
+    "title": "LED Lights Product 56",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 330,
+    "discountPercentage": 18.11,
+    "rating": 4.98,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 27
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 17
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 28
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 26
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 19
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 22
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 39
+          }
+        ]
+      }
+    ],
+    "stock": 45,
+    "brand": "LED Lights",
+    "category": "laptops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 57,
+    "title": "Rubber Product 57",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 262,
+    "discountPercentage": 15.31,
+    "rating": 4.66,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 31
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 25
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 1
+          }
+        ]
+      }
+    ],
+    "stock": 55,
+    "brand": "Rubber",
+    "category": "sunglasses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 58,
+    "title": "mastar watch Product 58",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 611,
+    "discountPercentage": 2.23,
+    "rating": 1.07,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 24
+          }
+        ]
+      }
+    ],
+    "stock": 71,
+    "brand": "mastar watch",
+    "category": "fragrances",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 59,
+    "title": "Stainless Product 59",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 228,
+    "discountPercentage": 2.78,
+    "rating": 3.19,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 22
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 18
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 29
+          }
+        ]
+      }
+    ],
+    "stock": 38,
+    "brand": "Stainless",
+    "category": "mens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 60,
+    "title": "IELGY Product 60",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 300,
+    "discountPercentage": 9.46,
+    "rating": 3.84,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 27
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 14
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 33
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 1
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 4
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 22
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 37
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 35
+          }
+        ]
+      }
+    ],
+    "stock": 31,
+    "brand": "IELGY",
+    "category": "automotive",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 61,
+    "title": "mastar watch Product 61",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 170,
+    "discountPercentage": 4.08,
+    "rating": 1.92,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 6
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 18
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 42
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 36
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 35
+          }
+        ]
+      }
+    ],
+    "stock": 52,
+    "brand": "mastar watch",
+    "category": "smartphones",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 62,
+    "title": "Rubber Product 62",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 460,
+    "discountPercentage": 12.17,
+    "rating": 2.98,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 43
+          }
+        ]
+      }
+    ],
+    "stock": 47,
+    "brand": "Rubber",
+    "category": "lighting",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 63,
+    "title": "Fog Scent Xpressio Product 63",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 147,
+    "discountPercentage": 12.57,
+    "rating": 3.78,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 13
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 46
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 37
+          }
+        ]
+      }
+    ],
+    "stock": 60,
+    "brand": "Fog Scent Xpressio",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 64,
+    "title": "JIEPOLLY Product 64",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 861,
+    "discountPercentage": 6.48,
+    "rating": 2.07,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 40
+          }
+        ]
+      }
+    ],
+    "stock": 55,
+    "brand": "JIEPOLLY",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 65,
+    "title": "DADAWU Product 65",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 593,
+    "discountPercentage": 18.37,
+    "rating": 1.51,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 43
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 7
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 83,
+    "brand": "DADAWU",
+    "category": "mens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 66,
+    "title": "Neon LED Light Product 66",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 546,
+    "discountPercentage": 13.35,
+    "rating": 3.46,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 24
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 26
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 50
+          }
+        ]
+      }
+    ],
+    "stock": 44,
+    "brand": "Neon LED Light",
+    "category": "lighting",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 67,
+    "title": "Golden Product 67",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 413,
+    "discountPercentage": 9.73,
+    "rating": 1.12,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 20
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 16
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 20
+          }
+        ]
+      }
+    ],
+    "stock": 60,
+    "brand": "Golden",
+    "category": "home-decoration",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 68,
+    "title": "Golden Product 68",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 173,
+    "discountPercentage": 18.72,
+    "rating": 4.96,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 11
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 47
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 20
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 8
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 45
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 28
+          }
+        ]
+      }
+    ],
+    "stock": 28,
+    "brand": "Golden",
+    "category": "womens-watches",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 69,
+    "title": "Apple Product 69",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 748,
+    "discountPercentage": 5.64,
+    "rating": 0.95,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 36
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 13
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 9
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 31
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 33
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 46
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 22
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 42
+          }
+        ]
+      }
+    ],
+    "stock": 94,
+    "brand": "Apple",
+    "category": "womens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 70,
+    "title": "Stainless Product 70",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 431,
+    "discountPercentage": 2.35,
+    "rating": 1.72,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 37
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 20
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 24
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 40
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 5
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 4
+          }
+        ]
+      }
+    ],
+    "stock": 55,
+    "brand": "Stainless",
+    "category": "womens-dresses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 71,
+    "title": "YIOSI Product 71",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 990,
+    "discountPercentage": 8.22,
+    "rating": 2.57,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 25
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 10
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 1
+          }
+        ]
+      }
+    ],
+    "stock": 96,
+    "brand": "YIOSI",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 72,
+    "title": "Saaf & Khaas Product 72",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 325,
+    "discountPercentage": 13.46,
+    "rating": 0.07,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 23
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 19
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 18
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 5
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 23
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 22
+          }
+        ]
+      }
+    ],
+    "stock": 17,
+    "brand": "Saaf & Khaas",
+    "category": "womens-dresses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 73,
+    "title": "Kitchen Shelf Product 73",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1064,
+    "discountPercentage": 12.8,
+    "rating": 1.86,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 21
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 4
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 36
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 16
+          }
+        ]
+      }
+    ],
+    "stock": 52,
+    "brand": "Kitchen Shelf",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 74,
+    "title": "Hemani Tea Product 74",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1088,
+    "discountPercentage": 19.93,
+    "rating": 3.56,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 35
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 11
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 15
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 43
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 16
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 35
+          }
+        ]
+      }
+    ],
+    "stock": 57,
+    "brand": "Hemani Tea",
+    "category": "womens-shoes",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 75,
+    "title": "Digital Printed Product 75",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 692,
+    "discountPercentage": 10.34,
+    "rating": 0.95,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 23
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 16
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 47
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 48
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 5
+          }
+        ]
+      }
+    ],
+    "stock": 60,
+    "brand": "Digital Printed",
+    "category": "furniture",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 76,
+    "title": "Soft Cotton Product 76",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 649,
+    "discountPercentage": 3.03,
+    "rating": 4.04,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 16
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 10
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 46
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 15
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 42
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 32
+          }
+        ]
+      }
+    ],
+    "stock": 71,
+    "brand": "Soft Cotton",
+    "category": "smartphones",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 77,
+    "title": "IELGY fashion Product 77",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 375,
+    "discountPercentage": 2.46,
+    "rating": 1.46,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 22
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 27
+          }
+        ]
+      }
+    ],
+    "stock": 89,
+    "brand": "IELGY fashion",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 78,
+    "title": "Dermive Product 78",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 547,
+    "discountPercentage": 13.52,
+    "rating": 4.07,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 47
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 49
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 36
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 19
+          }
+        ]
+      }
+    ],
+    "stock": 99,
+    "brand": "Dermive",
+    "category": "womens-bags",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 79,
+    "title": "HP Pavilion Product 79",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 506,
+    "discountPercentage": 17.01,
+    "rating": 2.35,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 45
+          }
+        ]
+      }
+    ],
+    "stock": 83,
+    "brand": "HP Pavilion",
+    "category": "smartphones",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 80,
+    "title": "Bracelet Product 80",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1003,
+    "discountPercentage": 16.74,
+    "rating": 0.27,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 5
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 28
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 26
+          }
+        ]
+      }
+    ],
+    "stock": 64,
+    "brand": "Bracelet",
+    "category": "womens-dresses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 81,
+    "title": "Flying Wooden Product 81",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1088,
+    "discountPercentage": 8.43,
+    "rating": 4.7,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 4
+          }
+        ]
+      }
+    ],
+    "stock": 36,
+    "brand": "Flying Wooden",
+    "category": "womens-bags",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 82,
+    "title": "Cuff Butterfly Product 82",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 190,
+    "discountPercentage": 15.77,
+    "rating": 2.53,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 14
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 15
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 12
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 32
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 27
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 33
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 46
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 35
+          }
+        ]
+      }
+    ],
+    "stock": 93,
+    "brand": "Cuff Butterfly",
+    "category": "fragrances",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 83,
+    "title": "fauji Product 83",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1048,
+    "discountPercentage": 9.69,
+    "rating": 0.77,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 9
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 47
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 2
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 43
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 26
+          }
+        ]
+      }
+    ],
+    "stock": 59,
+    "brand": "fauji",
+    "category": "groceries",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 84,
+    "title": "Boho Decor Product 84",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 884,
+    "discountPercentage": 17.28,
+    "rating": 0.56,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 36
+          }
+        ]
+      }
+    ],
+    "stock": 16,
+    "brand": "Boho Decor",
+    "category": "mens-shirts",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 85,
+    "title": "Microsoft Surface Product 85",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 185,
+    "discountPercentage": 15.94,
+    "rating": 0.53,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 14
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 47
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 50
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 3
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 22
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 34
+          }
+        ]
+      }
+    ],
+    "stock": 8,
+    "brand": "Microsoft Surface",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 86,
+    "title": "Fog Scent Xpressio Product 86",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 836,
+    "discountPercentage": 1.13,
+    "rating": 2.54,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 5
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 35
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 3
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 11
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 5
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 36
+          }
+        ]
+      }
+    ],
+    "stock": 43,
+    "brand": "Fog Scent Xpressio",
+    "category": "smartphones",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 87,
+    "title": "mastar watch Product 87",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 650,
+    "discountPercentage": 16.8,
+    "rating": 2.35,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 14
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 8
+          },
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 42
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 1
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 28
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 32
+          }
+        ]
+      }
+    ],
+    "stock": 10,
+    "brand": "mastar watch",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 88,
+    "title": "Lord - Al-Rehab Product 88",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 181,
+    "discountPercentage": 14.81,
+    "rating": 3.88,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 32
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 48
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 20
+          }
+        ]
+      }
+    ],
+    "stock": 39,
+    "brand": "Lord - Al-Rehab",
+    "category": "laptops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 89,
+    "title": "Eastern Watches Product 89",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 791,
+    "discountPercentage": 19.81,
+    "rating": 1.82,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 17
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 23
+          }
+        ]
+      }
+    ],
+    "stock": 85,
+    "brand": "Eastern Watches",
+    "category": "fragrances",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 90,
+    "title": "L'Oreal Paris Product 90",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 879,
+    "discountPercentage": 14.43,
+    "rating": 3.79,
+    "variations": [
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 23
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 6
+          }
+        ]
+      }
+    ],
+    "stock": 25,
+    "brand": "L'Oreal Paris",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 91,
+    "title": "Darojay Product 91",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 878,
+    "discountPercentage": 5.46,
+    "rating": 1.06,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 37
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 48
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 29
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 18
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 22
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 14
+          },
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 28
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 42
+          }
+        ]
+      }
+    ],
+    "stock": 35,
+    "brand": "Darojay",
+    "category": "womens-bags",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 92,
+    "title": "Cuff Butterfly Product 92",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 383,
+    "discountPercentage": 9.57,
+    "rating": 0.96,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 20
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 16
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 49
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 44
+          }
+        ]
+      }
+    ],
+    "stock": 16,
+    "brand": "Cuff Butterfly",
+    "category": "tops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 93,
+    "title": "Sneakers Product 93",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 512,
+    "discountPercentage": 17.35,
+    "rating": 4.98,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 13
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 49
+          }
+        ]
+      },
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 44
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 28,
+    "brand": "Sneakers",
+    "category": "womens-watches",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 94,
+    "title": "Synthetic Leather Product 94",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 808,
+    "discountPercentage": 18.33,
+    "rating": 2.88,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 50
+          }
+        ]
+      }
+    ],
+    "stock": 23,
+    "brand": "Synthetic Leather",
+    "category": "tops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 95,
+    "title": "BRAVE BULL Product 95",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 189,
+    "discountPercentage": 7.41,
+    "rating": 3.63,
+    "variations": [
+      {
+        "size": "6.5\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 46
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 34
+          }
+        ]
+      }
+    ],
+    "stock": 15,
+    "brand": "BRAVE BULL",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 96,
+    "title": "Sandals Flip Flops Product 96",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 858,
+    "discountPercentage": 15.5,
+    "rating": 2,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 2
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 48
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 25
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 7
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 50
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 48
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 23
+          }
+        ]
+      }
+    ],
+    "stock": 92,
+    "brand": "Sandals Flip Flops",
+    "category": "womens-jewellery",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 97,
+    "title": "LouisWill Product 97",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 589,
+    "discountPercentage": 4.19,
+    "rating": 0.67,
+    "variations": [
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 37
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 36
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 22
+          }
+        ]
+      }
+    ],
+    "stock": 24,
+    "brand": "LouisWill",
+    "category": "tops",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 98,
+    "title": "lightingbrilliance Product 98",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 528,
+    "discountPercentage": 5.46,
+    "rating": 0.37,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 25
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 42
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 14
+          },
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 15
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 47
+          }
+        ]
+      },
+      {
+        "size": "7.5\"",
+        "colors": [
+          {
+            "color": "green",
+            "colorCode": "#00FF00",
+            "stock": 16
+          }
+        ]
+      }
+    ],
+    "stock": 21,
+    "brand": "lightingbrilliance",
+    "category": "womens-dresses",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 99,
+    "title": "Ratttan Outdoor Product 99",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 715,
+    "discountPercentage": 9.62,
+    "rating": 1.64,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 37
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 26
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 23
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "blue",
+            "colorCode": "#0000FF",
+            "stock": 48
+          },
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 2
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 26
+          }
+        ]
+      }
+    ],
+    "stock": 69,
+    "brand": "Ratttan Outdoor",
+    "category": "motorcycle",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 100,
+    "title": "Maasai Sandals Product 100",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 612,
+    "discountPercentage": 15.21,
+    "rating": 0.14,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "orange",
+            "colorCode": "#FFA500",
+            "stock": 9
+          },
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 50
+          },
+          {
+            "color": "red",
+            "colorCode": "#FF0000",
+            "stock": 4
+          }
+        ]
+      },
+      {
+        "size": "7.0\"",
+        "colors": [
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 41
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 42
+          },
+          {
+            "color": "yellow",
+            "colorCode": "#FFFF00",
+            "stock": 50
+          }
+        ]
+      },
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "white",
+            "colorCode": "#FFFFFF",
+            "stock": 26
+          }
+        ]
+      }
+    ],
+    "stock": 19,
+    "brand": "Maasai Sandals",
+    "category": "skincare",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  }
+]

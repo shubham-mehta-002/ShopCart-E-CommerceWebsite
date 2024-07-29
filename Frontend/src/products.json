@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone 9",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 993,
+    "discountPercentage": 12.96,
+    "rating": 0,
+    "variations": [
+      {
+        "size": "6.1\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 10
+          },
+          {
+            "color": "purple",
+            "colorCode": "#800080",
+            "stock": 21
+          }
+        ]
+      }
+    ],
+    "stock": 31,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "title": "cargos",
+    "description": "An apple cargo which is nothing like apple",
+    "price": 993,
+    "discountPercentage": 12.96,
+    "rating": 0,
+    "variations": [
+      {
+        "size": "M",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 10
+          },
+          {
+            "color": "gray",
+            "colorCode": "#808080",
+            "stock": 2
+          }
+        ]
+      },
+      {
+        "size": "L",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 0
+          },
+          {
+            "color": "gray",
+            "colorCode": "#808080",
+            "stock": 2
+          }
+        ]
+      }
+    ],
+    "stock": 14,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "title": "MacBook pro",
+    "description": "An apple cargo which is nothing like apple",
+    "price": 993,
+    "discountPercentage": 12.96,
+    "rating": 0,
+    "variations": [
+      {
+        "size": "15.2\"",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 0
+          },
+          {
+            "color": "gray",
+            "colorCode": "#808080",
+            "stock": 0
+          }
+        ]
+      },
+      {
+        "size": "L",
+        "colors": [
+          {
+            "color": "black",
+            "colorCode": "#000000",
+            "stock": 0
+          },
+          {
+            "color": "gray",
+            "colorCode": "#808080",
+            "stock": 0
+          }
+        ]
+      }
+    ],
+    "stock": 0,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "images": [
+      "https://images.pexels.com/photos/20485643/pexels-photo-20485643/free-photo-of-rings-and-wedding-invitation.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/15301144/pexels-photo-15301144/free-photo-of-foamy-waves-on-the-shore-and-skyscrapers-of-a-coastal-city-in-distance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://images.pexels.com/photos/25539612/pexels-photo-25539612/free-photo-of-the-view-from-the-top-of-a-tall-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.pixabay.com/photo/2023/11/09/19/36/zoo-8378189_640.jpg"
+    ],
+    "deleted": false
+  }
+]
