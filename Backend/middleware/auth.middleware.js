@@ -54,7 +54,7 @@ const renewTokens = async (req, res, next) => {
 
             res.cookie("accessToken", newAccessToken, { maxAge: 600000, secure: true, httpOnly: true });
             res.cookie("refreshToken", newRefreshToken, { maxAge: 1200000, secure: true, httpOnly: true });
-            res.cookie("loggedInUserInfo",{userId ,role:user.role},{ maxAge: 600000, secure: true, httpOnly:false})
+            res.cookie("loggedInUserInfo",JSON.stringify({userId ,role:user.role}),{ maxAge: 600000, secure: true, httpOnly:false})
             // Set the user ID in the request body to continue to the next middleware
             req.body.user = { id: userId };
             next();

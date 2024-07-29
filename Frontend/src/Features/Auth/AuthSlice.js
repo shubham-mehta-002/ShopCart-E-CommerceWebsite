@@ -6,12 +6,11 @@ import Cookies from "js-cookie"
 const initialState = {
     error:null,
     status:'idle',
-    loggedInUser: 
-    Cookies.get('loggedInUserInfo') ? (Cookies.get('loggedInUserInfo').startsWith("j:") ? ({...JSON.parse(Cookies.get('loggedInUserInfo')).slice(0,2)}):({...JSON.parse(Cookies.get('loggedInUserInfo'))})) :  
-    {
-        userId : null,
-        role : null
-    },
+    loggedInUser: {userId : null,role : null}
+    // Cookies.get('loggedInUserInfo') ? 
+    //     (Cookies.get('loggedInUserInfo').startsWith("j:") ? ({...JSON.parse(Cookies.get('loggedInUserInfo').slice(0,2))}):({...JSON.parse(Cookies.get('loggedInUserInfo'))})) 
+    //     :  {userId : null,role : null}
+    ,
     isUserRegistered:false,
     role:null,
     mailSent: false,

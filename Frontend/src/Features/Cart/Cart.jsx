@@ -5,12 +5,12 @@ import {v4 as uuid} from "uuid"
 import { useSelector , useDispatch } from "react-redux";
 import {fetchAllCartItemsAsync} from './CartSlice'
 import {useEffect} from 'react'
-import { selectCartItems } from './CartSlice'
+import { selectCartState } from './CartSlice'
 
 export function Cart() {
   
     const dispatch = useDispatch()
-    const state = useSelector(selectCartItems)
+    const state = useSelector(selectCartState)
   console.log({state})
     useEffect(()=>{
       // console.log("dada")

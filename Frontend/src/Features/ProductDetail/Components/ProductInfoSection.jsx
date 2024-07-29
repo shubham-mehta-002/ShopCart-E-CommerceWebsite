@@ -6,7 +6,7 @@ import {AddToCartButton } from '../../Common/Buttons/AddToCartButton'
 import {AddToWishlistButton } from '../../Common/Buttons/AddToWishlistButton'
 import {useState , useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import axios from 'axios'
+
 import {addItemToCartAsync} from '../../Cart/CartSlice'
 import {useParams} from 'react-router-dom'
 import { selectLoggedInUser } from "../../Auth/AuthSlice";

@@ -14,17 +14,20 @@ export function RootPage(){
   // set login state
   useEffect(()=>{
     const user = Cookies.get("loggedInUserInfo")
+    console.log({cookie : user})
     if(user){
       let userDetails = null
         if(user.startsWith("j:")){
-          userDetails= JSON.parse(cookieValue.slice(2))
-        }
+          console.log("starts wth j :")
+          userDetails= JSON.parse(user.slice(2))
+        }else{
         userDetails= JSON.parse(user)
+      }
         console.log({userDetails})
     dispatch(setLoggedInUserState(userDetails))
 
     }
-    // console.log("rrooott page",{user})
+  
   },[])
 
   // set wishlisted items state
@@ -34,11 +37,12 @@ export function RootPage(){
     dispatch(fetchAllWishlistItemsAsync());
   }, [dispatch]);
 
-    return(
-        <div className="min-h-screen">
-            <Navbar searchParameter={searchParameter} setSearchParameter={setSearchParameter}/>
 
-            <Outlet/>
-        </div>
+  return(
+      <div className="min-h-screen">
+          <Navbar searchParameter={searchParameter} setSearchParameter={setSearchParameter}/>
+
+          <Outlet/>
+      </div>
     )
 }

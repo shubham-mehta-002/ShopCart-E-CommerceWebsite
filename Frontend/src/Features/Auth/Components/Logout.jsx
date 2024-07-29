@@ -12,7 +12,7 @@ export function Logout() {
     try {
       console.log("i ma called2")
 
-      await dispatch(logoutUserAsync());
+      dispatch(logoutUserAsync());
       localStorage.removeItem("loggedInUser");
       navigate('/login'); // Navigate to the login page
     } catch (error) {

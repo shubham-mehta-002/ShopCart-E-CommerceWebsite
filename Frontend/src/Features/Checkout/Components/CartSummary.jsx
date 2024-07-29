@@ -4,14 +4,14 @@ import { v4 as uuid } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllCartItemsAsync } from "../../Cart/CartSlice";
 import { useEffect } from "react";
-import { selectCartItems  } from "../../Cart/CartSlice";
+import { selectCartState  } from "../../Cart/CartSlice";
 import {createOrderAsync} from "../CheckoutSlice"
 import { useNavigate  } from "react-router-dom"; 
 import {selectCurrentOrderDetails ,selectOrderPlacedStatus} from "../CheckoutSlice"
 
 export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
   const dispatch = useDispatch();
-  const cartState = useSelector(selectCartItems);
+  const cartState = useSelector(selectCartState);
   const orderStatus  = useSelector(selectOrderPlacedStatus)
 
   console.log({orderStatus})

@@ -5,7 +5,7 @@ import { BsCart } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useRef} from "react";
 import { NavLink, Link , useNavigate} from "react-router-dom";
 import {selectProducts} from "../Product/ProductSlice"
 import {useSelector , useDispatch } from "react-redux"
@@ -76,6 +76,24 @@ export function Navbar({searchParameter,setSearchParameter}) {
       navigate(role==="admin" ? "admin/products" : "/products")
     }
   },[searchParameter])
+
+
+  const profileMenuRef = useRef()
+
+  function OpenProfileMenuHandler(e){
+    e.stopPropagation()
+    setShowProfileOptions(prevValue => !prevValue)
+  }
+
+  useEffect(()=>{
+    const showProfileMenuEventHandler = window.addEventListener('click',()=>{
+      setShowProfileOptions(false)
+    })
+
+    // return (()=>{
+    //   // showProfileMenuEventHandler.remove()
+    // })
+  })
 
   return (
     <div className="navbar-wrapper bg-[#1F2937] w-full h-[70px] box-border px-5 text-white flex items-center justify-between relative z-50">
@@ -148,14 +166,15 @@ export function Navbar({searchParameter,setSearchParameter}) {
         <div
           key={uuid()}
           className="flex flex-col items-center justify-center gap-1 cursor-pointer "
-          onClick={()=>setShowProfileOptions(prevValue => !prevValue)}
+          onClick={OpenProfileMenuHandler}
         >
           <CiUser className="h-6 w-6 " />
           <span className="text-sm">Profile</span>
         </div>
 
         {/* profile dropdown menu */}
-        <div className={`${showProfileOptions ? "flex" : "hidden"} profile-menu h-[120px] w-[200px] absolute top-[95%] right-0 z-10 bg-white  shadow-2xl rounded-md border-2 border-gray-200 flex flex-col `}>
+        <div 
+          className={`${showProfileOptions ? "flex" : "hidden"} profile-menu h-[120px] w-[200px] absolute top-[95%] right-0 z-10 bg-white  shadow-2xl rounded-md border-2 border-gray-200 flex flex-col `}>
             {
                 profileOptions.map(option => (
                     <Link to={option.link} >

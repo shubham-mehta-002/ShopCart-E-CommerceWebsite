@@ -33,7 +33,7 @@ export function Wishlist() {
             </div>
           </>
         ) : (
-          <div className="products-container w-full grid grid-cols-1 vsm:grid-cols-2 xl:grid-cols-3 gap-y-5 gap-x-0">
+          <div className="md:mx-16 products-container w-full grid grid-cols-1 vsm:grid-cols-2 xl:grid-cols-4 gap-y-5 gap-x-0 ">
             {wishlistItems?.map((product) => (
               <WishlistItemCard
                 // key={product._id}

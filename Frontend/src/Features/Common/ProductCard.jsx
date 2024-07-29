@@ -74,8 +74,8 @@ export function ProductCard({_id,className,thumbnail,title,brand,discountPercent
                         className="price w-[15%] flex items-center justify-center"
                         onClick={handleAddOrRemoveFromWishlist}
                     >
-                        <img src={!isProductInWishlist ? "https://img.icons8.com/?size=100&id=87&format=png&color=000000" : "https://img.icons8.com/?size=100&id=7697&format=png&color=3056d3"} className="text-red-600" alt="wishlistIcon"/>
-                        {/* <FontAwesomeIcon icon="fa-solid fa-heart" style={{color: "#4c6df0",}} /> */}
+                        <img src={!isProductInWishlist ? "https://img.icons8.com/?size=100&id=87&format=png&color=000000" : "https://img.icons8.com/?size=100&id=7697&format=png&color=3056d3"} className="text-red-600 h-8 w-8" alt="wishlistIcon"/>
+                        
                     </div>}
                 </div>
 
