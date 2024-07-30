@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider , Navigate} from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import {
   RootPage,
   HomePage,
@@ -20,7 +24,7 @@ import {
   AdminOrdersPage,
   AdminEditOrderPage,
   AdminCreateProductPage,
-  AdminRootPage
+  AdminRootPage,
 } from "./Pages";
 
 import { ProtectedRoute, AdminProtectedRoute, PublicRoute } from "./Features";
@@ -32,12 +36,12 @@ function App() {
       path: "/",
       element: <RootPage />,
       children: [
-        { 
-          path:"home",
+        {
+          path: "home",
           element: <Navigate to="/products" />,
         },
         {
-          index:true,
+          index: true,
           element: <ProductListPage />,
         },
         {
@@ -97,51 +101,59 @@ function App() {
           ),
         },
         {
-          path:"admin",
-          element : <AdminRootPage />,
-          children:[
+          path: "admin",
+          element: <AdminRootPage />,
+          children: [
             {
-              index:true,
-              element:<AdminProtectedRoute>
-                <ProductListPage />
-              </AdminProtectedRoute>
+              index: true,
+              element: (
+                <AdminProtectedRoute>
+                  <ProductListPage />
+                </AdminProtectedRoute>
+              ),
             },
             {
-              path:"products",
-              element:<AdminProtectedRoute>
-                <ProductListPage />
-              </AdminProtectedRoute>
+              path: "products",
+              element: (
+                <AdminProtectedRoute>
+                  <ProductListPage />
+                </AdminProtectedRoute>
+              ),
             },
             {
               path: "product/:productId",
-              element: 
+              element: (
                 <AdminProtectedRoute>
                   <AdminEditProductPage />
                 </AdminProtectedRoute>
+              ),
             },
             {
               path: "orders/edit/:orderId",
-              element: 
+              element: (
                 <AdminProtectedRoute>
                   <AdminEditOrderPage />
                 </AdminProtectedRoute>
+              ),
             },
             {
               path: "orders",
-              element: 
+              element: (
                 <AdminProtectedRoute>
                   <AdminOrdersPage />
                 </AdminProtectedRoute>
+              ),
             },
             {
               path: "products/create",
-              element: 
+              element: (
                 <AdminProtectedRoute>
                   <AdminCreateProductPage />
                 </AdminProtectedRoute>
+              ),
             },
-          ]
-        }
+          ],
+        },
       ],
     },
     {
@@ -154,7 +166,7 @@ function App() {
     },
     {
       path: "/logout",
-      element: <LogoutPage />
+      element: <LogoutPage />,
     },
     {
       path: "/signup",
@@ -167,7 +179,7 @@ function App() {
     {
       path: "/reset-password",
       element: <ResetPasswordPage />,
-    }
+    },
   ]);
 
   return (

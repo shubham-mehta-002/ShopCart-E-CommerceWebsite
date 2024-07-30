@@ -12,30 +12,26 @@ export function RootPage(){
   const dispatch = useDispatch()
 
   // set login state
+  let userDetails = null
   useEffect(()=>{
     const user = Cookies.get("loggedInUserInfo")
     console.log({cookie : user})
     if(user){
-      let userDetails = null
-        if(user.startsWith("j:")){
-          console.log("starts wth j :")
-          userDetails= JSON.parse(user.slice(2))
-        }else{
-        userDetails= JSON.parse(user)
-      }
-        console.log({userDetails})
-    dispatch(setLoggedInUserState(userDetails))
-
+      userDetails = JSON.parse(user)
+      console.log({userDetails})
+      dispatch(setLoggedInUserState(userDetails))
     }
   
   },[])
 
   // set wishlisted items state
   const wishlistItems = useSelector(selectWishlistItems);
-  console.log({wishlistItems})
-  useEffect(() => {
-    dispatch(fetchAllWishlistItemsAsync());
-  }, [dispatch]);
+  useEffect(()=>{
+    if(userDetails){
+      console.log({wishlistItems})
+      dispatch(fetchAllWishlistItemsAsync());
+    }
+  },[dispatch , userDetails])
 
 
   return(

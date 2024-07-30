@@ -122,7 +122,7 @@ const orderSlice = createSlice({
         .addCase(createOrderAsync.fulfilled , (state , action)=>{
             state.status = "idle"
             console.log({action})
-            state.currentOrder.orderId = action.payload.data.orderId
+            state.currentOrder.orderId = action.payload.data.data
             state.currentOrder.isOrderPlaced = true
             console.log('order',{action})
         })

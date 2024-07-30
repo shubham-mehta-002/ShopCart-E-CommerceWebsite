@@ -9,6 +9,7 @@ export function LogoutPage(){
         return <Navigate to="/login"></Navigate>
     }
 
+    console.log("nooooo")
     return(
         <Logout></Logout>
     )

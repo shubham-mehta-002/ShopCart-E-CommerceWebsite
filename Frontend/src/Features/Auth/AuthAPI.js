@@ -101,7 +101,6 @@ export function logoutUser() {
       resolve(response.data);
 
     } catch (error) {
-      Cookies.remove('loggedInUserInfo')
       if (error.response) {
         const errorCode = error.response.status;
         if(errorCode === 401){

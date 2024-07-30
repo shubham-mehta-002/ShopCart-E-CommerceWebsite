@@ -27,7 +27,6 @@ export function ProductCard({_id,className,thumbnail,title,brand,discountPercent
     if(user && user.role!=="admin"){
       wishlistItems = useSelector(selectWishlistItems);
       if(wishlistItems.length>0){
-        console.log("aaaaaaaaaa",{wishlistItems})
           isProductInWishlist = wishlistItems.find((item) => item._id.toString() === _id.toString())
       }
     }

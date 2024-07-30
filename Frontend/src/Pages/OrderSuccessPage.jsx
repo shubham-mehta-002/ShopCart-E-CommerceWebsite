@@ -5,7 +5,7 @@ import {resetCurrentOrderStatus} from "../Features/Checkout/CheckoutSlice"
 
 export const OrderSuccessPage = () =>{
     const {orderId} = useParams()
-
+    // console.log({orderId})
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(resetCurrentOrderStatus())

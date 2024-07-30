@@ -36,6 +36,37 @@ const verifyJWT = async (req, res, next) => {
     }
 };
 
+const verifyAdminJWT = async (req, res, next) => {
+    try {
+        const { accessToken , refreshToken } = req.cookies;
+        console.log({refreshToken, accessToken})
+        if((!refreshToken)){
+            return next(new ApiError(401, "Unauthorized"))
+        }
+        console.log("I am here");
+        if (accessToken) {
+            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, (error, decoded) => {
+                if (error) {
+                    console.log({ error: error.message });
+                    return renewTokens(req, res, next); // Pass next to renewTokens
+                } else {
+                    const { userId ,role} = decoded;
+                    if(role!=="admin"){
+                        return next(new ApiError(401, "Unauthorized"))
+                    }
+                    req.body.user = { id: userId };
+                    next();
+                }
+            });
+        } else {
+            return renewTokens(req, res, next); // Pass next to renewTokens
+        }
+    } catch (error) {
+        console.log({error})
+        return res.status(500).json({ success: false, message: "Something went wrong!" });
+    }
+};
+
 const renewTokens = async (req, res, next) => {
     try {
         const { refreshToken } = req.cookies;
@@ -64,4 +95,4 @@ const renewTokens = async (req, res, next) => {
     }
 };
 
-module.exports = { verifyJWT };
+module.exports = { verifyJWT , verifyAdminJWT };

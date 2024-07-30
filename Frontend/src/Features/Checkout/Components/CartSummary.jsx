@@ -96,6 +96,8 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
 
   const navigate = useNavigate()
 
+    console.log("biibvdsibibvsibdivsbibvisdbvsibdvsib",{orderId})
+
   return (
     <>
     { isOrderPlaced && navigate(`/order-success/${orderId}`) }

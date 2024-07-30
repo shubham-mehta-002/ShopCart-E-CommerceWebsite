@@ -16,15 +16,16 @@
 
 
 
+STEPS : 
+--> remove j: complexity 
+--> profilemenu when clicked outside should get closed
+--> Navbar shows items count 
+--> PAYMENT GATEWAY ADD AND UNDERSTAND WEBHOOK CONCEPT
+-->(optional) ADD PRICE FILTER ALSO
+--> find 2 times logout error message reason
+--> test every functionality if working , any bug to be fixed
+--> check in mobile view also
+--> test admin routes also
 
-//-------------    ADMIN       --------------//
-
-XXXXx1. upload on cloudinary options
-XXXXX2. orders page pr pagination
-XXXXX3. filter and sorting of order page 
-XXXXXX4. whne user edit the prodct show some message coming form the backend and also  naviagte or do something about it to acknwledge user for success message
-XXXXx5. Delete - Add state change on the frontend 
-
-XXXXX6. Create product mai bhi cloudinary add karo
-7. Filters and sorting for mobilevew also
-8. Price filter add karo
+--> clean backned and understand the code [errorHandlers,Use of validateBeforeSave ? where ? when ? and then test,...]
+--> clean frontend  -----><------

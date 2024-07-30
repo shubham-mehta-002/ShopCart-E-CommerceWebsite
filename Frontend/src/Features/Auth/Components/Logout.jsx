@@ -1,27 +1,28 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector} from "react-redux";
 import { logoutUserAsync } from "../AuthSlice";
+import { useEffect } from "react";
+import { selectLoggedInUser } from "../AuthSlice";
 
 export function Logout() {
+  console.log(useSelector(selectLoggedInUser))
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    console.log("i ma called")
+  const handleLogout = async() => {
+    console.log("i am called");
 
-    try {
-      console.log("i ma called2")
-
-      dispatch(logoutUserAsync());
-      localStorage.removeItem("loggedInUser");
+    await dispatch(logoutUserAsync());
+    console.log("1.............")
       navigate('/login'); // Navigate to the login page
-    } catch (error) {
-      console.error("Logout failed:", error);
-    }
+    console.log("2.............")
+
+    
   };
 
-  // Trigger the logout process immediately
-  handleLogout();
+  useEffect(() => {
+    handleLogout();
+  }, []);
 
   return null; // or any other component you want to render while logging out
 }

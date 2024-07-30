@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 router.use(express.json());
-const { verifyJWT } = require("../middleware/auth.middleware");
+const { verifyJWT ,verifyAdminJWT} = require("../middleware/auth.middleware");
 
 const {
   fetchUserDetails,
@@ -13,15 +13,15 @@ const {
   updateOrder,
 } = require("../controllers/order.controller");
 
-router.use(verifyJWT);
+// router.use(verifyJWT);
 
 // TODO :  remove it
 router.get("/", fetchUserDetails);
 
-router.post("/create", createOrder);
-router.get("/my", fetchUserOrders);
-router.get("/all", fetchAllOrders);
-router.get("/:orderId", fetchOrderById);
-router.post("/update/:orderId", updateOrder);
+router.post("/create",verifyJWT, createOrder);
+router.get("/my", verifyJWT,fetchUserOrders);
+router.get("/all", verifyAdminJWT,fetchAllOrders);
+router.get("/:orderId", verifyJWT,fetchOrderById);
+router.post("/update/:orderId",verifyAdminJWT, updateOrder);
 
 module.exports = router;
