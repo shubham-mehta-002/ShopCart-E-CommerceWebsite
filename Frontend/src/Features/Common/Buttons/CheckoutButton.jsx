@@ -1,5 +1,3 @@
-import { FaShoppingBag } from "react-icons/fa";
-
 export function CheckoutButton() {
   return (
     <>

@@ -35,11 +35,9 @@ export const fetchAllProductsAsync = createAsyncThunk(
         sort,
         searchParameter,
       });
-      //  console.log("slice",{response})
-      console.log("slice", { response });
+
       return response;
     } catch (error) {
-      // console.log("slice",{error})
       throw error;
     }
   }
@@ -50,7 +48,6 @@ export const fetchAllCategoriesAsync = createAsyncThunk(
   async () => {
     try {
       const response = await fetchAllCategories();
-      //  console.log({response},"asli")
       return response.data.data;
     } catch (error) {
       throw error;
@@ -70,7 +67,6 @@ export const fetchAllBrandsAsync = createAsyncThunk(
   }
 );
 
-
 const productSlice = createSlice({
   name: "product",
   initialState,
@@ -86,28 +82,28 @@ const productSlice = createSlice({
         state.status.products = "loading";
       })
       .addCase(fetchAllProductsAsync.fulfilled, (state, action) => {
-        (state.status.products = "idle"), console.log("filters", { action });
-        (state.products = action.payload.products),
-          (state.totalProducts = action.payload.totalProducts);
+        state.status.products = "idle";
+        state.products = action.payload.products;
+        state.totalProducts = action.payload.totalProducts;
       })
       .addCase(fetchAllProductsAsync.rejected, (state) => {
-        (state.status.products = "idle"),
-          (state.error.products = "Something went wrong !!");
+        state.status.products = "idle";
+        state.error.products = "Something went wrong !!";
       })
-      // by categories
+
+      // fetch categories
       .addCase(fetchAllCategoriesAsync.pending, (state) => {
         state.status.categories = "loading";
       })
       .addCase(fetchAllCategoriesAsync.fulfilled, (state, action) => {
-        console.log({ action });
-        (state.status.categories = "idle"),
-          (state.filters.categories = action.payload);
+        state.status.categories = "idle";
+        state.filters.categories = action.payload;
       })
       .addCase(fetchAllCategoriesAsync.rejected, (state) => {
-        (state.status.categories = "idle"),
-          (state.error.categories = "Something went wrong !!");
+        state.status.categories = "idle";
+        state.error.categories = "Something went wrong !!";
       })
-      // brands
+      // fetch brands
       .addCase(fetchAllBrandsAsync.pending, (state) => {
         state.status.brands = "loading";
       })
@@ -117,13 +113,13 @@ const productSlice = createSlice({
       .addCase(fetchAllBrandsAsync.rejected, (state, action) => {
         (state.status.brands = "idle"),
           (state.error.brands = "Something went wrong !!");
-      })
-
+      });
   },
 });
 
 export const { setSearchParameters } = productSlice.actions;
 
+export const selectProductState = (state) => state.product;
 export const selectProducts = (state) => state.product.products;
 export const selectSearchParameters = (state) => state.product.searchParameters;
 export const selectCategories = (state) => state.product.filters.categories;

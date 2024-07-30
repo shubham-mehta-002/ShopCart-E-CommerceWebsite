@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
-export function OrderTile({order}) {
+export function OrderTile({ order }) {
   return (
     <>
       <div className="order-item-wrapper flex flex-col gap-5 box-border sm:mx-6 xl:mx-20 my-5 ">
@@ -15,7 +15,9 @@ export function OrderTile({order}) {
               </div>
               <div className="product flex flex-row gap-5">
                 <div className="thumbnail">
-                  <Link to={`/products/${item.product._id}`}><img src={item.product.thumbnail} className="h-20 w-20" /></Link>
+                  <Link to={`/products/${item.product._id}`}>
+                    <img src={item.product.thumbnail} className="h-20 w-20" />
+                  </Link>
                 </div>
                 <div className="description w-full flex flex-col">
                   <div className="text-lg font-semibold">
@@ -66,7 +68,9 @@ export function OrderTile({order}) {
                     <div>
                       {order.address.city},{order.address.pincode}
                     </div>
-                    <div className="font-medium">Pincode : {order.address.pinCode}</div>
+                    <div className="font-medium">
+                      Pincode : {order.address.pinCode}
+                    </div>
                   </div>
                   <div className="contact sm:w-[30%]">
                     <div className="phone">Phone : {order.phoneNumber}</div>

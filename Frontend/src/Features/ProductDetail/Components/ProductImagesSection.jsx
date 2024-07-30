@@ -1,25 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { v4 as uuid } from "uuid";
 
-
-export function ProductImageSection({images}) {
-
+export function ProductImageSection({ images }) {
   // State to manage main image index
   const [mainImageIndex, setMainImageIndex] = useState(0);
-  const [otherImages, setOtherImages] = useState([]);
 
   // Handle click on other images
   const handleImageClick = (imageIndex) => {
     setMainImageIndex(imageIndex);
   };
-
-  // this will keep track of other images and update the state
-  useEffect(() => {
-    let otherImages = images.filter(
-      (_, index) => index !== mainImageIndex
-    );
-    setOtherImages(otherImages);
-  }, [mainImageIndex]);
 
   return (
     <>

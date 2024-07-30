@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import {
   RootPage,
-  HomePage,
   LoginPage,
   SignupPage,
   ForgotPasswordPage,
@@ -19,7 +18,6 @@ import {
   ResetPasswordPage,
   MyOrdersPage,
   MyProfilePage,
-  AdminProductListPage,
   AdminEditProductPage,
   AdminOrdersPage,
   AdminEditOrderPage,

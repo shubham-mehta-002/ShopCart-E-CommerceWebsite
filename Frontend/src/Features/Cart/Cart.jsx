@@ -1,87 +1,89 @@
-import { ProductTile} from "../../Features";
+import { ProductTile } from "../../Features";
 import { CheckoutButton } from "../../Features";
 import { Link } from "react-router-dom";
-import {v4 as uuid} from "uuid"
-import { useSelector , useDispatch } from "react-redux";
-import {fetchAllCartItemsAsync} from './CartSlice'
-import {useEffect} from 'react'
-import { selectCartState } from './CartSlice'
+import { v4 as uuid } from "uuid";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchAllCartItemsAsync } from "./CartSlice";
+import { useEffect } from "react";
+import { selectCartState } from "./CartSlice";
 
 export function Cart() {
-  
-    const dispatch = useDispatch()
-    const state = useSelector(selectCartState)
-  console.log({state})
-    useEffect(()=>{
-      // console.log("dada")
-      dispatch(fetchAllCartItemsAsync())
-    },[])
+  const dispatch = useDispatch();
+  const state = useSelector(selectCartState);
 
-    console.log({state})
+  useEffect(() => {
+    dispatch(fetchAllCartItemsAsync());
+  }, []);
 
-  
   return (
     <div className="wrapper w-full sm:w-[90%] p-3 sm:p-10 box-border mx-auto my-10 bg-white flex flex-col gap-4">
       <div className="header text-5xl font-bold">Cart</div>
 
       {/* cart items */}
       <div className="cart-items-wrapper flex flex-col gap-3">
-        {state?.cartItems?.length === 0 ?  
-        <>
-        <div className=" text-3xl my-10 font-bold flex items-center justify-center">
-          No Items Added
-        </div> 
-        <div className="flex items-center justify-center">
-          <span className=" font-semibold text-center text-lg text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
-              <Link to="/products">Continue Shopping</Link>
-          </span>
-        </div>
-        </>
-        : 
-        state?.cartItems?.map((item) => (
-          <ProductTile key={uuid()} {...item}  />
-        ))}
+        {state?.cartItems?.length === 0 ? (
+          <>
+            <div className=" text-3xl my-10 font-bold flex items-center justify-center">
+              No Items Added
+            </div>
+            <div className="flex items-center justify-center">
+              <span className=" font-semibold text-center text-lg text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
+                <Link to="/products">Continue Shopping</Link>
+              </span>
+            </div>
+          </>
+        ) : (
+          state?.cartItems?.map((item) => (
+            <ProductTile key={uuid()} {...item} />
+          ))
+        )}
       </div>
 
       {/* price and checkout section */}
-      {state?.cartItems?.length > 0 && <div className="totalPrice flex flex-col gap-3">
-        {/* price */}
-        <div className="subTotal flex justify-between items-center">
-          <span className="font-semibold text-base">Subtotal</span>
-          <span className="font-semibold text-base">
-            $
-            {state?.cartItems?.reduce((acc, curr) => {
-              return (acc += (Math.floor(
-                ((100 - curr.product.discountPercentage) / 100) * curr.product.price
-              ))*curr.quantity );
-            }, 0)}
-          </span>
-        </div>
-        <div className="subTotal flex justify-between items-center">
-          <span className="font-semibold text-base">Total Items in Cart</span>
-          <span className="font-semibold text-base">
-            {state?.cartItems?.reduce((acc, curr) => {
-              return (acc += curr.quantity);
-            }, 0)}{" "}
-            items
-          </span>
-        </div>
-        <div className=" text-[#6B7280] text-sm">
-          Shipping and taxes calculated at checkout
-        </div>
+      {state?.cartItems?.length > 0 && (
+        <div className="totalPrice flex flex-col gap-3">
+          {/* price */}
+          <div className="subTotal flex justify-between items-center">
+            <span className="font-semibold text-base">Subtotal</span>
+            <span className="font-semibold text-base">
+              $
+              {state?.cartItems?.reduce((acc, curr) => {
+                return (acc +=
+                  Math.floor(
+                    ((100 - curr.product.discountPercentage) / 100) *
+                      curr.product.price
+                  ) * curr.quantity);
+              }, 0)}
+            </span>
+          </div>
+          <div className="subTotal flex justify-between items-center">
+            <span className="font-semibold text-base">Total Items in Cart</span>
+            <span className="font-semibold text-base">
+              {state?.cartItems?.reduce((acc, curr) => {
+                return (acc += curr.quantity);
+              }, 0)}{" "}
+              items
+            </span>
+          </div>
+          <div className=" text-[#6B7280] text-sm">
+            Shipping and taxes calculated at checkout
+          </div>
 
-        {/* checkout    */}
-        <Link to="/checkout"><CheckoutButton className="w-[50%]" /></Link>
-        <div className="flex items-center justify-center">
-          <span className=" text-center text-sm text-gray-500  hover:cursor-pointer">
-            or
-          </span>
+          {/* checkout    */}
+          <Link to="/checkout">
+            <CheckoutButton className="w-[50%]" />
+          </Link>
+          <div className="flex items-center justify-center">
+            <span className=" text-center text-sm text-gray-500  hover:cursor-pointer">
+              or
+            </span>
 
-          <span className=" font-semibold text-center text-sm text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
-            <Link to="/products">Continue Shopping</Link>
-          </span>
+            <span className=" font-semibold text-center text-sm text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
+              <Link to="/products">Continue Shopping</Link>
+            </span>
+          </div>
         </div>
-      </div>}
+      )}
     </div>
   );
 }

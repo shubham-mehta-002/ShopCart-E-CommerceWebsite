@@ -26,14 +26,11 @@ export {Wishlist} from "./Wishlist/Wishlist"
 
 
 export {AdminProtectedRoute} from "./Admin/AdminProtectedRoute"
-export {AdminHome} from "./Admin/AdminHome"
-export {AdminProductList} from "./Admin/Product/AdminProductList"
 export {AdminEditProductForm} from "./Admin/Product/AdminEditProductForm"
 export {AdminOrders} from "./Admin/Order/AdminOrders"
 export {AdminOrderTile} from "./Admin/Order/AdminOrderTile"
 export {AdminEditOrderForm} from "./Admin/Order/AdminEditOrderForm"
 export {AdminCreateProductForm} from "./Admin/Product/AdminCreateProductForm"
-export {AdminNavbar} from "./Admin/AdminNavbar"
 
 
 

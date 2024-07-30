@@ -82,7 +82,7 @@ const loginUser = asyncHandler(async(req,res,next)=>{
         .status(200)
         .cookie("accessToken",accessToken, {httpOnly:true ,secure:true ,maxAge:process.env.ACCESS_TOKEN_EXPIRY }) 
         .cookie("refreshToken",refreshToken,{httpOnly:true ,secure:true ,maxAge:process.env.REFRESH_TOKEN_EXPIRY})  
-        .cookie("loggedInUserInfo", JSON.stringify({role:loggedInUser.role , userId: loggedInUser._id}),{httpOnly:false ,secure:true ,maxAge:process.env.ACCESS_TOKEN_EXPIRY })
+        .cookie("loggedInUserInfo", JSON.stringify({role:loggedInUser.role , userId: loggedInUser._id}),{httpOnly:false ,secure:true ,maxAge:process.env.REFRESH_TOKEN_EXPIRY })
         .json(new ApiResponse(200,"User logged in successfully",null))
        
 }

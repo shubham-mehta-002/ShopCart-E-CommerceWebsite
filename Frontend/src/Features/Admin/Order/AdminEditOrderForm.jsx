@@ -1,19 +1,21 @@
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchOrderByIdAsync, selectOrderDetails ,updateOrderByIdAsync} from "../AdminSlice";
+import {
+  fetchOrderByIdAsync,
+  selectOrderDetails,
+  updateOrderByIdAsync,
+} from "../AdminSlice";
 import { useForm } from "react-hook-form";
 
 export const AdminEditOrderForm = () => {
   const { orderId } = useParams();
   const order = useSelector(selectOrderDetails);
-  console.log({ order });
+
   const {
     register,
     handleSubmit,
     setValue,
-    watch,
-    getValues,
     formState: { errors },
   } = useForm();
 
@@ -24,12 +26,12 @@ export const AdminEditOrderForm = () => {
       setValue("billingName", order.billingName);
       setValue("phoneNumber", order.phoneNumber);
       setValue("paymentStatus", order.paymentStatus);
-      if(order.address){
+      if (order.address) {
         setValue("street", order.address.street || "");
         setValue("city", order.address.city || "");
         setValue("state", order.address.state || "");
-        setValue("pinCode", order.address.pinCode || "")
-        }
+        setValue("pinCode", order.address.pinCode || "");
+      }
       setValue("items", order.items);
     }
   }
@@ -138,23 +140,20 @@ export const AdminEditOrderForm = () => {
   };
 
   function handleFormSubmit(data) {
-    console.log({ data });
-    
-    const updatedOrderDetails ={
-        ...order , 
-        billingName: data.billingName,
-        phoneNumber : data.phoneNumber,
-        paymentStatus : data.paymentStatus,
-        address:{
-            street: data.street,
-            city:data.city,
-            state:data.state,
-            pinCode: data.pinCode
-        },
-        items:data.items
-    }
-    console.log({updatedOrderDetails})
-    dispatch(updateOrderByIdAsync({orderId , updatedOrderDetails}))
+    const updatedOrderDetails = {
+      ...order,
+      billingName: data.billingName,
+      phoneNumber: data.phoneNumber,
+      paymentStatus: data.paymentStatus,
+      address: {
+        street: data.street,
+        city: data.city,
+        state: data.state,
+        pinCode: data.pinCode,
+      },
+      items: data.items,
+    };
+    dispatch(updateOrderByIdAsync({ orderId, updatedOrderDetails }));
   }
 
   return (
@@ -227,72 +226,74 @@ export const AdminEditOrderForm = () => {
           </div>
 
           {/* address  */}
-         { order.address && <><div className="street-address mb-4">
-            <label htmlFor="streetAddress" className="font-medium text-sm">
-              Street Address
-            </label>
-            <input
-              {...register("street", { ...validations.street })}
-              type="text"
-              className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
-            />
-            {errors.street && (
-              <span className="text-sm text-red-600">
-                *{errors.street.message}
-              </span>
-            )}
-          </div>
-          <div className="other-address-details lg:flex flex-row items-center justify-between">
-            <div className="city w-[90%] mb-4 lg:w-[30%]">
-              <label htmlFor="city" className="font-medium text-sm">
-                City
-              </label>
-              <input
-                {...register("city", { ...validations.city })}
-                type="text"
-                className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
-              />
-              {errors.city && (
-                <span className="text-sm text-red-600">
-                  *{errors.city.message}
-                </span>
-              )}
-            </div>
+          {order.address && (
+            <>
+              <div className="street-address mb-4">
+                <label htmlFor="streetAddress" className="font-medium text-sm">
+                  Street Address
+                </label>
+                <input
+                  {...register("street", { ...validations.street })}
+                  type="text"
+                  className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
+                />
+                {errors.street && (
+                  <span className="text-sm text-red-600">
+                    *{errors.street.message}
+                  </span>
+                )}
+              </div>
+              <div className="other-address-details lg:flex flex-row items-center justify-between">
+                <div className="city w-[90%] mb-4 lg:w-[30%]">
+                  <label htmlFor="city" className="font-medium text-sm">
+                    City
+                  </label>
+                  <input
+                    {...register("city", { ...validations.city })}
+                    type="text"
+                    className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
+                  />
+                  {errors.city && (
+                    <span className="text-sm text-red-600">
+                      *{errors.city.message}
+                    </span>
+                  )}
+                </div>
 
-            <div className="state w-[90%] mb-4 lg:w-[30%]">
-              <label htmlFor="state" className="font-medium text-sm">
-                State/Province
-              </label>
-              <input
-                {...register("state", { ...validations.state })}
-                type="text"
-                className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
-              />
-              {errors.state && (
-                <span className="text-sm text-red-600">
-                  *{errors.state.message}
-                </span>
-              )}
-            </div>
+                <div className="state w-[90%] mb-4 lg:w-[30%]">
+                  <label htmlFor="state" className="font-medium text-sm">
+                    State/Province
+                  </label>
+                  <input
+                    {...register("state", { ...validations.state })}
+                    type="text"
+                    className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
+                  />
+                  {errors.state && (
+                    <span className="text-sm text-red-600">
+                      *{errors.state.message}
+                    </span>
+                  )}
+                </div>
 
-            <div className="pincode w-[90%] mb-4 lg:w-[30%]">
-              <label htmlFor="pincode" className="font-medium text-sm">
-                ZIP / Postal Code
-              </label>
-              <input
-                {...register("pinCode", { ...validations.pinCode })}
-                type="text"
-                className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
-              />
-              {errors.pinCode && (
-                <span className="text-sm text-red-600">
-                  *{errors.pinCode.message}
-                </span>
-              )}
-            </div>
-          </div>
-          </>
-        }
+                <div className="pincode w-[90%] mb-4 lg:w-[30%]">
+                  <label htmlFor="pincode" className="font-medium text-sm">
+                    ZIP / Postal Code
+                  </label>
+                  <input
+                    {...register("pinCode", { ...validations.pinCode })}
+                    type="text"
+                    className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
+                  />
+                  {errors.pinCode && (
+                    <span className="text-sm text-red-600">
+                      *{errors.pinCode.message}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
           {/* total Items*/}
           <div className="totalItems mb-4 ">
             <label className="font-medium text-sm">Total Items :</label>

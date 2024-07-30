@@ -1,11 +1,14 @@
 import { useForm } from "react-hook-form";
-import { Link , Navigate , useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { useState , useEffect} from "react";
-import { useSelector , useDispatch} from 'react-redux'
-import {selectPasswordResetStatus , resetPasswordAsync , resetPasswordResetStatus} from "../AuthSlice"
-
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  selectPasswordResetStatus,
+  resetPasswordAsync,
+  resetPasswordResetStatus,
+} from "../AuthSlice";
 
 export function ResetPassword() {
   const {
@@ -44,36 +47,35 @@ export function ResetPassword() {
     },
   };
 
-  const resetPasswordStatus = useSelector(selectPasswordResetStatus)
+  const resetPasswordStatus = useSelector(selectPasswordResetStatus);
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const query = new URLSearchParams(window.location.search);
-  const token = query.get('token')
-  const email = query.get('email')
+  const token = query.get("token");
+  const email = query.get("email");
 
-  const formSubmitHandler = (data) =>{
-      console.log(data)
-      dispatch(resetPasswordAsync({
-          password: data.password,
-          email,
-          token
-      }))
+  const formSubmitHandler = (data) => {
+    console.log(data);
+    dispatch(
+      resetPasswordAsync({
+        password: data.password,
+        email,
+        token,
+      })
+    );
+  };
 
-  }
-
-  useEffect(()=>{
-    if(resetPasswordStatus){
-      dispatch(resetPasswordResetStatus())
-      navigate("/login")
+  useEffect(() => {
+    if (resetPasswordStatus) {
+      dispatch(resetPasswordResetStatus());
+      navigate("/login");
     }
-    
-  },[dispatch , navigate ,resetPasswordStatus])
+  }, [dispatch, navigate, resetPasswordStatus]);
 
   return (
     <>
-    {/* {registrationStatus && <Navigate to="/login" />} */}
       <div className="h-screen w-screen  flex items-center justify-center">
         <div className="login-form-wrapper h-[90%] w-[90%] sm:w-full sm:max-w-md mx-auto ">
           <div className="image-wrapper flex items-center justify-center flex-col py-5">
@@ -91,7 +93,6 @@ export function ResetPassword() {
             onSubmit={handleSubmit(formSubmitHandler)}
             className="form-wrapper mt-10 px-5 flex flex-col gap-5 "
           >
-
             {/* password field */}
             <div className="password relative">
               <label htmlFor="password" className=" font-semibold">
@@ -149,16 +150,17 @@ export function ResetPassword() {
             </div>
 
             {/* reset button */}
-            <button className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
-            disabled={isSubmitting}
+            <button
+              className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
+              disabled={isSubmitting}
             >
-              { resetPasswordStatus ? "Resetting Password" : "Reset Password"}
+              {resetPasswordStatus ? "Resetting Password" : "Reset Password"}
             </button>
 
             {/* login page link  */}
             <div className="signup-link mt-5 text-center">
               <span className=" text-center text-sm text-gray-500  hover:cursor-pointer">
-                Send me back to {" "}
+                Send me back to{" "}
               </span>
               <span className=" font-semibold text-center text-sm text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
                 <Link to="/login">Log in</Link>
@@ -168,9 +170,6 @@ export function ResetPassword() {
           {/* form ends */}
         </div>
       </div>
-
-   
-
     </>
   );
 }

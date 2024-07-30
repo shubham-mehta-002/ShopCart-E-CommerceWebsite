@@ -6,30 +6,28 @@ import { useState, useEffect } from "react";
 import {
   fetchUserDetailsAsync,
   addUserAddressAsync,
-  selectCurrentOrderDetails
+  selectCurrentOrderDetails,
 } from "../CheckoutSlice";
 
-
 export function Checkout() {
-
-  const [selectedAddressIndex , setSelectedAddressIndex] = useState(null)
-  const [paymentMethod , setPaymentMethod] = useState("Cash")
-  const paymentMethods = ["Cash","Card"]
+  const [selectedAddressIndex, setSelectedAddressIndex] = useState(null);
+  const [paymentMethod, setPaymentMethod] = useState("Cash");
+  const paymentMethods = ["Cash", "Card"];
 
   const {
     register: registerPersonal,
     handleSubmit: handleSubmitPersonal,
     reset: resetPersonal,
-    watch:watchPersonal,
-    formState: { errors: errorsPersonal }
+    watch: watchPersonal,
+    formState: { errors: errorsPersonal },
   } = useForm();
 
   const {
     register: registerAddress,
     handleSubmit: handleSubmitAddress,
     reset: resetAddress,
-    watch:watchAddress,
-    formState: { errors: errorsAddress }
+    watch: watchAddress,
+    formState: { errors: errorsAddress },
   } = useForm();
 
   const dispatch = useDispatch();
@@ -97,7 +95,7 @@ export function Checkout() {
         nonEmpty: (phone) => {
           if (phone.trim() === "") return "Phone field can't be empty";
           return true;
-        }
+        },
       },
     },
     streetAddress: {
@@ -110,8 +108,7 @@ export function Checkout() {
         message: "Enter a valid street Address",
       },
       validate: (streetAddress) => {
-        if (streetAddress.trim() === "")
-          return "Street Address can't be empty";
+        if (streetAddress.trim() === "") return "Street Address can't be empty";
         return true;
       },
     },
@@ -159,7 +156,6 @@ export function Checkout() {
     },
   };
 
-
   const handleAddressSubmit = (data) => {
     const addressDetails = {
       street: data.streetAddress,
@@ -172,9 +168,8 @@ export function Checkout() {
     resetAddress();
   };
 
-const state = useSelector(selectCurrentOrderDetails)
+  const state = useSelector(selectCurrentOrderDetails);
 
-   
   return (
     <div className="wrapper block lg:flex lg:flex-row lg:justify-around ">
       <div className="personal-details-wrapper  w-[100%] sm:w-[90%] mx-auto lg:w-[45%] my-10 lg:mx-4 py-4 px-8 bg-white">
@@ -247,7 +242,7 @@ const state = useSelector(selectCurrentOrderDetails)
           </div>
         </form>
 
-        <hr className="my-5 border-1 border-gray-600"/>
+        <hr className="my-5 border-1 border-gray-600" />
 
         {/* form start */}
         <form onSubmit={handleSubmitAddress(handleAddressSubmit)}>
@@ -334,45 +329,44 @@ const state = useSelector(selectCurrentOrderDetails)
             </button>
           </div>
         </form>
-    
-
-
-        
 
         {/* saved address information */}
         <div className="saved-address mt-5">
           <div className="text-xl font-semibold">Addresses</div>
           {userDetails?.address?.length > 0 ? (
             <>
-          <div className="text-base mb-3">Choose from Existing addresses</div>
+              <div className="text-base mb-3">
+                Choose from Existing addresses
+              </div>
 
-          <ul className="flex flex-col mx-auto gap-4">
-            
-              {userDetails.address.map((address,index) => (
-                <label
-                  key={uuid()}
-                  className="flex gap-1 p-1 border-2 border-slate-300"
-                  onClick={()=>setSelectedAddressIndex(index)}
-                >
-                  <input type="radio" name="address"  checked={index === selectedAddressIndex} />
-                  <div className="ml-3">
-                    <div className="text-md font-medium">
-                      {address.streetAddress}
+              <ul className="flex flex-col mx-auto gap-4">
+                {userDetails.address.map((address, index) => (
+                  <label
+                    key={uuid()}
+                    className="flex gap-1 p-1 border-2 border-slate-300"
+                    onClick={() => setSelectedAddressIndex(index)}
+                  >
+                    <input
+                      type="radio"
+                      name="address"
+                      checked={index === selectedAddressIndex}
+                    />
+                    <div className="ml-3">
+                      <div className="text-md font-medium">
+                        {address.streetAddress}
+                      </div>
+                      <div>
+                        {address.city}, {address.state}
+                      </div>
+                      <div>{address.pinCode}</div>
                     </div>
-                    <div>
-                      {address.city}, {address.state}
-                    </div>
-                    <div>{address.pinCode}</div>
-                  </div>
-                </label>
-                
-              ))}
+                  </label>
+                ))}
               </ul>
-              </> 
-            ) : (
-              <p className="mt-2">No saved addresses found</p>
-            )}
-         
+            </>
+          ) : (
+            <p className="mt-2">No saved addresses found</p>
+          )}
         </div>
 
         {/* payment options*/}
@@ -381,17 +375,24 @@ const state = useSelector(selectCurrentOrderDetails)
           <div className="text-base mb-3">Choose One</div>
 
           <ul className="flex flex-col mx-auto gap-1">
-            {paymentMethods && paymentMethods.length && (
+            {paymentMethods &&
+              paymentMethods.length &&
               paymentMethods.map((method) => (
-                <label 
-                    onClick={() => setPaymentMethod(method)}
-                    key={uuid()} 
-                    className="flex p-1 items-center">
-                  <input type="radio" name="payment" value={method} checked={paymentMethod === method} onChange={() => setPaymentMethod(method)} />
+                <label
+                  onClick={() => setPaymentMethod(method)}
+                  key={uuid()}
+                  className="flex p-1 items-center"
+                >
+                  <input
+                    type="radio"
+                    name="payment"
+                    value={method}
+                    checked={paymentMethod === method}
+                    onChange={() => setPaymentMethod(method)}
+                  />
                   <div className="ml-2">{method}</div>
                 </label>
-              ))
-            )}
+              ))}
           </ul>
         </div>
 
@@ -399,7 +400,11 @@ const state = useSelector(selectCurrentOrderDetails)
       </div>
 
       <div className="cart-summary w-[100%] mx-auto lg:w-[45%] my-10 ">
-        <CartSummary selectedAddressIndex={selectedAddressIndex}  paymentMethod={paymentMethod} watch={watchPersonal}/>
+        <CartSummary
+          selectedAddressIndex={selectedAddressIndex}
+          paymentMethod={paymentMethod}
+          watch={watchPersonal}
+        />
       </div>
     </div>
   );

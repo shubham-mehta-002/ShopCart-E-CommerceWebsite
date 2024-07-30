@@ -18,7 +18,7 @@ export function Pagination({ totalDocs, page, setPage }) {
         <div className="total-items flex items-center justify-center">
           Showing{" "}
           <span className="font-bold">
-            &nbsp;{(page - 1) * ITEMS_PER_PAGE + 1}&nbsp;{" "}
+            &nbsp;{totalDocs !==0 ? (page - 1) * ITEMS_PER_PAGE +1 : (page - 1) * ITEMS_PER_PAGE }&nbsp;{" "}
           </span>{" "}
           to{" "}
           <span className="font-bold">

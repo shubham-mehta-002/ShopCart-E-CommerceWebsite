@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchProductDetailById  , updateProduct} from "./ProductDetailAPI";
+import { fetchProductDetailById, updateProduct } from "./ProductDetailAPI";
 
 const initialState = {
   product: null,
@@ -10,12 +10,11 @@ const initialState = {
 export const updateProductAsync = createAsyncThunk(
   "product/updateProductAsync",
   async ({ _id, fieldsToBeUpdated }) => {
-    console.log("sdadas", { _id, fieldsToBeUpdated });
     try {
       const response = await updateProduct(_id, fieldsToBeUpdated);
       return { data: response.data, _id, fieldsToBeUpdated };
     } catch (error) {
-      // console.log({error})
+      console.log("error while updating product", { error });
       throw error;
     }
   }
@@ -28,7 +27,7 @@ export const fetchProductDetailByIdAsync = createAsyncThunk(
       const response = await fetchProductDetailById(productId);
       return response;
     } catch (error) {
-      // console.log({error})
+      console.log("error while fetching product detail", { error });
       throw error;
     }
   }
@@ -40,12 +39,12 @@ const ProductDetailSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // fetching product detail
       .addCase(fetchProductDetailByIdAsync.pending, (state) => {
         state.status = "loading";
       })
       .addCase(fetchProductDetailByIdAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        // console.log({action})
         state.product = action.payload;
       })
       .addCase(fetchProductDetailByIdAsync.rejected, (state) => {
@@ -58,17 +57,8 @@ const ProductDetailSlice = createSlice({
         state.status = "loading";
       })
       .addCase(updateProductAsync.fulfilled, (state, action) => {
-        console.log({ action });
-        const { fieldsToBeUpdated, _id } = action.payload;
-        console.log({ fieldsToBeUpdated });
-        // state.products = state.products.map((product) => {
-        //   if (product._id === _id) {
-        //     return { ...product, ...fieldsToBeUpdated };
-        //   } else {
-        //     return product;
-        //   }
-        // });
-        state.product = {...state.product , ...fieldsToBeUpdated}
+        const { fieldsToBeUpdated } = action.payload;
+        state.product = { ...state.product, ...fieldsToBeUpdated };
         state.status = "idle";
       })
       .addCase(updateProductAsync.rejected, (state, action) => {

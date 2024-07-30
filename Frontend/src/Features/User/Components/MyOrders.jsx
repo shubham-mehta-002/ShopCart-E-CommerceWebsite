@@ -3,6 +3,7 @@ import { fetchUserOrdersAsync, selectUserOrderDetails, selectUserState } from ".
 import { useEffect } from "react";
 import {Link} from "react-router-dom"
 import { OrderTile } from "./OrderTile";
+import { Loader } from "../../../utils/Loader";
 
 export function MyOrders() {
   const dispatch = useDispatch();
@@ -13,14 +14,11 @@ export function MyOrders() {
   const orders = useSelector(selectUserOrderDetails);
   const { status } = useSelector(selectUserState);
 
-  useEffect(() => {
-    console.log({ orders }); // Log orders to check the data structure
-  }, [orders]);
 
   return (
     <>
       {status === "loading" ? (
-        <p>Loading...</p>
+        <Loader/>
       ) : (
         <div className="order-wrapper flex flex-col gap-5">
           {orders && orders.length === 0 ? (

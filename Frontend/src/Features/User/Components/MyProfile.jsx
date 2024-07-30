@@ -8,22 +8,21 @@ import { useEffect, useState } from "react";
 import { MdEdit } from "react-icons/md";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { useForm } from "react-hook-form";
+import { Loader } from "../../../utils/Loader";
 
 export function MyProfile() {
   const dispatch = useDispatch();
+
   const [selectedAddressForUpdation, setSelectedAddressForUpdation] =
     useState(null);
+
   const [editFields, setEditFields] = useState({
     name: false,
     phoneNumber: false,
   });
-  const [filedValue, setFiledValue] = useState({
-    name: "",
-    phoneNumber: "",
-  });
+
+  const [filedValue, setFiledValue] = useState({ name: "", phoneNumber: "" });
   const { userInfo, status, error } = useSelector(selectUserState);
-  console.log({ userInfo });
-  console.log({ editFields });
 
   const {
     register,
@@ -34,6 +33,7 @@ export function MyProfile() {
     formState: { errors },
   } = useForm();
 
+  // validations
   const validation = {
     streetAddress: {
       required: {
@@ -106,18 +106,17 @@ export function MyProfile() {
     setValue("city", userInfo.address[addressIndex].city);
     setValue("state", userInfo.address[addressIndex].state);
     setValue("pincode", userInfo.address[addressIndex].pinCode);
-    console.log({ addressIndex });
   }
 
   function updateAddressHandler(data, e) {
-    console.log({data, userInfo})
     e.preventDefault();
-    if ( userInfo.address.length !== 0  && 
-      (data.streetAddress ===
+    if (
+      userInfo.address.length !== 0 &&
+      data.streetAddress ===
         userInfo.address[selectedAddressForUpdation].street &&
       data.city === userInfo.address[selectedAddressForUpdation].city &&
       data.state === userInfo.address[selectedAddressForUpdation].state &&
-      data.pincode === userInfo.address[selectedAddressForUpdation].pinCode)
+      data.pincode === userInfo.address[selectedAddressForUpdation].pinCode
     ) {
       alert("Change some value before updating ...");
       return;
@@ -153,35 +152,34 @@ export function MyProfile() {
       return;
     }
     const newData = {
-      fullName:value
-    }
+      fullName: value,
+    };
     dispatch(updateUserDetailsAsync({ newData }));
-    setEditFields(prev => ({...prev , name:!prev.name}))
+    setEditFields((prev) => ({ ...prev, name: !prev.name }));
   }
 
   function updateUserPhoneNumberHandler() {
     const value = filedValue.phoneNumber;
-    console.log(value.length)
+
     if (value.trim() === "") {
       alert("phone number can't be empty");
       return;
     }
-    if(value.length !== 10){
-      alert("Enter a valid 10 digit number")
+    if (value.length !== 10) {
+      alert("Enter a valid 10 digit number");
       return;
     }
-    const phoneNumberPattern = /[0-9]{10}/
+    const phoneNumberPattern = /[0-9]{10}/;
     if (!phoneNumberPattern.test(value)) {
       alert("Enter a valid phone number");
       return;
     }
 
     const newData = {
-      phoneNumber: value
-    }
-    dispatch(updateUserDetailsAsync({ newData}));
-    setEditFields(prev => ({...prev , phoneNumber:!prev.phoneNumber}))
-
+      phoneNumber: value,
+    };
+    dispatch(updateUserDetailsAsync({ newData }));
+    setEditFields((prev) => ({ ...prev, phoneNumber: !prev.phoneNumber }));
   }
 
   useEffect(() => {
@@ -191,7 +189,7 @@ export function MyProfile() {
   return (
     <>
       {status === "loading" ? (
-        <p>Loading ...</p>
+        <Loader/>
       ) : (
         <div className="order-wrapper mx-auto sm:mx-16 xl:mx-36 mt-8 bg-white px-3 sm:px-10 mb-5 pb-5">
           <div className="header text-5xl mb-8 text-center font-bold pt-4">
@@ -228,7 +226,6 @@ export function MyProfile() {
                 <button
                   onClick={(e) => updateUserNameHandler(e)}
                   className="h-9 w-[50px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
-                  // disabled={loginState.status !== 'idle'}
                 >
                   Save
                 </button>
@@ -279,7 +276,6 @@ export function MyProfile() {
                 <button
                   className="h-9 w-[50px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
                   onClick={(e) => updateUserPhoneNumberHandler(e)}
-                  // disabled={loginState.status !== 'idle'}
                 >
                   Save
                 </button>
@@ -290,92 +286,97 @@ export function MyProfile() {
           <hr className="border-1 sm:w-[100%] border-gray-400" />
 
           {/* update address Form */}
-          {selectedAddressForUpdation!==null && <form onSubmit={handleSubmit(updateAddressHandler)} className="mt-4">
-            {/* street  */}
-            <div className="street-address mb-8">
-              <label htmlFor="streetAddress" className="font-medium text-sm">
-                Street Address
-              </label>
-              <input
-                {...register("streetAddress", {
-                  ...validation.streetAddress,
-                })}
-                type="text"
-                className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
-              />
-              {errors.streetAddress && (
-                <span className="text-sm text-red-600">
-                  *{errors.streetAddress.message}
-                </span>
-              )}
-            </div>
-
-            <div className="other-address-details lg:flex flex-row items-center justify-between">
-              <div className="city w-[100%] mb-8 lg:w-[30%]">
-                <label htmlFor="city" className="font-medium text-sm">
-                  City
+          {selectedAddressForUpdation !== null && (
+            <form
+              onSubmit={handleSubmit(updateAddressHandler)}
+              className="mt-4"
+            >
+              {/* street  */}
+              <div className="street-address mb-8">
+                <label htmlFor="streetAddress" className="font-medium text-sm">
+                  Street Address
                 </label>
                 <input
-                  {...register("city", { ...validation.city })}
+                  {...register("streetAddress", {
+                    ...validation.streetAddress,
+                  })}
                   type="text"
                   className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
                 />
-                {errors.city && (
+                {errors.streetAddress && (
                   <span className="text-sm text-red-600">
-                    *{errors.city.message}
+                    *{errors.streetAddress.message}
                   </span>
                 )}
               </div>
 
-              <div className="state w-[100%] mb-8 lg:w-[30%]">
-                <label htmlFor="state" className="font-medium text-sm">
-                  State/Province
-                </label>
-                <input
-                  {...register("state", { ...validation.state })}
-                  type="text"
-                  className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
-                />
-                {errors.state && (
-                  <span className="text-sm text-red-600">
-                    *{errors.state.message}
-                  </span>
-                )}
+              <div className="other-address-details lg:flex flex-row items-center justify-between">
+                <div className="city w-[100%] mb-8 lg:w-[30%]">
+                  <label htmlFor="city" className="font-medium text-sm">
+                    City
+                  </label>
+                  <input
+                    {...register("city", { ...validation.city })}
+                    type="text"
+                    className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
+                  />
+                  {errors.city && (
+                    <span className="text-sm text-red-600">
+                      *{errors.city.message}
+                    </span>
+                  )}
+                </div>
+
+                <div className="state w-[100%] mb-8 lg:w-[30%]">
+                  <label htmlFor="state" className="font-medium text-sm">
+                    State/Province
+                  </label>
+                  <input
+                    {...register("state", { ...validation.state })}
+                    type="text"
+                    className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
+                  />
+                  {errors.state && (
+                    <span className="text-sm text-red-600">
+                      *{errors.state.message}
+                    </span>
+                  )}
+                </div>
+
+                <div className="pincode w-[90%] mb-8 lg:w-[30%]">
+                  <label htmlFor="pincode" className="font-medium text-sm">
+                    ZIP / Postal Code
+                  </label>
+                  <input
+                    {...register("pincode", { ...validation.pincode })}
+                    type="text"
+                    className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
+                  />
+                  {errors.pincode && (
+                    <span className="text-sm text-red-600">
+                      *{errors.pincode.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              <div className="pincode w-[90%] mb-8 lg:w-[30%]">
-                <label htmlFor="pincode" className="font-medium text-sm">
-                  ZIP / Postal Code
-                </label>
-                <input
-                  {...register("pincode", { ...validation.pincode })}
-                  type="text"
-                  className="focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none"
-                />
-                {errors.pincode && (
-                  <span className="text-sm text-red-600">
-                    *{errors.pincode.message}
-                  </span>
-                )}
+              <div className="button-wrapper flex flex-row justify-end">
+                <button
+                  type="button"
+                  className="h-5 w-20 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md"
+                  onClick={() => reset()}
+                >
+                  Reset
+                </button>
+                <button
+                  type="submit"
+                  className="h-5 w-30 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md text-white bg-[#4338CA]"
+                >
+                  Update Address
+                </button>
               </div>
-            </div>
-
-            <div className="button-wrapper flex flex-row justify-end">
-              <button
-                type="button"
-                className="h-5 w-20 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md"
-                onClick={() => reset()}
-              >
-                Reset
-              </button>
-              <button
-                type="submit"
-                className="h-5 w-30 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md text-white bg-[#4338CA]"
-              >
-                Update Address
-              </button>
-            </div>
-          </form>}
+            </form>
+          )}
           {/* form ends */}
 
           <div className="addresses pl-4 mt-5 sm:p-0">

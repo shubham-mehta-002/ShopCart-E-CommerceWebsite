@@ -2,7 +2,6 @@ import { useSelector , useDispatch } from "react-redux"
 import { useEffect , useState , useRef} from "react"
 import {fetchAllOrdersAsync , selectAllOrders ,selectTotalOrders ,selectAdminAPIStatus} from "../AdminSlice"
 import { AdminOrderTile } from "./AdminOrderTile"
-import { ITEMS_PER_PAGE } from "../../../constants"
 import { MdKeyboardArrowDown } from "react-icons/md";
 import {Pagination} from "../../Common/Pagination"
 

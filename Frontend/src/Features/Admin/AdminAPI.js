@@ -21,14 +21,9 @@ export const fetchAllOrders = ({sort,page=1}) => {
       const response = await axios.get(`${BASE_URL}/orders/all?${queryString}`, {
         withCredentials: true,
       });
-      console.log({ response });
-      // if(response.data.success === true){
-      //   successMessageToastNotificaton(response.data.message)
-      // }
       resolve(response.data);
     } catch (error) {
-      // console.log({ error });
-      console.log(error.response )
+      console.log("error whiile fetching all orders",{ error });
 
       if(error.response.data.error.statusCode === 401){
         errorMessageToastNotificaton("Unauthorized")
@@ -41,19 +36,14 @@ export const fetchAllOrders = ({sort,page=1}) => {
 };
 
 export const fetchOrderById = (orderId) => {
-  // console.log("api ", { orderId });
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.get(`${BASE_URL}/orders/${orderId}`, {
         withCredentials: true,
       });
-      console.log({response})
-      // if(response.data.success === true){
-      //   successMessageToastNotificaton(response.data.message)
-      // }
       resolve(response.data);
     } catch (error) {
-      console.log({ error });
+      console.log("error while fetching order details ",{ error });
       errorMessageToastNotificaton()
       reject(error.message);
     }
@@ -61,7 +51,7 @@ export const fetchOrderById = (orderId) => {
 };
 
 export const updateOrderById = ({ orderId, updatedOrderDetails }) => {
-  console.log("api order update", { orderId });
+
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -78,9 +68,7 @@ export const updateOrderById = ({ orderId, updatedOrderDetails }) => {
 
       resolve(response.data);
     } catch (error) {
-
-      console.log({ error });
-      console.log(error.response.data.error.statusCode )
+      console.log("error while updaing order details",{error})
       if(error.response.data.error.statusCode === 401){
         errorMessageToastNotificaton("Unauthorized")
       }else{
@@ -102,13 +90,12 @@ export const createProduct = (product) => {
         },
         { withCredentials: true }
       );
-      console.log("crate product ",{response})
       if(response.data.success === true){
         successMessageToastNotificaton(response.data.message)
       }
       resolve(response.data);
     } catch (error) {
-      console.log({ error });
+      console.log("error while creating product",{ error });
       errorMessageToastNotificaton()
 
       reject(error.message);

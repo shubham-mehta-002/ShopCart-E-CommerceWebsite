@@ -1,13 +1,16 @@
 import { useForm } from "react-hook-form";
-import { Link , useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { useState , useEffect } from "react";
-import { useDispatch , useSelector} from 'react-redux'
-import { loginUserAsync ,selectLoggedInUser , selectAuthState } from "../AuthSlice";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  loginUserAsync,
+  selectLoggedInUser,
+  selectAuthState,
+} from "../AuthSlice";
 
 export function LoginForm() {
-  
   const {
     register,
     handleSubmit,
@@ -44,24 +47,21 @@ export function LoginForm() {
     },
   };
 
-  const dispatch = useDispatch()
-  const user = useSelector(selectLoggedInUser)
+  const dispatch = useDispatch();
+  const loginState = useSelector(selectAuthState);
+  const navigate = useNavigate();
 
-  console.log('login form ',{user})
+  const user = useSelector(selectLoggedInUser);
 
-  const loginState = useSelector(selectAuthState) 
-
-  const navigate = useNavigate()
-  async function formSubmitHandler({email,password}) {
-    dispatch(loginUserAsync({email,password}))
-    
+  function formSubmitHandler({ email, password }) {
+    dispatch(loginUserAsync({ email, password }));
   }
 
-  useEffect(()=>{
-    if(user.userId){
-      navigate("/")
+  useEffect(() => {
+    if (user.userId) {
+      navigate("/");
     }
-  },[user.userId])
+  }, [user.userId]);
 
   return (
     <>
@@ -136,11 +136,11 @@ export function LoginForm() {
             </div>
 
             {/* login Button */}
-            <button 
+            <button
               className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
-              disabled={loginState.status !== 'idle'}
-              >
-              {loginState.status !== 'idle' ? "Logging" : "Log in"}
+              disabled={loginState.status !== "idle"}
+            >
+              {loginState.status !== "idle" ? "Logging" : "Log in"}
             </button>
 
             {/* sign up link */}

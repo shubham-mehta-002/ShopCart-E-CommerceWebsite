@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import {useDispatch , useSelector} from "react-redux"
-import { resetPasswordRequestAsync , selectMailSentStatus , resetMailSentStatus ,selectAuthStatus} from "../AuthSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { resetPasswordRequestAsync, selectMailSentStatus } from "../AuthSlice";
 
 export function ForgotPasswordForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm();
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const mailSentStatus = useSelector(selectMailSentStatus);
 
   const validations = {
     email: {
@@ -29,16 +30,10 @@ export function ForgotPasswordForm() {
     },
   };
 
-  const mailSentStatus = useSelector(selectAuthStatus)
-  // console.log({mailSentStatus})
-
   function forgotPasswordFormHandler(data) {
-    // console.log(data);
-    dispatch(resetPasswordRequestAsync({email:data.email}))
-    dispatch(resetMailSentStatus()) // remove karo aur timer lagaoo that after 10 sec it will reset MAIL ALREADY SENT
+    dispatch(resetPasswordRequestAsync({ email: data.email }));
   }
 
-  
   return (
     <>
       <div className="h-screen w-screen  flex items-center justify-center">
@@ -76,7 +71,7 @@ export function ForgotPasswordForm() {
             </div>
 
             <button className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold">
-              { mailSentStatus ==="idle" ? "Send Mail" : "Sending Mail"}
+              {!mailSentStatus ? "Send Mail" : "Sending Mail"}
             </button>
 
             <div className="signup-link mt-5 text-center">

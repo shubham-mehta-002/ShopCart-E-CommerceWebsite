@@ -5,7 +5,6 @@ import {
 } from "../../utils/toastNotifications";
 import { BASE_URL } from "../../constants";
 
-
 export function registerUser(email, password) {
   return new Promise(async (resolve, reject) => {
     try {
@@ -19,7 +18,7 @@ export function registerUser(email, password) {
       }
       resolve(response.data);
     } catch (error) {
-      console.log("error in registeration api ", error.message);
+      console.log("error during sign up ", error);
       if (error.response) {
         const errorCode = error.response.status;
         if (errorCode === 409) {
@@ -43,23 +42,20 @@ export function registerUser(email, password) {
   });
 }
 
-
 export function loginUser(email, password) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.post(`${BASE_URL}/auth/login`, {
-        email,
-        password,
-      },{
-        withCredentials: true, // Ensure cookies are included
-    })
-      console.log({response})
+      const response = await axios.post(
+        `${BASE_URL}/auth/login`,
+        {
+          email,
+          password,
+        },
+        {
+          withCredentials: true, // Ensure cookies are included
+        }
+      );
       if (response.data.success === true) {
-        // localStorage.setItem('loggedInUser', JSON.stringify({
-        //   userId : response.data.data._id,
-        //   role: response.data.data.role
-        // }));
-        
         successMessageToastNotificaton(response.data.message);
       }
       resolve(response.data);
@@ -87,26 +83,26 @@ export function loginUser(email, password) {
   });
 }
 
-
 export function logoutUser() {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.post(`${BASE_URL}/auth/logout`,{},{
-        withCredentials: true, // Ensure cookies are included
-    })
-      console.log({response})
+      const response = await axios.post(
+        `${BASE_URL}/auth/logout`,
+        {},
+        {
+          withCredentials: true, // Ensure cookies are included
+        }
+      );
       if (response.data.success === true) {
         successMessageToastNotificaton(response.data.message);
       }
       resolve(response.data);
-
     } catch (error) {
       if (error.response) {
         const errorCode = error.response.status;
-        if(errorCode === 401){
+        if (errorCode === 401) {
           errorMessageToastNotificaton("Invalid request : Unauthorized");
-        }
-        else if (errorCode === 500) {
+        } else if (errorCode === 500) {
           errorMessageToastNotificaton("Internal Server Error");
         } else {
           errorMessageToastNotificaton("Something went wrong!!");
@@ -125,47 +121,44 @@ export function logoutUser() {
   });
 }
 
-
 export function resetPasswordRequest(email) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.post(`${BASE_URL}/auth/reset-password-request`,{
-        email
-      })
-      console.log({response})
+      const response = await axios.post(
+        `${BASE_URL}/auth/reset-password-request`,
+        {
+          email,
+        }
+      );
       if (response.data.success === true) {
         successMessageToastNotificaton("Mail Sent !! ");
       }
       resolve(response.data);
-
-
     } catch (error) {
-      console.log({error})
+      console.log("error during generating password reset request ", { error });
       errorMessageToastNotificaton("Something went wrong ");
     }
   });
 }
 
-export function resetPassword({password , token , email}) {
+export function resetPassword({ password, token, email }) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.post(`${BASE_URL}/auth/reset-password`,{
+      const response = await axios.post(`${BASE_URL}/auth/reset-password`, {
         password,
         token,
-        email
-      })
-      console.log({response})
+        email,
+      });
       if (response.data.success === true) {
         successMessageToastNotificaton("Password Updated !! ");
       }
       resolve(response.data);
-
     } catch (error) {
-      console.log({error})
-      if(error.response.data.message === "Token Invalid"){
-        errorMessageToastNotificaton("Token Invalid")
-      }else{
-      errorMessageToastNotificaton("Something went wrong ")
+      console.log("error suring password reset", { error });
+      if (error.response.data.message === "Token Invalid") {
+        errorMessageToastNotificaton("Token Invalid");
+      } else {
+        errorMessageToastNotificaton("Something went wrong ");
       }
     }
   });

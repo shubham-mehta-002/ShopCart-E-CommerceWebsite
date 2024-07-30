@@ -6,26 +6,35 @@ import {AddToCartButton } from '../../Common/Buttons/AddToCartButton'
 import {AddToWishlistButton } from '../../Common/Buttons/AddToWishlistButton'
 import {useState , useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
-
 import {addItemToCartAsync} from '../../Cart/CartSlice'
 import {useParams} from 'react-router-dom'
 import { selectLoggedInUser } from "../../Auth/AuthSlice";
 import {selectWishlistItems ,removeFromWishlistAsync,addToWishlistAsync} from "../../Wishlist/WishlistSlice";
-// import { selectLoggedInUser } from "../../Auth/AuthSlice";
+
 
 export function ProductInfoSection({_id,title,brand,description,stock,rating,price,discountPercentage,variations}) {
   const [selectedProductIndex , setSelectedProductIndex] = useState(null)
   const [selectedColorIndex , setSelectedColorIndex] = useState(null)
   
-  useEffect(()=>{
-    setSelectedColorIndex(null)
-  },[selectedProductIndex])  
-  
   const dispatch = useDispatch()
   const user = useSelector(selectLoggedInUser)
-  console.log({user})
-  
 
+  // check if product is in wishlist 
+  let wishlistItems=null
+  let isProductInWishlist = false
+
+  if(user && user.role!=="admin"){
+    wishlistItems = useSelector(selectWishlistItems);
+    if(wishlistItems.length>0){
+
+        isProductInWishlist = wishlistItems.find((item) => item._id.toString() === _id.toString())
+    }
+  }
+
+  useEffect(()=>{
+    setSelectedColorIndex(null)
+  },[selectedProductIndex]) 
+  
   function addOrRemoveFromWishlistHandler(){
     if(isProductInWishlist){
       dispatch(removeFromWishlistAsync({productId : _id}))
@@ -53,21 +62,9 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
       colorCode : variations[selectedProductIndex].colors[selectedColorIndex].colorCode,
       quantity : 1 //by default 
     }
-    // console.log({productDetails})
+  
     dispatch(addItemToCartAsync({productDetails}))
 
-  }
-
-  // check if product is in wishlist 
-  let wishlistItems=null
-  let isProductInWishlist = false
-
-  if(user && user.role!=="admin"){
-    wishlistItems = useSelector(selectWishlistItems);
-    if(wishlistItems.length>0){
-      console.log("aaaaaaaaaa",{wishlistItems})
-        isProductInWishlist = wishlistItems.find((item) => item._id.toString() === _id.toString())
-    }
   }
 
   return (

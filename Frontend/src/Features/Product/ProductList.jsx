@@ -10,6 +10,7 @@ import {
   fetchAllProductsAsync,
   fetchAllBrandsAsync,
   fetchAllCategoriesAsync,
+  selectProductState,
 } from "../Product/ProductSlice";
 import { selectLoggedInUser } from "../Auth/AuthSlice";
 import { useEffect } from "react";
@@ -17,20 +18,30 @@ import { v4 as uuid } from "uuid";
 import { Link } from "react-router-dom";
 import { selectSearchParameters } from "./ProductSlice";
 import { useNavigate } from "react-router-dom";
-import {Pagination} from "../Common/Pagination"
+import { Pagination } from "../Common/Pagination";
+import { Loader } from "../../utils/Loader";
 
 export function ProductList() {
-  const state = useSelector((state) => state.product);
-  const user = useSelector(selectLoggedInUser);
-  console.log("productList admin", { user });
-
-  const searchParameter = useSelector(selectSearchParameters);
-
-  const dispatch = useDispatch();
-
   const [showSortMenu, setShowSortMenu] = useState(false);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+  const [filter, setFilter] = useState({ category: [], brand: [] });
+  const [sort, setSort] = useState("");
+  const [page, setPage] = useState(1);
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const state = useSelector(selectProductState);
+  const searchParameter = useSelector(selectSearchParameters);
+  const user = useSelector(selectLoggedInUser);
+
+  const sortOptions = [
+    { name: "Price: Low to High", sortBy: "price", order: "asc" },
+    { name: "Price: High to Low", sortBy: "price", order: "desc" },
+    { name: "Better Discount", sortBy: "discountPercentage", order: "desc" },
+  ];
+
+  // selected filters handler
   const filterHandler = (value, filterType) => {
     const isFilterAlreadySelected = filter[filterType].find(
       (val) => val === value
@@ -48,10 +59,7 @@ export function ProductList() {
     setFilter(newFilters);
   };
 
-  const [filter, setFilter] = useState({ category: [], brand: [] });
-  const [sort, setSort] = useState("");
-  const [page, setPage] = useState(1);
-
+  // fetching products using debouncing
   useEffect(() => {
     const timeOut = setTimeout(() => {
       dispatch(fetchAllProductsAsync({ filter, page, sort, searchParameter }));
@@ -62,22 +70,32 @@ export function ProductList() {
     };
   }, [filter, page, sort, searchParameter]);
 
+  // fetching brands and categories
   useEffect(() => {
     dispatch(fetchAllBrandsAsync());
     dispatch(fetchAllCategoriesAsync());
   }, [dispatch]);
 
-  const sortOptions = [
-    { name: "Price: Low to High", sortBy: "price", order: "asc" },
-    { name: "Price: High to Low", sortBy: "price", order: "desc" },
-    { name: "Better Discount", sortBy: "discountPercentage", order: "desc" },
-  ];
-
-  const navigate = useNavigate();
-
+  // add product button handler only for ADMIN
   function addProductHandler() {
     navigate("/admin/products/create");
   }
+
+  function showSortMenuClickHandler(e) {
+    e.stopPropagation();
+    setShowSortMenu((prevValue) => !prevValue);
+  }
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      setShowSortMenu(false);
+    }
+
+    window.addEventListener("click", handleClickOutside);
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="px-5 w-full md:mx-auto  md:w-[90%]  bg-white mx-auto ">
@@ -85,16 +103,13 @@ export function ProductList() {
       <div className="header mt-[60px] h-[80px] flex flex-row items-center justify-between gap-10 relative">
         <div className="w-[50%] text-4xl font-bold text-left">All Products</div>
         <div className="flex flex-row items-center gap-2 cursor-pointer">
-          <span
-            className="text-xl"
-            onClick={() => setShowSortMenu((prevValue) => !prevValue)}
-          >
+          <span className="text-xl" onClick={showSortMenuClickHandler}>
             Sort
           </span>
           <span>
             <MdKeyboardArrowDown
               className="h-6 w-6"
-              onClick={() => setShowSortMenu((prevValue) => !prevValue)}
+              onClick={showSortMenuClickHandler}
             />
           </span>
           <span>
@@ -109,7 +124,7 @@ export function ProductList() {
         <div
           className={`${
             showSortMenu ? "flex" : "hidden"
-          } sort-menu h-[120px] w-[200px] absolute top-[90%] right-0 z-10 bg-white  shadow-2xl rounded-md border-2 border-gray-200 flex flex-col justify-around`}
+          } sort-menu h-[120px] w-[200px] absolute top-[70%] right-0 z-10 bg-white  shadow-2xl rounded-md border-2 border-gray-200 flex flex-col justify-around`}
         >
           {sortOptions.map((sortOption) => (
             <div
@@ -132,9 +147,13 @@ export function ProductList() {
       <hr className="text-[#E5E7EB]" />
 
       <div className="mt-20 products-wrappper flex flex-row gap-20 relative">
-
         {/* filters -web view */}
-        <DesktopFilters state={state} filterHandler={filterHandler} filter={filter} setFilter={setFilter} />
+        <DesktopFilters
+          state={state}
+          filterHandler={filterHandler}
+          filter={filter}
+          setFilter={setFilter}
+        />
 
         {/* products */}
         <div className="wrapper w-[100%] lg:w-[70%]">
@@ -147,7 +166,7 @@ export function ProductList() {
             </button>
           )}
           {state.status.products === "loading" && (
-            <p className="text-black text-3xl font-semibold">Loading ...</p>
+            <Loader/>
           )}
           {state.error.products && (
             <div className="block text-black text-3xl font-semibold">
@@ -183,16 +202,21 @@ export function ProductList() {
       </div>
 
       {/* filters-mobile view */}
-      <MobileFilters state={state} filterHandler={filterHandler} filter={filter} setFilter={setFilter} showMobileFilters={showMobileFilters} setShowMobileFilters={setShowMobileFilters} />
+      <MobileFilters
+        state={state}
+        filterHandler={filterHandler}
+        filter={filter}
+        setFilter={setFilter}
+        showMobileFilters={showMobileFilters}
+        setShowMobileFilters={setShowMobileFilters}
+      />
     </div>
   );
 }
 
-function DesktopFilters({ state, filter, setFilter ,filterHandler}) {
+function DesktopFilters({ state, filter, filterHandler }) {
   const [showCategoryFilters, setShowCategoryFilters] = useState(false);
   const [showBrandFilters, setShowBrandFilters] = useState(false);
-
-
 
   return (
     <>
@@ -286,9 +310,17 @@ function DesktopFilters({ state, filter, setFilter ,filterHandler}) {
   );
 }
 
-function MobileFilters({ state ,filter,setFilter,setShowMobileFilters,showMobileFilters ,filterHandler}) {
-  const [showMobileCategoryFilters, setShowMobileCategoryFilters] = useState(false);
-  const [showMobileBrandFilters, setShowMobileShowBrandFilters] = useState(false);
+function MobileFilters({
+  state,
+  filter,
+  setShowMobileFilters,
+  showMobileFilters,
+  filterHandler,
+}) {
+  const [showMobileCategoryFilters, setShowMobileCategoryFilters] =
+    useState(false);
+  const [showMobileBrandFilters, setShowMobileShowBrandFilters] =
+    useState(false);
 
   return (
     <>
@@ -334,7 +366,7 @@ function MobileFilters({ state ,filter,setFilter,setShowMobileFilters,showMobile
           {state.filters.categories === undefined ? (
             <p>No category found</p>
           ) : (
-             state.filters.categories.map(({ label, value }) => {
+            state.filters.categories.map(({ label, value }) => {
               return (
                 <label
                   key={uuid()}
@@ -399,4 +431,3 @@ function MobileFilters({ state ,filter,setFilter,setShowMobileFilters,showMobile
     </>
   );
 }
-

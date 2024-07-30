@@ -15,10 +15,8 @@ export function RootPage(){
   let userDetails = null
   useEffect(()=>{
     const user = Cookies.get("loggedInUserInfo")
-    console.log({cookie : user})
     if(user){
       userDetails = JSON.parse(user)
-      console.log({userDetails})
       dispatch(setLoggedInUserState(userDetails))
     }
   
@@ -28,7 +26,6 @@ export function RootPage(){
   const wishlistItems = useSelector(selectWishlistItems);
   useEffect(()=>{
     if(userDetails){
-      console.log({wishlistItems})
       dispatch(fetchAllWishlistItemsAsync());
     }
   },[dispatch , userDetails])

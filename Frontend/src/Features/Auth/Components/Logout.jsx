@@ -1,23 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch , useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUserAsync } from "../AuthSlice";
 import { useEffect } from "react";
-import { selectLoggedInUser } from "../AuthSlice";
 
 export function Logout() {
-  console.log(useSelector(selectLoggedInUser))
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogout = async() => {
-    console.log("i am called");
-
-    await dispatch(logoutUserAsync());
-    console.log("1.............")
-      navigate('/login'); // Navigate to the login page
-    console.log("2.............")
-
-    
+  const handleLogout = async () => {
+    await dispatch(logoutUserAsync()); // used await so that it can naviagte after the dispatch is properly executed
+    navigate("/login"); // Navigate to the login page
   };
 
   useEffect(() => {
