@@ -1,9 +1,6 @@
 1. Use of validateBeforeSave ? where ? when ? and then test
-2. Add Footer
+
 3. React Spinners for loaders
-4. Navbar shows items count 
-5. optimizations like when user switches the page, prev api should stop
-6. if state has some products, then the on going back and coming again on sam epage  it should not call the api again
 7. Dark mode
 
 

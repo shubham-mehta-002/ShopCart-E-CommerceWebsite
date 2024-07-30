@@ -12,7 +12,7 @@ export function AdminOrders() {
 
   const dispatch = useDispatch()
 
-  const [showSortMenu , setShowSortMenu] = useState(true)
+  const [showSortMenu , setShowSortMenu] = useState(false)
   const sortMenuRef = useRef(null)
 
   const apiStatus = useSelector(selectAdminAPIStatus)
@@ -107,8 +107,9 @@ export function AdminOrders() {
       </div>
     </div>
 
-
+    <div className="mx-12">
     <Pagination page={page}  setPage={setPage} totalDocs={totalOrders}/>
+    </div>
     </>
   )
 }
