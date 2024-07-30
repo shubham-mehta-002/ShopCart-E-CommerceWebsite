@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require('express')
 
 process.on('uncaughtException',(error)=>{
-    console.log({error})
     console.log(error.name , error.message)
     console.log("Uncaught exception occured! Shutting down...")
     process.exit(1)  

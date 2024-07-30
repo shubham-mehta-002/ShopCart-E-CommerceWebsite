@@ -23,7 +23,6 @@ const createOrder = asyncHandler(async (req, res,next) => {
   
       if (!fetchedUser) {
         return next(new ApiError(400,"User not found"))
-        // return res.status(400).json({ success: false, message: "User not found" });
       }
   
       // Calculate total amount and total items
@@ -106,45 +105,30 @@ const createOrder = asyncHandler(async (req, res,next) => {
       })
 
       return res.status(200).json(new ApiResponse(200, "Order created successfully", newOrderId))
-      // return res.status(200).json({ success: true, message: "Order created successfully" , orderId:newOrderId });
-    // } catch (error) {
-    //   console.log({ error });
-    //   return res.status(500).json({ success: false, message: "Something went wrong", error: error.message });
-    // }
+  
   }
  )
   
 // TODO : Convert this inot sinple api in users.controller.js
 const fetchUserDetails = asyncHandler(async(req,res,next) =>{
-    // try {
         const {id:userId}= req.body.user
         const fetchedUser = await User.findById(userId).populate('address')
         if(!fetchedUser){
           return next(new ApiError(400,"User not found"))
-            // return res.status(400).json({success:false , message:"User not found"})
         }
-        // console.log({fetchedUser})
+        
         const {address , email , fullName , phoneNumber} = fetchedUser
 
         const userDetails = {address , email , fullName ,phoneNumber}
 
         return res.status(200).json(new ApiResponse(200,"User details fetched successfully", userDetails))
-        // return res.status(200).json({success:true , message:"User details fetched successfully" , data : userDetails})
-
-    // } catch (error) {
-    //     console.log({error})
-    //     return res.status(500).json({success:false , message:"Something went wrong"})
         
-    // } 
 })
 
 const fetchUserOrders = asyncHandler(async(req,res,next)=>{
-  // try{    
-    console.log(req.body)
+ 
       const {id : userId} =  req.body.user
-      // if(!userId){
-      //     res.status(400).json({success:false , message:"No id found "})
-      // }
+     
 
       const fetchedUser = await User.findById(userId).populate({
             path: 'orderHistory',
@@ -155,18 +139,12 @@ const fetchUserOrders = asyncHandler(async(req,res,next)=>{
             })
       if(! fetchedUser ){
           return next(new ApiError(400,"User not found"))
-          // res.status(400).json({success:false , message:"User not found "})
       }
 
       const orders = fetchedUser.orderHistory
 
       return res.status(200).json(new ApiResponse(200,"Orders fetched Successfully",orders))
-      // return res.status(200).json({success:true , message: "Orders fetched Successfully" , data:orders})
-
-  // }catch(error){
-  //   console.log({error})
-  //     return res.status(500).json({success:false , message:"Something went wrong "})
-  // }
+     
 })
 
 const fetchAllOrders = asyncHandler(async(req,res,next)=>{
@@ -192,12 +170,9 @@ const fetchAllOrders = asyncHandler(async(req,res,next)=>{
 )
 
 const fetchOrderById = asyncHandler(async(req,res,next)=>{
-  // try{
-    console.log(req.params)
     const {orderId} = req.params
     if(!orderId){
       return next(new ApiError(400,"Order Id not found"))
-      // return res.status(400).json({success:false , message :"Order Id not found"})
     }
 
     const order = await Order.findById(orderId).populate({
@@ -207,41 +182,28 @@ const fetchOrderById = asyncHandler(async(req,res,next)=>{
 
     if(!order){
       return next(new ApiError(400,`No Order found with OrderID ${orderId}`))
-      // return res.status(400).json({success:false , message :`No Order found with OrderID ${orderId}`})
     }
-    console.log({order})
     return res.status(200).json(new ApiResponse(200,"Order fetched successfully",order)) 
-    // return res.status(200).json({success:true , message:"Order fetched successfully" , data:order})
 
-  // }catch(error){
-  //   console.log({error})
-  //   return res.status(500).json({success:false , message :"Something went wrong" , error:error.message})
-  // }
+
 })
 
 const updateOrder = asyncHandler(async(req,res,next)=>{
   
 
     const { updatedOrderDetails } = req.body
-    console.log({updatedOrderDetails})
     const {orderId} = req.params
     if(!orderId){
       return next(new ApiError(400,"Order Id not found"))
-      // return res.status(400).json({success:false , message :"Order Id not found"})
     }
 
     const updatedOrder = await Order.findByIdAndUpdate(orderId , {...updatedOrderDetails},{new:true})
     if(!updateOrder){
       return next(new ApiError(400,`No Order found with OrderID ${orderId}`))
-      // return res.status(400).json({success:false , message:`No Order found with OrderID ${orderId}`})
     }
 
     return res.status(200).json(new ApiResponse(200,"Order Updated successfully"))
-    // return res.status(200).json({success:true , message:"Order updated successfully"})
 
-  // }catch(error){
-  //   return res.status(500).json({success:false, message:"Something went wrong", error:error.message})
-  // }
 })
 module.exports = {
     createOrder , 

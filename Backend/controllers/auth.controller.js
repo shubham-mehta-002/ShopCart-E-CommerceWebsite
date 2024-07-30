@@ -75,9 +75,6 @@ const loginUser = asyncHandler(async(req,res,next)=>{
     const {accessToken, refreshToken} = await generateAccessAndRefreshTokens(user._id)
 
     const loggedInUser = await User.findById(user._id).select("role _id")
-
-    console.log( JSON.stringify({role:loggedInUser.role , userId: loggedInUser._id}))
-
     return res
         .status(200)
         .cookie("accessToken",accessToken, {httpOnly:true ,secure:true ,maxAge:process.env.ACCESS_TOKEN_EXPIRY }) 
@@ -133,7 +130,6 @@ const resetPasswordRequest =  asyncHandler(async(req,res,next)=>{
 
         const subject = "Reset password Request"
         const resetPageLink = `${BASE_URL}/reset-password?token=${token}&email=${email}`
-        console.log({resetPageLink})
         const html= `<p>Click <a href='${resetPageLink}'>here</a> to reset password</p>
                     <p>Donot share this mail/reset passwork link to anyone `
         await sendMail({

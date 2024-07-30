@@ -9,21 +9,16 @@ const verifyJWT = async (req, res, next) => {
     try {
         
         const { accessToken , refreshToken } = req.cookies;
-        console.log({refreshToken, accessToken})
         if((!refreshToken)){
             return next(new ApiError(401, "Unauthorized"))
         }
-        console.log("I am here");
         if (accessToken) {
             jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, (error, decoded) => {
                 if (error) {
-                    console.log({ error: error.message });
                     return renewTokens(req, res, next); // Pass next to renewTokens
                 } else {
                     const { userId } = decoded;
-                    console.log({userId})
-                    console.log("All good");
-                    console.log(req.body)
+                    
                     req.body.user = { id: userId };
                     next();
                 }
@@ -40,15 +35,12 @@ const verifyJWT = async (req, res, next) => {
 const verifyAdminJWT = async (req, res, next) => {
     try {
         const { accessToken , refreshToken } = req.cookies;
-        console.log({refreshToken, accessToken})
         if((!refreshToken)){
             return next(new ApiError(401, "Unauthorized"))
         }
-        console.log("I am here");
         if (accessToken) {
             jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, (error, decoded) => {
                 if (error) {
-                    console.log({ error: error.message });
                     return renewTokens(req, res, next); // Pass next to renewTokens
                 } else {
                     const { userId ,role} = decoded;

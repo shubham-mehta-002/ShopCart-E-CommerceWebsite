@@ -16,29 +16,20 @@ const seedData = async () => {
 };
 
 const updateProduct = asyncHandler(async(req,res,next)=>{
-  // try {
-    // console.log('id',req.params)
+
     const { productId } = req.params;
     if(!productId){
       return next(new ApiError(400,"Product Id not passed"))
     }
-    console.log({productId})
     const {fieldsToBeUpdated} = req.body
     if(!fieldsToBeUpdated){
       return next(new ApiError(400,"No fields found"))
     }
 
-    console.log({productId,fieldsToBeUpdated})
-  
     const productToBeUpdated = await Product.findByIdAndUpdate(productId, {...fieldsToBeUpdated} , {new:true})
-    console.log({productToBeUpdated})
 
     return res.status(200).json(new ApiResponse(200,"Updated Successfully"))
-    // return res.status(200).json({success:true , message:"Updated Successfully"})
-  // } catch (error) {
-  //   console.log({error})
-  //   return res.status(500).json({success:false , message :"Something went wrong", error:error.message})
-  // }
+   
   
 })
 
@@ -51,15 +42,12 @@ const fetchProductById = asyncHandler(async (req, res,next) => {
     const product = await Product.findOne({ _id: productId });
 
     return res.status(200).json(new ApiResponse(200,"Fetched successfully", product))
-    // return res.status(200).json({ success: true, data: product });
   
     
 });
 
 const fetchAllProducts = asyncHandler(async (req, res,next) => {
-  // try {
-    console.log(req.query);
-    
+      
     let query = Product.find();
     let totalProductsQuery = Product.find();
 
@@ -87,7 +75,6 @@ const fetchAllProducts = asyncHandler(async (req, res,next) => {
     }
 
     const sortField = req.query._sort;
-    console.log({ sortField });
     const sortOrder = parseInt(req.query._order, 10) || 1;
 
     // Regular sorting by the specified field
@@ -105,36 +92,21 @@ const fetchAllProducts = asyncHandler(async (req, res,next) => {
     const totalDocs = await totalProductsQuery.countDocuments();
     const products = await query.exec();
 
-    // console.log({ products, totalDocs });
 
     return res.status(200).json(new ApiResponse(200,"Fetched successfully", { totalProducts: totalDocs, products }))
-    // return res
-    //   .status(200)
-      // .json({ success: true, data: { totalProducts: totalDocs, products } });
-  // } catch (err) {
-  //   console.log({ err });
-  //   return res.status(500).json({ success: false, message: err.message });
-  // }
+   
 })
 
 const createProduct = asyncHandler(async(req,res,next)=>{
-  // try{
     const {product} = req.body
     if(!product){
       return next(new ApiError(400,"Product details not passed"))
     }
-    // if(!title || ! ....)
-    console.log({product})
 
     const newProduct = await Product.create({...product})
-    console.log({newProduct})
 
     return res.status(200).json(new ApiResponse(200,"Added successfully"))
-    // return res.status(200).json({success:true , message: "Added successfully" })
-
-  // }catch(error){
-  //   return res.status(500).json({success:false , message:"Something went wrong" , error:error.message})
-  // }
+   
 })
 
 module.exports = {

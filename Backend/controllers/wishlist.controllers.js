@@ -10,7 +10,6 @@ const wishlistItems = asyncHandler(async (req, res) => {
     path: "wishlist",
     select: "thumbnail quantity price title description discountPercentage",
   });
-  console.log({ userId, wishlist });
   return res
     .status(200)
     .json(
@@ -49,18 +48,15 @@ const removeFromWishlist = asyncHandler(async (req, res, next) => {
   const { id: userId } = req.body.user;
   const { productId } = req.body;
 
-  console.log({ productId });
 
   const fetchedUser = await User.findById(userId).select("wishlist");
   if (!fetchedUser.wishlist) {
     return next(new ApiError(400, "Couldn't fetch wishlist"));
   }
 
-  console.log(fetchedUser.wishlist);
   const isAlreadyAdded = fetchedUser.wishlist.find(
     (itemId) => itemId.toString() === productId.toString()
   );
-  console.log({ isAlreadyAdded });
   if (!isAlreadyAdded) {
     return next(new ApiError(409, "Product not found in wishlist!"));
   }

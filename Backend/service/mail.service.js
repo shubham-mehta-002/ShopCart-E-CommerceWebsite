@@ -14,7 +14,6 @@ const transporter = nodemailer.createTransport({
 
 const sendMail = async ({to , subject , text, html }) => {
   try {
-    console.log({to , subject , text, html })
     const mailOptions = {
       from: {
         name: "Ecommerce App",
@@ -28,13 +27,12 @@ const sendMail = async ({to , subject , text, html }) => {
 
     await transporter.sendMail(mailOptions);
   } catch (error) {
+    console.log("error while sending mail", { error });
     throw error
-    console.log("error", { error });
   }
 };
 
 const createInvoiceMessage = ({order,orderId}) =>{
-  console.log({order}  ,{orderItems  : order.items})
   return (`<!DOCTYPE html>
     <html>
     <head>

@@ -13,7 +13,7 @@ const {
   updateOrder,
 } = require("../controllers/order.controller");
 
-// router.use(verifyJWT);
+
 
 // TODO :  remove it
 router.get("/", fetchUserDetails);

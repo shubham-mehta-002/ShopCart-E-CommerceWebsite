@@ -17,8 +17,7 @@
 
 
 STEPS : 
---> remove j: complexity 
---> profilemenu when clicked outside should get closed
+
 --> Navbar shows items count 
 --> PAYMENT GATEWAY ADD AND UNDERSTAND WEBHOOK CONCEPT
 -->(optional) ADD PRICE FILTER ALSO
@@ -26,6 +25,5 @@ STEPS :
 --> test every functionality if working , any bug to be fixed
 --> check in mobile view also
 --> test admin routes also
-
+--> remove strictMode
 --> clean backned and understand the code [errorHandlers,Use of validateBeforeSave ? where ? when ? and then test,...]
---> clean frontend  -----><------

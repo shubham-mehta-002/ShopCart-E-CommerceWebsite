@@ -3,7 +3,6 @@ const pagination = (model) =>{
         try{
             const page = parseInt(req.query.page) || 1
             const limit = parseInt(req.query.limit) || 10
-            // console.log({req:req.query})
             const startIndex = ( page-1 )*limit
             const endIndex = page*limit
 
@@ -25,7 +24,6 @@ const pagination = (model) =>{
 
             results.results = await model.find().skip(startIndex).limit(limit)
             results.totalCount = await model.countDocuments()
-            // console.log({results:results.results.length})
             req.paginatedResult = results
             next()
         }catch(err){
