@@ -10,7 +10,7 @@ import { selectCartState } from "./CartSlice";
 export function Cart() {
   const dispatch = useDispatch();
   const state = useSelector(selectCartState);
-
+  
   useEffect(() => {
     dispatch(fetchAllCartItemsAsync());
   }, []);
@@ -70,15 +70,17 @@ export function Cart() {
           </div>
 
           {/* checkout    */}
+          <div className="mt-2 flex justify-end">
           <Link to="/checkout">
-            <CheckoutButton className="w-[50%]" />
+            <CheckoutButton/>
           </Link>
-          <div className="flex items-center justify-center">
-            <span className=" text-center text-sm text-gray-500  hover:cursor-pointer">
-              or
+          </div>
+          <div className="mt-4 flex items-center justify-center">
+            <span className=" text-center text-lg text-gray-500">
+              or 
             </span>
 
-            <span className=" font-semibold text-center text-sm text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
+            <span className=" font-semibold text-center text-lg text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
               <Link to="/products">Continue Shopping</Link>
             </span>
           </div>

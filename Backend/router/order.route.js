@@ -16,7 +16,7 @@ const {
 
 
 // TODO :  remove it
-router.get("/", fetchUserDetails);
+router.get("/", verifyJWT,fetchUserDetails);
 
 router.post("/create",verifyJWT, createOrder);
 router.get("/my", verifyJWT,fetchUserOrders);

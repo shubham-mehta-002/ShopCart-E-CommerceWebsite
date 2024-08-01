@@ -26,6 +26,7 @@ app.use(cors({
 }))
 
 app.use(cookieParser())
+app.use(express.json());
 
 connectWithDB()
 .then(res => console.log("Successfully connected with database"))
@@ -33,6 +34,7 @@ connectWithDB()
 app.get('/',(req,res)=>{
     res.send("This is home page")
 })
+
 
 
 // import routes

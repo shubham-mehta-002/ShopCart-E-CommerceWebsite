@@ -4,11 +4,14 @@ import {fetchAllOrdersAsync , selectAllOrders ,selectTotalOrders ,selectAdminAPI
 import { AdminOrderTile } from "./AdminOrderTile"
 import { MdKeyboardArrowDown } from "react-icons/md";
 import {Pagination} from "../../Common/Pagination"
+import {Loader} from "../../../utils/Loader"
+
 
 export function AdminOrders() {
   const orders = useSelector(selectAllOrders)
   const totalOrders = useSelector(selectTotalOrders)
-
+  const fetchOrdersStatus = useSelector(selectAdminAPIStatus)
+  console.log({fetchOrdersStatus})
 
   const dispatch = useDispatch()
 
@@ -98,6 +101,8 @@ export function AdminOrders() {
       <div className="text-lg font-semibold flex items-center justify-center w-[30%]">Shipping Details</div>
       <div className="text-lg font-semibold flex items-center justify-center w-[10%]">Actions</div>
     </div>
+      {fetchOrdersStatus==="loading" && <Loader/>}
+      
       {
         apiStatus==="loading" ? <p w-full text-center mt-10 text-4xl font-semibold>Loading</p> : 
         !orders || orders?.length === 0 ? <p className="w-full text-center mt-10 text-4xl font-semibold">No orders found</p> 

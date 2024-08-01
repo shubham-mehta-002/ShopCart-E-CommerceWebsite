@@ -21,7 +21,7 @@ export const OrderSuccessPage = () =>{
             </div>
 
             <div className="mx-auto text-slate-800 text-center ">
-                You can check order in My Account &gt; My Orders
+                You can check order in Profile &gt; My Orders
             </div>
 
             

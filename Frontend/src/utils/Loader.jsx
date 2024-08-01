@@ -5,8 +5,8 @@ export function Loader() {
     <div className="h-full w-full flex items-center justify-center">
       <Oval
         visible={true}
-        height="80"
-        width="80"
+        height="60"
+        width="60"
         color="#4fa94d"
         ariaLabel="oval-loading"
         wrapperStyle={{}}

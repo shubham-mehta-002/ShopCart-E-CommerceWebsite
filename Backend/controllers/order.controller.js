@@ -104,7 +104,7 @@ const createOrder = asyncHandler(async (req, res,next) => {
         text
       })
 
-      return res.status(200).json(new ApiResponse(200, "Order created successfully", newOrderId))
+      return res.status(200).json(new ApiResponse(200, "Order created successfully", {newOrderId,orderItems:order.items}))
   
   }
  )
@@ -205,6 +205,7 @@ const updateOrder = asyncHandler(async(req,res,next)=>{
     return res.status(200).json(new ApiResponse(200,"Order Updated successfully"))
 
 })
+
 module.exports = {
     createOrder , 
     fetchUserDetails,

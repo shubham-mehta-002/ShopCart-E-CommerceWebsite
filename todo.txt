@@ -1,5 +1,4 @@
 1. Use of validateBeforeSave ? where ? when ? and then test
-
 3. React Spinners for loaders
 7. Dark mode
 
@@ -24,3 +23,18 @@ STEPS :
 --> test admin routes also
 --> remove strictMode
 --> clean backned and understand the code [errorHandlers,Use of validateBeforeSave ? where ? when ? and then test,...]
+
+
+/// most important 
+
+--> 3 apis separate
+--> payment GATEWAY
+
+
+
+-> create orderList slice set 
+--> then iin checkout slice form 
+
+
+
+--> SHOPMART

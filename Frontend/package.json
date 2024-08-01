@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^4.1.0",
     "axios": "^1.7.2",
     "cloudinary": "^2.3.1",
     "js-cookie": "^3.0.5",

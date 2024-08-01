@@ -46,7 +46,7 @@ export const addUserAddressAsync = createAsyncThunk(
 
 export const createOrderAsync = createAsyncThunk(
   "order/createOrder",
-  async ({ orderDetails }) => {
+  async ({ orderDetails , orderItems}) => {
     try {
       const response = await createOrder(orderDetails);
       return { data: response.data, orderDetails };
@@ -109,11 +109,13 @@ const orderSlice = createSlice({
       .addCase(createOrderAsync.pending, (state) => {
         state.status = "loading";
         state.isOrderPlaced = false;
+        state.ordersList = null
       })
       .addCase(createOrderAsync.fulfilled, (state, action) => {
-        state.status = "idle";
-        state.currentOrder.orderId = action.payload.data.data;
+        state.currentOrder.orderId = action.payload.data.data.newOrderId;
+        state.ordersList = action.payload.data.data.orderItems
         state.currentOrder.isOrderPlaced = true;
+        state.status = "idle";
       })
       .addCase(createOrderAsync.rejected, (state, action) => {
         state.status = "idle";
@@ -137,6 +139,7 @@ const orderSlice = createSlice({
 export const selectCurrentOrderDetails = (state) => state.order.currentOrder;
 export const selectOrdersList = (state) => state.order.ordersList;
 export const selectOrderPlacedStatus = (state) => state.order.status;
+
 
 export const { resetCurrentOrderStatus } = orderSlice.actions;
 export default orderSlice.reducer;

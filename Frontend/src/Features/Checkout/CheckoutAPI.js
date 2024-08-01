@@ -48,7 +48,6 @@ export const addUserAddress = (addressDetails)=>{
 
 
 export const createOrder = (orderDetails)=>{
-    console.log("order create ho rha hai babyo ",orderDetails)
     return new Promise(async(resolve,reject)=>{
         try{
             const response = await axios.post(`${BASE_URL}/orders/create`,{

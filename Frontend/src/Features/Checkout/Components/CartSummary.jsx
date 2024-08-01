@@ -16,8 +16,10 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
   const dispatch = useDispatch();
   const cartState = useSelector(selectCartState);
   const orderStatus = useSelector(selectOrderPlacedStatus);
-
+  // console.log({orderStatus})
   const { orderId, isOrderPlaced } = useSelector(selectCurrentOrderDetails);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchAllCartItemsAsync());
@@ -86,18 +88,21 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
       email,
       fullName,
       phoneNumber,
-
-      // Other order details
     };
 
-    dispatch(createOrderAsync({ orderDetails }));
+
+    if(paymentMethod.toLowerCase() === "cash"){
+      dispatch(createOrderAsync({ orderDetails }))
+    }else if(paymentMethod.toLowerCase() === "card"){
+      dispatch(createOrderAsync({ orderDetails }))
+    }
   }
 
-  const navigate = useNavigate();
 
   return (
     <>
       {isOrderPlaced && navigate(`/order-success/${orderId}`)}
+      
       <div className="wrapper w-full sm:w-[90%] p-3 sm:p-10 box-border mx-auto my-10 bg-white flex flex-col gap-4">
         <div className="header text-5xl font-bold">Cart</div>
 

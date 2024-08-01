@@ -6,7 +6,7 @@ import {AddToCartButton } from '../../Common/Buttons/AddToCartButton'
 import {AddToWishlistButton } from '../../Common/Buttons/AddToWishlistButton'
 import {useState , useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import {addItemToCartAsync} from '../../Cart/CartSlice'
+import {addItemToCartAsync , selectCartStatus} from '../../Cart/CartSlice'
 import {useParams} from 'react-router-dom'
 import { selectLoggedInUser } from "../../Auth/AuthSlice";
 import {selectWishlistItems ,removeFromWishlistAsync,addToWishlistAsync} from "../../Wishlist/WishlistSlice";
@@ -18,6 +18,7 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
   
   const dispatch = useDispatch()
   const user = useSelector(selectLoggedInUser)
+  const addToCartStatus = useSelector(selectCartStatus)
 
   // check if product is in wishlist 
   let wishlistItems=null
@@ -142,7 +143,8 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
           {!user || user?.role !== "admin" && 
           <>
           <div className="mt-10 button-wrapper flex flex-wrap flex-row gap-4">
-            <div  onClick={addToCartHandler}>{stock>0 && <AddToCartButton/>}</div>
+            <div   
+              onClick={addToCartHandler}>{stock>0 && <AddToCartButton message={addToCartStatus==="loading" ? "Adding to Cart" : "Add to Cart"}/>}</div>
             <div onClick={addOrRemoveFromWishlistHandler}><AddToWishlistButton message={isProductInWishlist ? "Remove From Wishlist" : "Add To Wishlist"} /></div>
           </div>
           <span className="text-red-500" >Max Quantity allowed per variation: 5 </span>
