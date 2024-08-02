@@ -28,12 +28,8 @@ STEPS :
 /// most important 
 
 --> 3 apis separate
---> payment GATEWAY
-
-
-
--> create orderList slice set 
---> then iin checkout slice form 
+--> user id convert to token
+--> re qrite product card and verifyy jwt tokens
 
 
 

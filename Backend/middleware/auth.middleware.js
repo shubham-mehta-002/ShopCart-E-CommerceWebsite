@@ -3,22 +3,22 @@ const { generateAccessAndRefreshTokens } = require('../controllers/auth.controll
 const User = require('../models/user.model');
 const { ApiError} =  require("../utils/ApiError")
 
-// TODO : Check if client refreshTk is same as that in backend , then only refresh otherwise return error
-
 const verifyJWT = async (req, res, next) => {
     try {
-        
         const { accessToken , refreshToken } = req.cookies;
         if((!refreshToken)){
             return next(new ApiError(401, "Unauthorized"))
         }
         if (accessToken) {
-            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, (error, decoded) => {
+            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async(error, decoded) => {
                 if (error) {
-                    return renewTokens(req, res, next); // Pass next to renewTokens
+                    return next(new ApiError(401, "Something went wrong"))
                 } else {
                     const { userId } = decoded;
-                    
+                    const fetchedUser = await User.findById(userId).select("refreshToken")
+                    if(fetchedUser.refreshToken !== refreshToken ){
+                        return new ApiError(401, "Unauthorized")
+                    }
                     req.body.user = { id: userId };
                     next();
                 }
@@ -32,6 +32,8 @@ const verifyJWT = async (req, res, next) => {
     }
 };
 
+
+
 const verifyAdminJWT = async (req, res, next) => {
     try {
         const { accessToken , refreshToken } = req.cookies;
@@ -39,13 +41,17 @@ const verifyAdminJWT = async (req, res, next) => {
             return next(new ApiError(401, "Unauthorized"))
         }
         if (accessToken) {
-            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, (error, decoded) => {
+            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async(error, decoded) => {
                 if (error) {
-                    return renewTokens(req, res, next); // Pass next to renewTokens
+                    return next(new ApiError(401, "Something went wrong"))
                 } else {
                     const { userId ,role} = decoded;
                     if(role!=="admin"){
                         return next(new ApiError(401, "Unauthorized"))
+                    }
+                    const fetchedUser = await User.findById(userId).select("refreshToken")
+                    if(fetchedUser.refreshToken !== refreshToken ){
+                        return new ApiError(401, "Unauthorized")
                     }
                     req.body.user = { id: userId };
                     next();

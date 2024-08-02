@@ -128,8 +128,7 @@ const fetchUserDetails = asyncHandler(async(req,res,next) =>{
 const fetchUserOrders = asyncHandler(async(req,res,next)=>{
  
       const {id : userId} =  req.body.user
-     
-
+      
       const fetchedUser = await User.findById(userId).populate({
             path: 'orderHistory',
             populate: {

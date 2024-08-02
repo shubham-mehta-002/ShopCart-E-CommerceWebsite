@@ -5,7 +5,7 @@ const {sendMail} = require('../service/mail.service')
 const {BASE_URL} = require('../constants')
 const crypto = require('crypto')
 const {asyncHandler} = require("../utils/asyncHandler")
-
+const jwt = require("jsonwebtoken");
 
 const generateAccessAndRefreshTokens = async(userId)=>{
     try{

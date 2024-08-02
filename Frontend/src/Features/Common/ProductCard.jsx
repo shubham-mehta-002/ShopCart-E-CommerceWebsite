@@ -11,7 +11,6 @@ import {
 
 export function ProductCard({
   _id,
-  className,
   thumbnail,
   title,
   brand,
@@ -68,20 +67,25 @@ export function ProductCard({
     }
   }
 
+  function clickHandler(){
+    navigate(`/products/${_id}`)
+  }
+
   return (
     <div
-      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border ${className} flex flex-col justify-between h-full `}
+      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border flex flex-col justify-between  w-[40vw] md:w-72 `}
     >
-      <div className="content-wrapper flex flex-col my-1 h-[80%] justify-between">
+      <div className="content-wrapper flex flex-col my-1 h-[250px] justify-between">
         <div className="image-wrapper h-[70%]">
           <img
+            onClick={clickHandler}
             src={thumbnail}
             alt={title}
-            className="h-full w-full rounded-md bg-[#ccced2] hover:bg-[#CDD1D7]"
+            className="hover:cursor-pointer h-full w-full rounded-md bg-[#ccced2] hover:bg-[#CDD1D7]"
           />
         </div>
 
-        <div className="product-details h-[18%] flex flex-row">
+        <div className="product-details h-[100px] flex flex-row">
           <div className="details w-[85%]">
             <div className="brand text-md font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
               {brand}
@@ -109,7 +113,7 @@ export function ProductCard({
           )}
         </div>
 
-        <div className="price h-[7%] whitespace-nowrap overflow-hidden text-ellipsis">
+        <div className="price h-[50px] whitespace-nowrap overflow-hidden text-ellipsis">
           <span className="text-sm font-bold">
             ${Math.floor(((100 - discountPercentage) / 100) * price)}
           </span>
@@ -155,4 +159,7 @@ export function ProductCard({
       )}
     </div>
   );
+
+
+
 }

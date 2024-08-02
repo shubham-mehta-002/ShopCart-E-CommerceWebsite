@@ -17,7 +17,9 @@ export function Navbar({ searchParameter, setSearchParameter }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const { role } = useSelector(selectLoggedInUser);
+  const user = useSelector(selectLoggedInUser);
+  const { role } = user
+  console.log({user})
 
   let directLinks = [];
   if (role === "admin") {
@@ -43,13 +45,13 @@ export function Navbar({ searchParameter, setSearchParameter }) {
     profileOptions = [
       { name: "My Profile", link: "/myProfile" },
       { name: "Orders", link: "admin/orders" },
-      { name: "Logout", link: "/logout" },
+      { name: user.userId ? "Logout" : "Login", link: user.userId ? "/logout" : "/login" },
     ];
   } else {
     profileOptions = [
       { name: "My Profile", link: "/myProfile" },
       { name: "My Orders", link: "/myOrders" },
-      { name: "Logout", link: "/logout" },
+      { name: user.userId ? "Logout" : "Login", link: user.userId ? "/logout" : "/login" },
     ];
   }
 

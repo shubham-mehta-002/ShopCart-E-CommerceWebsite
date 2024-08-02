@@ -159,7 +159,7 @@ export function ProductList() {
         <div className="wrapper w-[100%] lg:w-[70%]">
           {user && user.role === "admin" && (
             <button
-              className="hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-2 mb-2 "
+              className="hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-2 mb-2"
               onClick={addProductHandler}
             >
               Add Product
@@ -179,15 +179,14 @@ export function ProductList() {
               No product found{" "}
             </div>
           ) : (
-            <div className="products-container w-full  grid grid-cols-1 vsm:grid-cols-2 xl:grid-cols-3 gap-y-5 gap-x-0 ">
+            <div className="products-container w-full flex flex-wrap gap-4 justify-evenly">
               {state.products?.map((product) => (
-                <Link to={`/products/${product._id}`}>
+                // <Link to={`/products/${product._id}`}>
                   <ProductCard
                     key={product.id}
                     {...product}
-                    className="h-[300px] sm:h-[340px] sm:w-72 "
                   />
-                </Link>
+                // </Link>
               ))}
             </div>
           )}
