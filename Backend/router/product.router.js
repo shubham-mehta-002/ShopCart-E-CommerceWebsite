@@ -8,7 +8,7 @@ const {verifyJWT , verifyAdminJWT} =  require("../middleware/auth.middleware")
 
 
 
-router.post('/',fetchAllProducts)
+router.get('/',fetchAllProducts)
 router.get('/:productId',fetchProductById)
 router.post('/update/:productId',verifyAdminJWT,updateProduct)
 

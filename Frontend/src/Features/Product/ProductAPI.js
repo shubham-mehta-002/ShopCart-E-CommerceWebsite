@@ -31,7 +31,7 @@ export function fetchAllProducts({ filter, sort, page, searchParameter }) {
 
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.post(`${BASE_URL}/products?${queryString}`, {
+      const response = await axios.get(`${BASE_URL}/products?${queryString}`, {
         search: searchParameter,
       });
       resolve(response.data.data);

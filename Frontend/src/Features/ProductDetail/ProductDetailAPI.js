@@ -40,7 +40,7 @@ export function updateProduct(_id, fieldsToBeUpdated) {
     } catch (error) {
       console.log({ error });
 
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
       } else {
         errorMessageToastNotificaton();
