@@ -65,12 +65,13 @@ const fetchAllProducts = asyncHandler(async (req, res,next) => {
       });
     }
     
-    if (req.body.search?.trim() !== "") {
+    const search = req.body.search ? req.body.search : " "
+      if (req.body.search?.trim() !== "") {
       query = query.find({
-        title: { $regex: ".*" + req.body.search + ".*", $options: "i" },
+        title: { $regex: ".*" + search + ".*", $options: "i" },
       });
       totalProductsQuery = totalProductsQuery.find({
-        title: { $regex: ".*" + req.body.search + ".*", $options: "i" },
+        title: { $regex: ".*" + search + ".*", $options: "i" },
       });
     }
 
