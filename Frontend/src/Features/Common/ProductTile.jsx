@@ -5,6 +5,7 @@ import {
   removeCartItemAsync,
 } from "../Cart/CartSlice";
 
+
 export function ProductTile({ color, colorCode, product, quantity, size }) {
   const { _id, thumbnail, price, title, description, discountPercentage } =
     product;
@@ -59,7 +60,13 @@ export function ProductTile({ color, colorCode, product, quantity, size }) {
         {/* details */}
         <div className="details w-[calc(100%-100px)] flex flex-col gap-1 ml-3">
           <div className="flex flex-row justify-between">
-            <span>{title}</span>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 ">
+              <span>{title} </span>
+              <div className="h-[20px] w-[20px] rounded-full" style={{"backgroundColor" : `${colorCode}`}}> 
+              </div>
+              <span className="font-semibold">{size}</span>
+            </div>
+            <div className="h"></div>
             <span>
               ${Math.floor(((100 - discountPercentage) / 100) * price)}
             </span>

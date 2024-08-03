@@ -10,6 +10,7 @@ import {addItemToCartAsync , selectCartStatus} from '../../Cart/CartSlice'
 import {useParams} from 'react-router-dom'
 import { selectLoggedInUser } from "../../Auth/AuthSlice";
 import {selectWishlistItems ,removeFromWishlistAsync,addToWishlistAsync} from "../../Wishlist/WishlistSlice";
+import { useNavigate } from "react-router-dom";
 
 
 export function ProductInfoSection({_id,title,brand,description,stock,rating,price,discountPercentage,variations}) {
@@ -19,6 +20,7 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
   const dispatch = useDispatch()
   const user = useSelector(selectLoggedInUser)
   const addToCartStatus = useSelector(selectCartStatus)
+  const navigate = useNavigate()
 
   // check if product is in wishlist 
   let wishlistItems=null
@@ -38,9 +40,9 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
   
   function addOrRemoveFromWishlistHandler(){
     if(isProductInWishlist){
-      dispatch(removeFromWishlistAsync({productId : _id}))
+      dispatch(removeFromWishlistAsync({productId : _id , navigate }))
   }else{
-      dispatch(addToWishlistAsync({productId : _id}))
+      dispatch(addToWishlistAsync({productId : _id , navigate}))
   }
   }
 
@@ -64,13 +66,13 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
       quantity : 1 //by default 
     }
   
-    dispatch(addItemToCartAsync({productDetails}))
+    dispatch(addItemToCartAsync({productDetails,navigate}))
 
   }
 
   return (
     <>
-        <div className="details-container w-full  box-border px-8 md:pt-5 md:px-3  ">
+        <div className="flex flex-col justify-end details-container w-full lg:w-[calc(100%-600px)] box-border px-8 md:pt-5 md:px-3  ">
           <div className="title font-semibold text-2xl">
             {title} by{" "}
             <span className="uppercase">{brand}</span>
@@ -84,7 +86,7 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
               <FaStarHalfAlt className=" text-[#6366F1] h-5 w-5 inline-block" />
             </span>
           </div>
-          <hr className="my-5 border-1 border-slate-400" />
+          
 
           <PriceDetail
             discountPercentage={discountPercentage}
@@ -142,10 +144,19 @@ export function ProductInfoSection({_id,title,brand,description,stock,rating,pri
 
           {!user || user?.role !== "admin" && 
           <>
-          <div className="mt-10 button-wrapper flex flex-wrap flex-row gap-4">
+          <div className="mt-10 button-wrapper flex flex-wrap flex-col  gap-4">
             <div   
-              onClick={addToCartHandler}>{stock>0 && <AddToCartButton message={addToCartStatus==="loading" ? "Adding to Cart" : "Add to Cart"}/>}</div>
-            <div onClick={addOrRemoveFromWishlistHandler}><AddToWishlistButton message={isProductInWishlist ? "Remove From Wishlist" : "Add To Wishlist"} /></div>
+              onClick={addToCartHandler}
+              className="max-w-[400px]"
+              >
+                {stock>0 && <AddToCartButton message={addToCartStatus==="loading" ? "Adding to Cart" : "Add to Cart"}/>}
+            </div>
+            <div 
+              onClick={addOrRemoveFromWishlistHandler}
+              className="max-w-[400px]"
+              >
+                <AddToWishlistButton message={isProductInWishlist ? "Remove From Wishlist" : "Add To Wishlist"} />
+            </div>
           </div>
           <span className="text-red-500" >Max Quantity allowed per variation: 5 </span>
           </>

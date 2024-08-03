@@ -48,6 +48,8 @@ export function AdminOrders() {
     }
   },[])
 
+  console.log({orders})
+
   return (
     <>
     

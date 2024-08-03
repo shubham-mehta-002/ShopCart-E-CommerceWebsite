@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export function OrderTile({ order }) {
+    console.log({order})
   return (
     <>
       <div className="order-item-wrapper flex flex-col gap-5 box-border sm:mx-6 xl:mx-20 my-5 ">

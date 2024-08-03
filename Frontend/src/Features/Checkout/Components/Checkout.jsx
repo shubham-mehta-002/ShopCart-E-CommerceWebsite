@@ -353,7 +353,7 @@ export function Checkout() {
                     />
                     <div className="ml-3">
                       <div className="text-md font-medium">
-                        {address.streetAddress}
+                        {address.street}
                       </div>
                       <div>
                         {address.city}, {address.state}

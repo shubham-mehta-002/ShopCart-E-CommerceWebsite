@@ -34,6 +34,7 @@ export function ProductList() {
   const state = useSelector(selectProductState);
   const searchParameter = useSelector(selectSearchParameters);
   const user = useSelector(selectLoggedInUser);
+
   const {role} = user 
 
   const sortOptions = [
@@ -63,13 +64,14 @@ export function ProductList() {
   // fetching products using debouncing
   useEffect(() => {
     const timeOut = setTimeout(() => {
+ 
       dispatch(fetchAllProductsAsync({ filter, page, sort, searchParameter ,role}));
     }, 500);
 
     return () => {
       clearTimeout(timeOut);
     };
-  }, [filter, page, sort, searchParameter]);
+  }, [filter, page, sort, searchParameter,role]);
 
   // fetching brands and categories
   useEffect(() => {
@@ -180,14 +182,12 @@ export function ProductList() {
               No product found{" "}
             </div>
           ) : (
-            <div className="products-container w-full flex flex-wrap gap-4 justify-evenly">
+            <div className="products-container w-full flex flex-wrap sm:gap-4 justify-evenly">
               {state.products?.map((product) => (
-                // <Link to={`/products/${product._id}`}>
                   <ProductCard
                     key={product.id}
                     {...product}
                   />
-                // </Link>
               ))}
             </div>
           )}

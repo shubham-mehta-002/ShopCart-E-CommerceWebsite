@@ -23,7 +23,7 @@ export const fetchAllWishlistItems = () => {
   });
 };
 
-export const addToWishlist = (productId) => {
+export const addToWishlist = (productId,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -40,7 +40,8 @@ export const addToWishlist = (productId) => {
     } catch (error) {
       console.log({error})
       if (error.response.data?.statusCode === 401) {
-        errorMessageToastNotificaton("Unauthorized");
+        errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
       } else if (error.response.data?.statusCode === 409) {
         errorMessageToastNotificaton("Already in Wishlist");
       } else {
@@ -51,7 +52,7 @@ export const addToWishlist = (productId) => {
   });
 };
 
-export const removeFromWishlist = (productId) => {
+export const removeFromWishlist = (productId,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -67,7 +68,8 @@ export const removeFromWishlist = (productId) => {
       resolve(response.data);
     } catch (error) {
       if (error.response.data.error.statusCode === 401) {
-        errorMessageToastNotificaton("Unauthorized");
+        errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }

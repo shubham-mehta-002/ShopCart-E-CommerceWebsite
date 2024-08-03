@@ -12,9 +12,9 @@ export function ProductImageSection({ images }) {
 
   return (
     <>
-      <div className="images-container items-center justify-center w-full sm:w-[600px] md:w-[500px] xl:w-[50%] flex flex-col sm:flex-row sm:gap-2 mx-auto">
+      <div className="images-container items-center sm:justify-center w-full sm:w-[600px] md:w-[500px] xl:w-[50%] flex flex-col sm:flex-row sm:gap-2 mx-auto">
         {/* Main image */}
-        <div className="main-image-container mx-auto my-3 px-3 sm:my-0 h-[300px] w-[75vw]  sm:h-[500px] sm:w-[500px] sm:block flex items justify-center box-border sm:p-10">
+        <div className="main-image-container mx-auto my-3 px-3 sm:my-0 h-[250px] w-[75vw]  sm:h-[500px] sm:w-[500px] sm:block flex items justify-center box-border sm:p-10">
           <img
             className={`main-image h-full w-full rounded-sm`}
             src={images[mainImageIndex]}
@@ -31,7 +31,7 @@ export function ProductImageSection({ images }) {
                 key={uuid()}
                 onClick={() => handleImageClick(index)}
                 src={images[index]}
-                className={`h-[150px] w-[80%]  cursor-pointer rounded-md border-2 border-blue-200`}
+                className={`h-[140px] w-[80%]  cursor-pointer rounded-md border-2 border-blue-200`}
                 alt={`product-image-${index + 1}`}
               ></img>
             ))}

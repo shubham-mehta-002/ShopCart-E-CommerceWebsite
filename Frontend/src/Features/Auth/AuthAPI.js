@@ -138,7 +138,10 @@ export function resetPasswordRequest(email) {
       resolve(response.data);
     } catch (error) {
       console.log("error during generating password reset request ", { error });
-      errorMessageToastNotificaton("Something went wrong ");
+      if(error.response.data.statusCode === 400){
+        errorMessageToastNotificaton("User not found");
+      }else{
+      errorMessageToastNotificaton();}
     }
   });
 }

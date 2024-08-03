@@ -118,7 +118,6 @@ const resetPasswordRequest =  asyncHandler(async(req,res,next)=>{
         if(!email){
             return next(new ApiError(400,"Email is required"))
         }
-        
         const fetchedUser = await User.findOne({email})
         if(!fetchedUser){
             return next(new ApiError(400,"User not found"))

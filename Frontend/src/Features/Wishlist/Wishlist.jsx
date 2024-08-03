@@ -38,7 +38,7 @@ export function Wishlist() {
             </div>
           </>
         ) : (
-          <div className="md:mx-16 products-container w-full grid grid-cols-1 vsm:grid-cols-2 xl:grid-cols-4 gap-y-5 gap-x-0 ">
+          <div className="md:mx-16 products-container w-full grid grid-cols-2 vsm:grid-cols-2 xl:grid-cols-4 gap-y-5 gap-x-0  ">
             {wishlistItems?.map((product) => (
               <WishlistItemCard
                 {...product}
@@ -73,7 +73,7 @@ export function WishlistItemCard({
 
   return (
     <div
-      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border ${className} flex flex-col justify-between h-full`}
+      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border ${className} flex flex-col justify-between `}
     >
       <div className="content-wrapper flex flex-col my-1 h-[80%] justify-between">
         <div className="image-wrapper h-[70%]">

@@ -3,7 +3,7 @@ const {asyncHandler} = require("../utils/asyncHandler")
 const {ApiError} = require("../utils/ApiError")
 const {ApiResponse} = require("../utils/ApiResponse")
 
-const addToCart = asyncHandler(async (req, res) => {
+const addToCart = asyncHandler(async (req, res,next) => {
 
     const { productDetails, user } = req.body;
     const { productId, quantity, color, colorCode, size } = productDetails;
@@ -44,7 +44,7 @@ const addToCart = asyncHandler(async (req, res) => {
 
 
 
-const reduceQuantity = asyncHandler(async (req, res) => {
+const reduceQuantity = asyncHandler(async (req, res,next) => {
  
     const { productDetails, user } = req.body;
     const { productId, quantity, color, colorCode, size } = productDetails;
@@ -92,7 +92,7 @@ const reduceQuantity = asyncHandler(async (req, res) => {
 })
 
 
-const cartItems = asyncHandler(async (req,res)=> {
+const cartItems = asyncHandler(async (req,res,next)=> {
         const { id:userId } = req.body.user
         const user = await User.findById(userId).populate({
             path: 'cart.product',
@@ -105,7 +105,7 @@ const cartItems = asyncHandler(async (req,res)=> {
       
 })
 
-const removeCartItem = asyncHandler(async(req,res)=>{
+const removeCartItem = asyncHandler(async(req,res,next)=>{
 
     const { id:userId } = req.body.user
    

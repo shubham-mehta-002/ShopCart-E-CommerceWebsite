@@ -22,6 +22,7 @@ export function fetchAllProducts({ filter, sort, page, searchParameter ,admin}) 
   }
 
   if(admin){
+   
     queryString += `admin=true&`;
   }
 

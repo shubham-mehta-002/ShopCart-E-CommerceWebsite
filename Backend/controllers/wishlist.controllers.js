@@ -4,7 +4,7 @@ const { asyncHandler } = require("../utils/asyncHandler");
 const { ApiError } = require("../utils/ApiError");
 const { ApiResponse } = require("../utils/ApiResponse");
 
-const wishlistItems = asyncHandler(async (req, res) => {
+const wishlistItems = asyncHandler(async (req, res,next) => {
   const { id: userId } = req.body.user;
   const { wishlist } = await User.findById(userId).populate({
     path: "wishlist",

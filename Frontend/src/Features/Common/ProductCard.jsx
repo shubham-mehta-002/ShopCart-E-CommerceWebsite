@@ -63,9 +63,9 @@ export function ProductCard({
     e.stopPropagation();
     e.preventDefault();
     if (isProductInWishlist) {
-      dispatch(removeFromWishlistAsync({ productId: _id }));
+      dispatch(removeFromWishlistAsync({ productId: _id ,navigate}));
     } else {
-      dispatch(addToWishlistAsync({ productId: _id }));
+      dispatch(addToWishlistAsync({ productId: _id ,navigate}));
     }
   }
 
@@ -108,7 +108,7 @@ export function ProductCard({
                     ? "https://img.icons8.com/?size=100&id=87&format=png&color=000000"
                     : "https://img.icons8.com/?size=100&id=7697&format=png&color=3056d3"
                 }
-                className="text-red-600 h-8 w-8"
+                className="text-red-600 h-8 w-8 hover:cursor-pointer"
                 alt="wishlistIcon"
               />
             </div>

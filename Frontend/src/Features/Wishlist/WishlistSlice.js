@@ -25,9 +25,9 @@ export const fetchAllWishlistItemsAsync = createAsyncThunk(
 
 export const addToWishlistAsync = createAsyncThunk(
   "cart/addToWishlist",
-  async ({ productId }) => {
+  async ({ productId,navigate }) => {
     try {
-      const response = await addToWishlist(productId);
+      const response = await addToWishlist(productId,navigate);
       return response.data;
     } catch (error) {
       throw error;
@@ -37,9 +37,9 @@ export const addToWishlistAsync = createAsyncThunk(
 
 export const removeFromWishlistAsync = createAsyncThunk(
   "cart/removeFromWishlist",
-  async ({ productId }) => {
+  async ({ productId ,navigate}) => {
     try {
-      const response = await removeFromWishlist(productId);
+      const response = await removeFromWishlist(productId,navigate);
       return { data: response.data, productId };
     } catch (error) {
       throw error;

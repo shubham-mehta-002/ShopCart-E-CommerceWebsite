@@ -3,6 +3,7 @@ import { MdEdit } from "react-icons/md";
 import { MdRemoveRedEye } from "react-icons/md";
 
 export function AdminOrderTile({ order }) {
+  console.log({order})
   return (
     <>
       <hr className="mt-1 border-1 border-slate-400" />
@@ -10,7 +11,7 @@ export function AdminOrderTile({ order }) {
         <div className="flex flex-row under items-center md:block orderId md:w-[10%] md:text-center break-words">
           <div className="md:hidden text-xl font-semibold ">Order ID : </div>
           <span className="font-bold ml-2 ">#{order._id}</span>
-        </div>
+        </div> 
 
         <ul className="items items-center gap-2 md:w-[30%]">
           <div className="md:hidden text-lg font-semibold  ">Items: </div>

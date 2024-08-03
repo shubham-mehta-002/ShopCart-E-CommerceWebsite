@@ -24,7 +24,7 @@ export const fetchAllCartItems = () => {
   });
 };
 
-export const addItemToCart = (productDetails) => {
+export const addItemToCart = (productDetails,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -41,7 +41,8 @@ export const addItemToCart = (productDetails) => {
     } catch (error) {
       console.log("error while adding item to cart", { error });
       if (error.response.data.error.statusCode === 401) {
-        errorMessageToastNotificaton("Unauthorized");
+        errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
       } else if (error.response.data.message === "Max 5 allowed") {
         errorMessageToastNotificaton("Max quantity Allowed: 5");
       } else {

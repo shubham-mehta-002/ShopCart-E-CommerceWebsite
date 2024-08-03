@@ -66,6 +66,7 @@ const fetchAllProducts = asyncHandler(async (req, res,next) => {
     }
 
     if (!req.query.admin) {
+      console.log("admin nai hu mai")
       query = query.where('deleted').ne(true);
       totalProductsQuery = totalProductsQuery.where('deleted').ne(true);
     }

@@ -26,9 +26,9 @@ export const fetchAllCartItemsAsync = createAsyncThunk(
 
 export const addItemToCartAsync = createAsyncThunk(
   "cart/addItemToCartAsync",
-  async ({ productDetails }) => {
+  async ({ productDetails ,navigate }) => {
     try {
-      const response = await addItemToCart(productDetails);
+      const response = await addItemToCart(productDetails,navigate);
       return { data: response.data, productDetails };
     } catch (error) {
       throw error;

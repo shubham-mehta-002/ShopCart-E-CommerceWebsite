@@ -14,7 +14,7 @@ export function MyOrders() {
   const orders = useSelector(selectUserOrderDetails);
   const { status } = useSelector(selectUserState);
 
-
+  console.log({orders})
   return (
     <>
       {status === "loading" ? (
