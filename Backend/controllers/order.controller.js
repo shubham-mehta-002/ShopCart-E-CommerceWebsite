@@ -109,21 +109,6 @@ const createOrder = asyncHandler(async (req, res,next) => {
   }
  )
   
-// TODO : Convert this inot sinple api in users.controller.js
-const fetchUserDetails = asyncHandler(async(req,res,next) =>{
-        const {id:userId}= req.body.user
-        const fetchedUser = await User.findById(userId).populate('address')
-        if(!fetchedUser){
-          return next(new ApiError(400,"User not found"))
-        }
-        
-        const {address , email , fullName , phoneNumber} = fetchedUser
-
-        const userDetails = {address , email , fullName ,phoneNumber}
-
-        return res.status(200).json(new ApiResponse(200,"User details fetched successfully", userDetails))
-        
-})
 
 const fetchUserOrders = asyncHandler(async(req,res,next)=>{
  
@@ -207,7 +192,6 @@ const updateOrder = asyncHandler(async(req,res,next)=>{
 
 module.exports = {
     createOrder , 
-    fetchUserDetails,
     fetchUserOrders,
     fetchAllOrders,
     fetchOrderById,

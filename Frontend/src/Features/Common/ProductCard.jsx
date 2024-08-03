@@ -19,6 +19,7 @@ export function ProductCard({
   price,
   deleted,
 }) {
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [addOrDeleteProductStatus, setAddOrDeleteProductStatus] =
@@ -47,13 +48,14 @@ export function ProductCard({
 
   const ProductStatusHandler = async (e) => {
     e.preventDefault();
-    // setIsProductDeleted(prevVal => !prevVal)
     setAddOrDeleteProductStatus(true);
     const fieldsToBeUpdated = {
       deleted: !isDeleted,
     };
-    setIsDeleted((prev) => !prev);
-    dispatch(updateProductAsync({ _id, fieldsToBeUpdated }));
+    const response = await dispatch(updateProductAsync({ _id, fieldsToBeUpdated }));
+    if(response?.payload?.data?.statusCode === 200){
+      setIsDeleted((prev) => !prev);
+    }
     setAddOrDeleteProductStatus(false);
   };
 
@@ -126,8 +128,9 @@ export function ProductCard({
         </div>
       </div>
 
-      {user && user.role === "admin" && (
-        <>
+      
+        
+        {user && user.role === "admin" && (
           <div className="button-wrapper h-[15%] flex flex-col sm:flex-row justify-between mt-2">
             <button
               className="hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-1"
@@ -149,15 +152,15 @@ export function ProductCard({
                 : "Delete"}
             </button>
           </div>
+        )}
           <div className="h-[5%] text-sm font-semibold text-red-600 flex justify-between">
-            {stock === 0 && (
-              <p className="text-sm text-red-600">Out of stock</p>
-            )}
-            {isDeleted ? "deleted" : ""}
+            
+              {stock ===0 && <p className="text-sm text-red-600">Out of stock</p>}
+            
+            {user && user.role === "admin" &&  isDeleted ? "deleted" : ""}
           </div>
-        </>
-      )}
-    </div>
+        
+      </div>
   );
 
 

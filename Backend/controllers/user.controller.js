@@ -31,7 +31,9 @@ const addUserAddress = asyncHandler(async(req,res,next)=>{
 
 const fetchUserDetails = asyncHandler(async(req,res,next) =>{
         const {id:userId} = req.body.user
-        const fetchedUserDetails = await User.findById(userId).select('email fullName address phoneNumber role')
+        const fetchedUserDetails = await User.findById(userId)
+            .select('email fullName address phoneNumber role')
+            .populate("address")
 
         if(!fetchedUserDetails){
             return next(new ApiError(400,"User not found"))

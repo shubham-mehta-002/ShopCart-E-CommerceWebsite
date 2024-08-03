@@ -46,8 +46,8 @@ const fetchProductById = asyncHandler(async (req, res,next) => {
     
 });
 
-const fetchAllProducts = asyncHandler(async (req, res,next) => {
-      
+const fetchAllProducts = asyncHandler(async (req, res,next) => {  
+
     let query = Product.find();
     let totalProductsQuery = Product.find();
 
@@ -64,14 +64,18 @@ const fetchAllProducts = asyncHandler(async (req, res,next) => {
         brand: { $in: req.query.brand },
       });
     }
+
+    if (!req.query.admin) {
+      query = query.where('deleted').ne(true);
+      totalProductsQuery = totalProductsQuery.where('deleted').ne(true);
+    }
     
-    const search = req.body.search
-      if (req.body.search && req.body.search?.trim() !== "") {
+      if (req.query.search && req.query.search?.trim() !== "") {
       query = query.find({
-        title: { $regex: ".*" + search + ".*", $options: "i" },
+        title: { $regex: ".*" + req.query.search + ".*", $options: "i" },
       });
       totalProductsQuery = totalProductsQuery.find({
-        title: { $regex: ".*" + search + ".*", $options: "i" },
+        title: { $regex: ".*" + req.query.search + ".*", $options: "i" },
       });
     }
 

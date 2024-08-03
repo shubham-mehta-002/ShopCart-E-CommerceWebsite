@@ -201,11 +201,13 @@ export function AdminEditProductForm() {
       );
     }, 0);
 
+    console.log({totalStock})
+
 
     dispatch(
       updateProductAsync({
         _id: productId,
-        fieldsToBeUpdated: { ...data, totalStock },
+        fieldsToBeUpdated: { ...data, stock:totalStock },
       })
     );
   };

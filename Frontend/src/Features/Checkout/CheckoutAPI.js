@@ -5,7 +5,7 @@ import { successMessageToastNotificaton , errorMessageToastNotificaton} from "..
 export const fetchUserDetails = ()=>{
     return new Promise(async(resolve,reject)=>{
         try{
-            const response = await axios.get(`${BASE_URL}/orders`,{withCredentials:true})
+            const response = await axios.get(`${BASE_URL}/user`,{withCredentials:true})
             console.log({response})
             resolve(response.data)
         }catch(error){

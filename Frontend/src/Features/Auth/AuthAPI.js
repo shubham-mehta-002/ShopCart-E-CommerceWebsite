@@ -43,10 +43,11 @@ export function registerUser(email, password) {
 }
 
 export function loginUser(email, password) {
+ 
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
-        `${BASE_URL}/auth/login`,
+        `http://localhost:4000/auth/login`,
         {
           email,
           password,
@@ -60,6 +61,7 @@ export function loginUser(email, password) {
       }
       resolve(response.data);
     } catch (error) {
+      console.log("Error while login",{error})
       if (error.response) {
         const errorCode = error.response.status;
         if (errorCode === 401) {

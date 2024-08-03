@@ -38,9 +38,10 @@ export const addToWishlist = (productId) => {
       successMessageToastNotificaton("Successfully added");
       resolve(response.data);
     } catch (error) {
-      if (error.response.data.error.statusCode === 401) {
+      console.log({error})
+      if (error.response.data?.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
-      } else if (error.response.data.error.statusCode === 409) {
+      } else if (error.response.data?.statusCode === 409) {
         errorMessageToastNotificaton("Already in Wishlist");
       } else {
         errorMessageToastNotificaton();

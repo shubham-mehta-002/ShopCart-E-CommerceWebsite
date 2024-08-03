@@ -58,10 +58,11 @@ const ProductDetailSlice = createSlice({
       })
       .addCase(updateProductAsync.fulfilled, (state, action) => {
         const { fieldsToBeUpdated } = action.payload;
+        console.log({fieldsToBeUpdated})
         state.product = { ...state.product, ...fieldsToBeUpdated };
         state.status = "idle";
       })
-      .addCase(updateProductAsync.rejected, (state, action) => {
+      .addCase(updateProductAsync.rejected, (state) => {
         state.error = "Something went wrong !!";
         state.status = "idle";
       });

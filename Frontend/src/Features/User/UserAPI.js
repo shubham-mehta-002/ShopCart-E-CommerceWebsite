@@ -8,7 +8,7 @@ import {
 export const fetchUserOrders = () => {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.get(`${BASE_URL}/orders/my`, {
+      const response = await axios.get(`${BASE_URL}/orders`, {
         withCredentials: true,
       });
 
@@ -28,7 +28,7 @@ export const fetchUserOrders = () => {
 export const fetchUserDetails = () => {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.get(`${BASE_URL}/user/my`, {
+      const response = await axios.get(`${BASE_URL}/user`, {
         withCredentials: true,
       });
 

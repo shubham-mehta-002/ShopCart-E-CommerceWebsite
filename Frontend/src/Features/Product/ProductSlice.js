@@ -27,13 +27,14 @@ const initialState = {
 
 export const fetchAllProductsAsync = createAsyncThunk(
   "product/fetchAllProducts",
-  async ({ filter, page, sort, searchParameter }) => {
+  async ({ filter, page, sort, searchParameter ,role}) => {
     try {
       const response = await fetchAllProducts({
         filter,
         page,
         sort,
         searchParameter,
+        admin: role==="admin"
       });
 
       return response;

@@ -9,7 +9,7 @@ const {updateUser , fetchUserDetails} = require('../controllers/user.controller'
 router.use(verifyJWT)
 
 router.post('/address/add',addUserAddress)
-router.get('/my',fetchUserDetails)
+router.get('/',fetchUserDetails)
 router.post('/update',updateUser)
 
 

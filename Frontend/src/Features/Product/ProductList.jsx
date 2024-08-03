@@ -15,11 +15,11 @@ import {
 import { selectLoggedInUser } from "../Auth/AuthSlice";
 import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
-import { Link } from "react-router-dom";
 import { selectSearchParameters } from "./ProductSlice";
 import { useNavigate } from "react-router-dom";
 import { Pagination } from "../Common/Pagination";
 import { Loader } from "../../utils/Loader";
+
 
 export function ProductList() {
   const [showSortMenu, setShowSortMenu] = useState(false);
@@ -34,6 +34,7 @@ export function ProductList() {
   const state = useSelector(selectProductState);
   const searchParameter = useSelector(selectSearchParameters);
   const user = useSelector(selectLoggedInUser);
+  const {role} = user 
 
   const sortOptions = [
     { name: "Price: Low to High", sortBy: "price", order: "asc" },
@@ -62,7 +63,7 @@ export function ProductList() {
   // fetching products using debouncing
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      dispatch(fetchAllProductsAsync({ filter, page, sort, searchParameter }));
+      dispatch(fetchAllProductsAsync({ filter, page, sort, searchParameter ,role}));
     }, 500);
 
     return () => {
