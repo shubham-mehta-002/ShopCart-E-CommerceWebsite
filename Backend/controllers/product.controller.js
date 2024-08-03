@@ -65,8 +65,8 @@ const fetchAllProducts = asyncHandler(async (req, res,next) => {
       });
     }
     
-    const search = req.body.search ? req.body.search : " "
-      if (req.body.search?.trim() !== "") {
+    const search = req.body.search
+      if (req.body.search && req.body.search?.trim() !== "") {
       query = query.find({
         title: { $regex: ".*" + search + ".*", $options: "i" },
       });
