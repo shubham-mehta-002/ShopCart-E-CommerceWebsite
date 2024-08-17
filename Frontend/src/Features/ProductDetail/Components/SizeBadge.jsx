@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export function SizeBadge({
   size,
   quantity,
@@ -7,7 +9,7 @@ export function SizeBadge({
   setSelectedColorIndex,
   className,
 }) {
-  const defaultClasses = "h-10 w-10 px-10 py-3";
+  const defaultClasses = "px-2 py-2 ";
   const style = className?.trim() ? className : defaultClasses;
 
   const handleBadgeClick = () => {
@@ -24,7 +26,7 @@ export function SizeBadge({
       } overflow-hidden rounded-lg border-2 border-slate-300 flex items-center justify-center relative ${style}`}
       onClick={handleBadgeClick}
     >
-      <span className="font-semibold text-xl">{size}</span>
+      <span className="font-semibold text-sm">{size}</span>
     </div>
   );
 }

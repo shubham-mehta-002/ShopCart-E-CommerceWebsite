@@ -42,7 +42,7 @@ export function registerUser(email, password) {
   });
 }
 
-export function loginUser(email, password) {
+export function loginUser(email, password,navigate) {
  
   return new Promise(async (resolve, reject) => {
     try {
@@ -56,8 +56,10 @@ export function loginUser(email, password) {
           withCredentials: true, // Ensure cookies are included
         }
       );
+      console.log({response})
       if (response.data.success === true) {
         successMessageToastNotificaton(response.data.message);
+        navigate("/")
       }
       resolve(response.data);
     } catch (error) {

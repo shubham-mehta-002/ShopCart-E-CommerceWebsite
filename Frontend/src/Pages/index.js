@@ -1,3 +1,5 @@
+import { PageNotFound } from './PageNotFound'
+
 export {RootPage} from './RootPage'
 export {LoginPage} from './Auth/LoginPage'
 export {SignupPage} from './Auth/SignupPage'
@@ -12,6 +14,7 @@ export {LogoutPage} from "./Auth/LogoutPage"
 export {ResetPasswordPage} from "./Auth/ResetPasswordPage"
 export {MyOrdersPage} from "./MyOrdersPage"
 export {MyProfilePage} from "./MyProfilePage"
+export {PageNotFound} from "./PageNotFound"
 
 export {AdminEditProductPage} from "./Admin/AdminEditProductPage"
 export {AdminOrdersPage} from "./Admin/AdminOrdersPage"

@@ -23,6 +23,7 @@ import {
   AdminEditOrderPage,
   AdminCreateProductPage,
   AdminRootPage,
+  PageNotFound
 } from "./Pages";
 
 import { ProtectedRoute, AdminProtectedRoute, PublicRoute } from "./Features";
@@ -178,6 +179,10 @@ function App() {
       path: "/reset-password",
       element: <ResetPasswordPage />,
     },
+    {
+      path: "*",
+      element : <PageNotFound/>
+    }
   ]);
 
   return (

@@ -4,15 +4,18 @@ import {
   reduceCartItemQuantityAsync,
   removeCartItemAsync,
 } from "../Cart/CartSlice";
-
+import { useNavigate } from "react-router-dom";
 
 export function ProductTile({ color, colorCode, product, quantity, size }) {
+
   const { _id, thumbnail, price, title, description, discountPercentage } =
     product;
 
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   function addQuantityHandler(e) {
+    e.stopPropagation()
     if (quantity === 5) {
       console.log("MAX LIMIT REACHED ");
     } else {
@@ -23,12 +26,12 @@ export function ProductTile({ color, colorCode, product, quantity, size }) {
         colorCode,
         quantity: 1,
       };
-      dispatch(addItemToCartAsync({ productDetails }));
-      // setCurrentQuantity(prev => prev+1)
+      dispatch(addItemToCartAsync({ productDetails ,navigate}));
     }
   }
 
-  function reduceQuantityHandler() {
+  function reduceQuantityHandler(e) {
+    e.stopPropagation()
     const productDetails = {
       productId: _id || useParams().productId,
       size,
@@ -36,17 +39,18 @@ export function ProductTile({ color, colorCode, product, quantity, size }) {
       colorCode,
       quantity: 1,
     };
-    dispatch(reduceCartItemQuantityAsync({ productDetails }));
+    dispatch(reduceCartItemQuantityAsync({ productDetails ,navigate}));
   }
 
-  function removeItemHandler() {
+  function removeItemHandler(e) {
+    e.stopPropagation()    
     const productDetails = {
       productId: _id || useParams().productId,
       size,
       color,
       colorCode,
     };
-    dispatch(removeCartItemAsync({ productDetails }));
+    dispatch(removeCartItemAsync({ productDetails,navigate }));
   }
 
   return (
@@ -58,20 +62,20 @@ export function ProductTile({ color, colorCode, product, quantity, size }) {
         </div>
 
         {/* details */}
-        <div className="details w-[calc(100%-100px)] flex flex-col gap-1 ml-3">
+        <div className="details w-[calc(100%-100px)] flex flex-col gap-2 ml-3">
           <div className="flex flex-row justify-between">
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 ">
-              <span>{title} </span>
+              <span className="mr-2">{title} </span>
               <div className="h-[20px] w-[20px] rounded-full" style={{"backgroundColor" : `${colorCode}`}}> 
               </div>
               <span className="font-semibold">{size}</span>
             </div>
             <div className="h"></div>
-            <span>
+            <span className="font-semibold">
               ${Math.floor(((100 - discountPercentage) / 100) * price)}
             </span>
           </div>
-          <div className=" w-[90%] whitespace-nowrap overflow-hidden text-ellipsis">
+          <div className=" w-[80%] whitespace-nowrap overflow-hidden text-ellipsis">
             {description}
           </div>
           <div className="flex flex-row justify-between items-center">

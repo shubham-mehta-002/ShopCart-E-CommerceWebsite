@@ -32,9 +32,9 @@ export const registerUserAsync = createAsyncThunk(
 
 export const loginUserAsync = createAsyncThunk(
   "auth/loginUser",
-  async ({ email, password }) => {
+  async ({ email,password ,navigate }) => {
     try {
-      const response = await loginUser(email, password);
+      const response = await loginUser(email, password,navigate);
       return response;
     } catch (error) {
       throw error;

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
 export function OrderTile({ order }) {
     console.log({order})
@@ -7,7 +8,7 @@ export function OrderTile({ order }) {
       <div className="order-item-wrapper flex flex-col gap-5 box-border sm:mx-6 xl:mx-20 my-5 ">
         {order.items.map((item) => {
           return (
-            <div className="bg-white p-4 flex flex-col gap-4">
+            <div key={uuid()} className="bg-white p-4 flex flex-col gap-4">
               <div className="order-id text-center text-xl sm:text-2xl font-bold text-[#5557d4] ">
                 Order #{order._id}
               </div>

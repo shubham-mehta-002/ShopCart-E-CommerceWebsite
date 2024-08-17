@@ -13,9 +13,9 @@ const initialState = {
 
 export const fetchUserOrdersAsync = createAsyncThunk(
   "user/fetchUserOrders",
-  async () => {
+  async ({navigate}) => {
     try {
-      const response = await fetchUserOrders();
+      const response = await fetchUserOrders(navigate);
 
       return response.data;
     } catch (error) {
@@ -26,9 +26,9 @@ export const fetchUserOrdersAsync = createAsyncThunk(
 
 export const fetchUserDetailsAsync = createAsyncThunk(
   "user/fetchUserDetails",
-  async () => {
+  async ({navigate}) => {
     try {
-      const response = await fetchUserDetails();
+      const response = await fetchUserDetails(navigate);
       return response.data;
     } catch (error) {
       throw error;
@@ -38,9 +38,9 @@ export const fetchUserDetailsAsync = createAsyncThunk(
 
 export const updateUserDetailsAsync = createAsyncThunk(
   "user/updateUserDetails",
-  async ({ newData }) => {
+  async ({ newData ,navigate}) => {
     try {
-      const response = await updateUserDetails(newData);
+      const response = await updateUserDetails(newData,navigate);
       return response;
     } catch (error) {
       throw error;

@@ -8,11 +8,15 @@ import {
   addUserAddressAsync,
   selectCurrentOrderDetails,
 } from "../CheckoutSlice";
+import { useNavigate } from "react-router-dom";
 
 export function Checkout() {
+
   const [selectedAddressIndex, setSelectedAddressIndex] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("Cash");
   const paymentMethods = ["Cash", "Card"];
+
+  const navigate = useNavigate()
 
   const {
     register: registerPersonal,
@@ -34,7 +38,7 @@ export function Checkout() {
   const { user: userDetails } = useSelector((state) => state.order);
 
   useEffect(() => {
-    dispatch(fetchUserDetailsAsync());
+    dispatch(fetchUserDetailsAsync({navigate}));
   }, [dispatch]);
 
   useEffect(() => {

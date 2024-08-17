@@ -6,6 +6,8 @@ import { useState , useEffect} from "react";
 import { useSelector , useDispatch} from 'react-redux'
 import { registerUserAsync , resetRegistrationStatus} from "../AuthSlice";
 import {selectRegistrationStatus , selectAuthState , selectLoggedInUser } from '../AuthSlice'
+import logo from "../../../assets/logo.png"
+
 
 export function SignupForm() {
   const {
@@ -84,9 +86,9 @@ export function SignupForm() {
         <div className="login-form-wrapper h-[90%] w-[90%] sm:w-full sm:max-w-md mx-auto ">
           <div className="image-wrapper flex items-center justify-center flex-col py-5">
             <img
-              src="https://mern-ecommerce-lyart.vercel.app/ecommerce.png"
+              src={logo}
               alt="logo"
-              className="h-20 w-20"
+              className="size-32"
             />
             <div className="mt-8 px-4 text font-bold text-3xl text-center">
               Create a new Account

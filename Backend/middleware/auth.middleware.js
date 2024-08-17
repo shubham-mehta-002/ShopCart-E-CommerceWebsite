@@ -5,11 +5,11 @@ const { ApiError} =  require("../utils/ApiError")
 
 const verifyJWT = async (req, res, next) => {
     try {
-        const { accessToken , refreshToken } = req.cookies;
+        const { accessToken , refreshToken , loggedInUserInfo} = req.cookies;
         if((!refreshToken)){
             return next(new ApiError(401, "Unauthorized"))
         }
-        if (accessToken) {
+        if (accessToken && loggedInUserInfo) {
             jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async(error, decoded) => {
                 if (error) {
                     return next(new ApiError(401, "Something went wrong"))
@@ -36,11 +36,11 @@ const verifyJWT = async (req, res, next) => {
 
 const verifyAdminJWT = async (req, res, next) => {
     try {
-        const { accessToken , refreshToken } = req.cookies;
+        const { accessToken , refreshToken ,loggedInUserInfo} = req.cookies;
         if((!refreshToken)){
             return next(new ApiError(401, "Unauthorized"))
         }
-        if (accessToken) {
+        if (accessToken && loggedInUserInfo) {
             jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async(error, decoded) => {
                 if (error) {
                     return next(new ApiError(401, "Something went wrong"))

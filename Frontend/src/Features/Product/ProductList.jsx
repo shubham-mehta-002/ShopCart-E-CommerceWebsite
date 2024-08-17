@@ -131,6 +131,7 @@ export function ProductList() {
         >
           {sortOptions.map((sortOption) => (
             <div
+            key={uuid()}
               className={`flex p-2 items-center cursor-pointer text-slate-700 pl-4 text-md font-normal ${
                 sort &&
                 sortOption.sortBy === sort._sort &&
@@ -182,10 +183,10 @@ export function ProductList() {
               No product found{" "}
             </div>
           ) : (
-            <div className="products-container w-full flex flex-wrap sm:gap-4 justify-evenly">
+            <div className="products-container w-full flex flex-wrap sm:gap-4 ">
               {state.products?.map((product) => (
                   <ProductCard
-                    key={product.id}
+                    key={uuid()}
                     {...product}
                   />
               ))}
@@ -244,7 +245,7 @@ function DesktopFilters({ state, filter, filterHandler }) {
           {state.filters.categories === undefined ? (
             <p>No category found</p>
           ) : (
-            state.filters.categories.map(({ label, value }) => {
+            state.filters.categories.map(({ label }) => {
               return (
                 <label
                   key={uuid()}
@@ -253,9 +254,9 @@ function DesktopFilters({ state, filter, filterHandler }) {
                   <input
                     type="checkbox"
                     className="h-4 w-4"
-                    value={value}
-                    checked={filter.category.includes(value)}
-                    onChange={(e) => filterHandler(value, "category")}
+                    value={label}
+                    checked={filter.category.includes(label)}
+                    onChange={(e) => filterHandler(label, "category")}
                   />
                   <span className="font-light text-lg flex flex-row">
                     {label}
@@ -290,14 +291,16 @@ function DesktopFilters({ state, filter, filterHandler }) {
           {state.filters.brands === undefined ? (
             <p>No brand found</p>
           ) : (
-            state.filters.brands.map(({ label, value }) => (
-              <label className="flex flex-row items-center w-full gap-3 min-h-[40px]">
+            state.filters.brands.map(({ label }) => (
+              <label
+                key={uuid()} 
+                className="flex flex-row items-center w-full gap-3 min-h-[40px]">
                 <input
                   type="checkbox"
                   className="h-4 w-4"
-                  value={value}
-                  checked={filter.brand.includes(value)}
-                  onChange={(e) => filterHandler(value, "brand")}
+                  value={label}
+                  checked={filter.brand.includes(label)}
+                  onChange={(e) => filterHandler(label, "brand")}
                 />
                 <span className="font-light text-lg">{label}</span>
               </label>
@@ -366,7 +369,7 @@ function MobileFilters({
           {state.filters.categories === undefined ? (
             <p>No category found</p>
           ) : (
-            state.filters.categories.map(({ label, value }) => {
+            state.filters.categories.map(({ label }) => {
               return (
                 <label
                   key={uuid()}
@@ -375,9 +378,9 @@ function MobileFilters({
                   <input
                     type="checkbox"
                     className="h-4 w-4"
-                    value={value}
-                    checked={filter.category.includes(value)}
-                    onChange={(e) => filterHandler(value, "category")}
+                    value={label}
+                    checked={filter.category.includes(label)}
+                    onChange={(e) => filterHandler(label, "category")}
                   />
                   <span className="font-light text-lg flex flex-row">
                     {label}
@@ -413,14 +416,16 @@ function MobileFilters({
           {state.filters.brands === undefined ? (
             <p>No brand found</p>
           ) : (
-            state.filters.brands.map(({ label, value }) => (
-              <label className="flex flex-row items-center w-full gap-3 min-h-[40px]">
+            state.filters.brands.map(({ label }) => (
+              <label 
+                key={uuid()}
+                className="flex flex-row items-center w-full gap-3 min-h-[40px]">
                 <input
                   type="checkbox"
                   className="h-4 w-4"
-                  value={value}
-                  checked={filter.brand.includes(value)}
-                  onChange={(e) => filterHandler(value, "brand")}
+                  value={label}
+                  checked={filter.brand.includes(label)}
+                  onChange={(e) => filterHandler(label, "brand")}
                 />
                 <span className="font-light text-lg">{label}</span>
               </label>

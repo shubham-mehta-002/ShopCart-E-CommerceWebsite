@@ -1,15 +1,16 @@
 import { Navbar } from "../Features"
-import { Outlet } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 import {useState , useEffect} from "react"
 import {useSelector ,  useDispatch} from "react-redux"
 import {setLoggedInUserState} from "../Features/Auth/AuthSlice"
 import Cookies from "js-cookie"
 import {selectWishlistItems ,fetchAllWishlistItemsAsync} from "../Features/Wishlist/WishlistSlice"
-
+import { useNavigate } from "react-router-dom"
 export function RootPage(){
   const [searchParameter , setSearchParameter] = useState("")
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   // set login state
   let userDetails = null
@@ -25,8 +26,8 @@ export function RootPage(){
   // set wishlisted items state
   const wishlistItems = useSelector(selectWishlistItems);
   useEffect(()=>{
-    if(userDetails){
-      dispatch(fetchAllWishlistItemsAsync());
+    if(userDetails && userDetails.role!=="admin"){
+      dispatch(fetchAllWishlistItemsAsync({navigate}));
     }
   },[dispatch , userDetails])
 

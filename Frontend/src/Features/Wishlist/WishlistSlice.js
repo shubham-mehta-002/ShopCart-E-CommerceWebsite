@@ -13,9 +13,9 @@ const initialState = {
 
 export const fetchAllWishlistItemsAsync = createAsyncThunk(
   "cart/fetchAllWishlistItems",
-  async () => {
+  async ({navigate}) => {
     try {
-      const response = await fetchAllWishlistItems();
+      const response = await fetchAllWishlistItems(navigate);
       return response.data;
     } catch (error) {
       throw error;
@@ -62,7 +62,7 @@ const wishlistSlice = createSlice({
         state.status = "idle";
       })
       .addCase(fetchAllWishlistItemsAsync.rejected, (state, error) => {
-        console.log("error while fetching wishlsit items", { error });
+        console.log("error while fetching wishlist items", { error });
         state.status = "idle";
       })
 

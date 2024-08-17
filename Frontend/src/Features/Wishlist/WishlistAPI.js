@@ -5,7 +5,7 @@ import {
 } from "../../utils/toastNotifications";
 import { BASE_URL } from "../../constants";
 
-export const fetchAllWishlistItems = () => {
+export const fetchAllWishlistItems = (navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.get(`${BASE_URL}/wishlist`, {
@@ -13,8 +13,9 @@ export const fetchAllWishlistItems = () => {
       });
       resolve(response.data);
     } catch (error) {
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }
@@ -67,7 +68,7 @@ export const removeFromWishlist = (productId,navigate) => {
       successMessageToastNotificaton("Successfully removed");
       resolve(response.data);
     } catch (error) {
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized")
         navigate("/login")
       } else {

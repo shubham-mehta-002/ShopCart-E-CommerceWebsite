@@ -2,7 +2,7 @@ import axios from 'axios'
 import {BASE_URL} from '../../constants'
 import { successMessageToastNotificaton , errorMessageToastNotificaton} from "../../utils/toastNotifications"
 
-export const fetchUserDetails = ()=>{
+export const fetchUserDetails = (navigate)=>{
     return new Promise(async(resolve,reject)=>{
         try{
             const response = await axios.get(`${BASE_URL}/user`,{withCredentials:true})
@@ -10,8 +10,9 @@ export const fetchUserDetails = ()=>{
             resolve(response.data)
         }catch(error){
             console.log({error})
-            if(error.response.data.error.statusCode === 401){
+            if(error.response.data.statusCode === 401){
                 errorMessageToastNotificaton("Unauthorized")
+                navigate("/login")
               }else{
               errorMessageToastNotificaton()
               }
@@ -20,9 +21,7 @@ export const fetchUserDetails = ()=>{
     })
 }
 
-
-
-export const addUserAddress = (addressDetails)=>{
+export const addUserAddress = (addressDetails,navigate)=>{
     console.log("chech checb kar babyeo",addressDetails)
     return new Promise(async(resolve,reject)=>{
         try{
@@ -36,8 +35,9 @@ export const addUserAddress = (addressDetails)=>{
             resolve(response)
         }catch(error){
             console.log("add address api",{error})
-            if(error.response.data.error.statusCode === 401){
+            if(error.response.data.statusCode === 401){
                 errorMessageToastNotificaton("Unauthorized")
+                navigate("/login")
               }else{
               errorMessageToastNotificaton()
               }
@@ -47,7 +47,7 @@ export const addUserAddress = (addressDetails)=>{
 }
 
 
-export const createOrder = (orderDetails)=>{
+export const createOrder = (orderDetails,navigate)=>{
     return new Promise(async(resolve,reject)=>{
         try{
             const response = await axios.post(`${BASE_URL}/orders/create`,{
@@ -60,9 +60,10 @@ export const createOrder = (orderDetails)=>{
             resolve(response)
         }catch(error){
             console.log("create order api",{error})
-            if(error.response.data.error.statusCode === 401){
+            if(error.response?.data.statusCode === 401){
                 errorMessageToastNotificaton("Unauthorized")
-              }else if(error.response.data.message.includes("Insufficient stock")){
+                navigate("/login")
+              }else if(error.response?.data.message.includes("Insufficient stock")){
               errorMessageToastNotificaton(error.response.data.message)
 
               }
@@ -74,7 +75,7 @@ export const createOrder = (orderDetails)=>{
     })
 }
 
-export const fetchUserOrders = ()=>{
+export const fetchUserOrders = (navigate)=>{
     return new Promise(async(resolve,reject)=>{
         try{
             const response = await axios.get(`${BASE_URL}/user/orders`,{},
@@ -83,8 +84,9 @@ export const fetchUserOrders = ()=>{
             resolve(response.data)
         }catch(error){
             console.log({error})
-            if(error.response.data.error.statusCode === 401){
+            if(error.response.data.statusCode === 401){
                 errorMessageToastNotificaton("Unauthorized")
+                navigate("/login")
               }else{
               errorMessageToastNotificaton()
               }

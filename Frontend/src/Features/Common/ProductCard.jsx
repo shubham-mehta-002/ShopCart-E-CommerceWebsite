@@ -52,7 +52,7 @@ export function ProductCard({
     const fieldsToBeUpdated = {
       deleted: !isDeleted,
     };
-    const response = await dispatch(updateProductAsync({ _id, fieldsToBeUpdated }));
+    const response = await dispatch(updateProductAsync({ _id, fieldsToBeUpdated ,navigate}));
     if(response?.payload?.data?.statusCode === 200){
       setIsDeleted((prev) => !prev);
     }
@@ -75,15 +75,15 @@ export function ProductCard({
 
   return (
     <div
-      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border flex flex-col justify-between  w-[40vw] md:w-72 `}
+      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border rounded-md flex flex-col justify-between  w-[40vw] md:w-64 `}
     >
       <div className="content-wrapper flex flex-col my-1 h-[250px] justify-between">
-        <div className="image-wrapper h-[70%]">
+        <div className="image-wrapper flex justify-center h-[70%]">
           <img
             onClick={clickHandler}
             src={thumbnail}
             alt={title}
-            className="hover:cursor-pointer h-full w-full rounded-md bg-[#ccced2] hover:bg-[#CDD1D7]"
+            className="hover:cursor-pointer h-full w-[70%] rounded-md object-fit "
           />
         </div>
 
@@ -108,7 +108,7 @@ export function ProductCard({
                     ? "https://img.icons8.com/?size=100&id=87&format=png&color=000000"
                     : "https://img.icons8.com/?size=100&id=7697&format=png&color=3056d3"
                 }
-                className="text-red-600 h-8 w-8 hover:cursor-pointer"
+                className="text-red-600 h-8 w-8 hover:cursor-pointer "
                 alt="wishlistIcon"
               />
             </div>

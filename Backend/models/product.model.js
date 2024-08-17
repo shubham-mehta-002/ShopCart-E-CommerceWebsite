@@ -47,7 +47,7 @@ const productSchema = new mongoose.Schema(
     },
     rating: {
       type: Number,
-      default: 0,
+      default:(Math.random()*5).toFixed(1),
       min: 0,
       max: 5,
     },
@@ -100,6 +100,7 @@ const productSchema = new mongoose.Schema(
         type:mongoose.Schema.Types.ObjectId,
         ref:"Review"
       },
+
     ],
   },
   { timestamps: true }

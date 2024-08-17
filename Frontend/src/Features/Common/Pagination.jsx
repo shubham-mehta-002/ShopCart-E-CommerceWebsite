@@ -45,9 +45,10 @@ export function Pagination({ totalDocs, page, setPage }) {
               Math.max(0, page - 3),
               Math.min(page + 2, pageNumberArray.length)
             )
-            .map((pageNumber) => {
+            .map((pageNumber,index) => {
               return (
                 <button
+                  key={index}
                   className={`h-10 w-10 p-3 ${
                     page === pageNumber
                       ? "bg-[rgb(79,70,229)]"

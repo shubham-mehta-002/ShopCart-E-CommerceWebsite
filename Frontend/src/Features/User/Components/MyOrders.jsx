@@ -4,17 +4,20 @@ import { useEffect } from "react";
 import {Link} from "react-router-dom"
 import { OrderTile } from "./OrderTile";
 import { Loader } from "../../../utils/Loader";
+import { useNavigate } from "react-router-dom";
+import {v4 as uuid} from "uuid"
 
 export function MyOrders() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+
   useEffect(() => {
-    dispatch(fetchUserOrdersAsync());
+    dispatch(fetchUserOrdersAsync({navigate}));
   }, [dispatch]);
 
   const orders = useSelector(selectUserOrderDetails);
   const { status } = useSelector(selectUserState);
 
-  console.log({orders})
   return (
     <>
       {status === "loading" ? (
@@ -33,7 +36,7 @@ export function MyOrders() {
             <div className="header text-5xl mb-8  font-bold">My Orders</div>
             <hr className="border-1 w-[90%] border-gray-400 "/>
             {orders && orders.map((order) => (
-              <OrderTile order={order} />
+              <OrderTile key={uuid()} order={order} />
             ))}
             </div>
           )}

@@ -1,18 +1,18 @@
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   fetchOrderByIdAsync,
   selectOrderDetails,
   updateOrderByIdAsync,
-  selectAdminAPIStatus
+  selectAdminAPIStatus,
 } from "../AdminSlice";
 import { useForm } from "react-hook-form";
 
 export const AdminEditOrderForm = () => {
   const { orderId } = useParams();
   const order = useSelector(selectOrderDetails);
-
   const {
     register,
     handleSubmit,
@@ -21,7 +21,8 @@ export const AdminEditOrderForm = () => {
   } = useForm();
 
   const dispatch = useDispatch();
-
+  const navigate = useNavigate()
+  
   function setDefaultValues() {
     if (order) {
       setValue("billingName", order.billingName);
@@ -42,7 +43,7 @@ export const AdminEditOrderForm = () => {
   }, [order]);
 
   useEffect(() => {
-    dispatch(fetchOrderByIdAsync({ orderId }));
+    dispatch(fetchOrderByIdAsync({ orderId ,navigate}));
   }, [dispatch]);
 
   const validations = {
@@ -154,14 +155,13 @@ export const AdminEditOrderForm = () => {
       },
       items: data.items,
     };
-    dispatch(updateOrderByIdAsync({ orderId, updatedOrderDetails }));
+    dispatch(updateOrderByIdAsync({ orderId, updatedOrderDetails,navigate }));
   }
 
   return (
     <div className="wrapper sm:mx-16 my-5 bg-white box-border p-4">
       <header className="font-bold text-4xl">Order Details </header>
       <div className="text-lg mt-2 font-semibold">#{orderId}</div>
-
 
       {order && (
         <form className="mt-5" onSubmit={handleSubmit(handleFormSubmit)}>
@@ -350,9 +350,15 @@ export const AdminEditOrderForm = () => {
                   <label className="font-semibold">Color : </label>
                   <span>{item.color}</span>
                 </div>
-                <div className="ml-2">
-                  <label className="font-semibold">Color Code : </label>
-                  <span>{item.colorCode}</span>
+                <div className="ml-2 flex flex-row items-center gap-2 ">
+                  <label className="font-semibold ">ColorCode:</label>
+                  <div className="container p-1 rounded-full">
+                    <div
+                      className="h-5 w-5 rounded-full flex hover:cursor-pointer"
+                      style={{ backgroundColor: `${item.colorCode}` }}
+                      onClick={() => setSelectedColorIndex(index)}
+                    ></div>
+                  </div>
                 </div>
 
                 <div className="status ml-2">

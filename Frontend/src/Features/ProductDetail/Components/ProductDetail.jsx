@@ -23,7 +23,7 @@ export function ProductDetail() {
 
       {selectedProduct && selectedProduct.product && (
         <div>
-          <div className="product-detail-wrapper md:flex flex-row gap-10">
+          <div className="product-detail-wrapper md:flex flex-row justify-start gap-10">
             {/* Images section */}
             <ProductImageSection images={selectedProduct.product.images} />
 

@@ -14,7 +14,7 @@ export const fetchAllCartItems = () => {
       resolve(response.data);
     } catch (error) {
       console.log("error while fetching cart items", { error });
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
       } else {
         errorMessageToastNotificaton();
@@ -40,7 +40,7 @@ export const addItemToCart = (productDetails,navigate) => {
       resolve(response.data);
     } catch (error) {
       console.log("error while adding item to cart", { error });
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized")
         navigate("/login")
       } else if (error.response.data.message === "Max 5 allowed") {
@@ -53,7 +53,7 @@ export const addItemToCart = (productDetails,navigate) => {
   });
 };
 
-export const reduceCartItemQuantity = (productDetails) => {
+export const reduceCartItemQuantity = (productDetails,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -66,8 +66,9 @@ export const reduceCartItemQuantity = (productDetails) => {
       resolve(response.data);
     } catch (error) {
       console.log("error while reducing item quantity", { error });
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }
@@ -76,7 +77,7 @@ export const reduceCartItemQuantity = (productDetails) => {
   });
 };
 
-export const removeCartItem = (productDetails) => {
+export const removeCartItem = (productDetails,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -92,8 +93,9 @@ export const removeCartItem = (productDetails) => {
       resolve(response.data);
     } catch (error) {
       console.log("error while removing item from cart", { error });
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }

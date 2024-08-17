@@ -22,9 +22,9 @@ const initialState = {
 
 export const fetchUserDetailsAsync = createAsyncThunk(
   "order/fetchUserDetails",
-  async () => {
+  async ({navigate}) => {
     try {
-      const response = await fetchUserDetails();
+      const response = await fetchUserDetails(navigate);
       return response.data;
     } catch (error) {
       throw error;

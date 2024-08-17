@@ -5,7 +5,10 @@ export function AdminProtectedRoute ({children}){
     let userId = null
     let role =null
 
+    console.log(Cookies.get("loggedInUserInfo"))
+
     if (!Cookies.get("loggedInUserInfo")) {
+        console.log("naviagting")
         return <Navigate to="/login"></Navigate>;
     }else{
         userId = JSON.parse(Cookies.get("loggedInUserInfo")).userId

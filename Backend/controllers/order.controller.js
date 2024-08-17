@@ -111,11 +111,13 @@ const createOrder = asyncHandler(async (req, res, next) => {
     const to = fetchedUser.email;
     const text = "Invoice";
 
+
     await sendMail({ html, to, subject, text });
 
     return res.status(200).json(new ApiResponse(200, "Order created successfully", { newOrderId : newOrder._id, orderItems: fetchedUser.cart }));
 
   } catch (error) {
+    console.log({error})
     // Abort transaction only if an error occurs or the transaction is still uncommitted
     if (session.inTransaction()) {
       await session.abortTransaction();
@@ -179,8 +181,7 @@ const fetchOrderById = asyncHandler(async(req,res,next)=>{
     }
 
     const order = await Order.findById(orderId).populate({
-      path:"items.product",
-      select:""
+      path:"items.product"
     })
 
     if(!order){

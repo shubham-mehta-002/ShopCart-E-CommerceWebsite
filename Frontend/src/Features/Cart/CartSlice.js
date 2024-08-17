@@ -38,9 +38,9 @@ export const addItemToCartAsync = createAsyncThunk(
 
 export const reduceCartItemQuantityAsync = createAsyncThunk(
   "cart/reduceCartItemQuantityAsync",
-  async ({ productDetails }) => {
+  async ({ productDetails ,navigate}) => {
     try {
-      const response = await reduceCartItemQuantity(productDetails);
+      const response = await reduceCartItemQuantity(productDetails,navigate);
       return { data: response.data, productDetails };
     } catch (error) {
       throw error;
@@ -50,9 +50,9 @@ export const reduceCartItemQuantityAsync = createAsyncThunk(
 
 export const removeCartItemAsync = createAsyncThunk(
   "cart/removeCartItemAsync",
-  async ({ productDetails }) => {
+  async ({ productDetails ,navigate}) => {
     try {
-      const response = await removeCartItem(productDetails);
+      const response = await removeCartItem(productDetails,navigate);
       return { data: response.data, productDetails };
     } catch (error) {
       throw error;

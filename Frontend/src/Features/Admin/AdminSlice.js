@@ -16,9 +16,9 @@ const initialState = {
 
 export const fetchAllOrdersAsync = createAsyncThunk(
   "user/fetchAllOrders",
-  async ({ filter, sort, page }) => {
+  async ({ filter, sort, page ,navigate}) => {
     try {
-      const response = await fetchAllOrders({ sort, page });
+      const response = await fetchAllOrders({ sort, page ,navigate});
       return response.data;
     } catch (error) {
       throw error;
@@ -28,9 +28,9 @@ export const fetchAllOrdersAsync = createAsyncThunk(
 
 export const fetchOrderByIdAsync = createAsyncThunk(
   "user/fetchOrderById",
-  async ({ orderId }) => {
+  async ({ orderId ,navigate}) => {
     try {
-      const response = await fetchOrderById(orderId);
+      const response = await fetchOrderById(orderId,navigate);
       return response.data;
     } catch (error) {
       throw error;
@@ -40,9 +40,9 @@ export const fetchOrderByIdAsync = createAsyncThunk(
 
 export const updateOrderByIdAsync = createAsyncThunk(
   "user/updateOrderById",
-  async ({ orderId, updatedOrderDetails }) => {
+  async ({ orderId, updatedOrderDetails ,navigate}) => {
     try {
-      const response = await updateOrderById({ orderId, updatedOrderDetails });
+      const response = await updateOrderById({ orderId, updatedOrderDetails,navigate });
       return { data: response.data, updatedOrderDetails };
     } catch (error) {
       throw error;
@@ -52,15 +52,16 @@ export const updateOrderByIdAsync = createAsyncThunk(
 
 export const createProductAsync = createAsyncThunk(
   "user/createProduct",
-  async ({ product }) => {
+  async ({ product ,navigate}) => {
     try {
-      const response = await createProduct(product);
+      const response = await createProduct(product,navigate);
       return response.data;
     } catch (error) {
       throw error;
     }
   }
 );
+
 
 const orderSlice = createSlice({
   name: "adminOrders",
@@ -121,7 +122,8 @@ const orderSlice = createSlice({
       })
       .addCase(createProductAsync.rejected, (state, action) => {
         state.status = "idle";
-      });
+      })
+
   },
 });
 

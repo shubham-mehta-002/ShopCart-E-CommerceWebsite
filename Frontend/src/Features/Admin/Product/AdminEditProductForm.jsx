@@ -15,11 +15,14 @@ import {
 import { updateProductAsync } from "../../ProductDetail/ProductDetailSlice";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { uploadOnCloudinary } from "../../../utils/uploadOnCloudinary";
+import { useNavigate } from "react-router-dom";
 
 export function AdminEditProductForm() {
   const dispatch = useDispatch();
   const { product } = useSelector(selectProductById);
   const { productId } = useParams();
+
+  const navigate = useNavigate()
 
   const {
     register,
@@ -44,7 +47,7 @@ export function AdminEditProductForm() {
   useEffect(() => {
     dispatch(fetchAllBrandsAsync());
     dispatch(fetchAllCategoriesAsync());
-    dispatch(fetchProductDetailByIdAsync(productId));
+    dispatch(fetchProductDetailByIdAsync(productId,navigate));
   }, [dispatch, productId]);
 
   useEffect(() => {
@@ -208,6 +211,7 @@ export function AdminEditProductForm() {
       updateProductAsync({
         _id: productId,
         fieldsToBeUpdated: { ...data, stock:totalStock },
+        navigate
       })
     );
   };
@@ -242,7 +246,7 @@ export function AdminEditProductForm() {
               <div className="w-full flex flex-row">
                 <label className="font-medium text-sm">Price ($)</label>
                 <input
-                  type="number"
+                  type="decimal"
                   {...register("price", { required: "Price is required" })}
                   className={`focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none ${
                     errors.price ? "border-red-500" : ""

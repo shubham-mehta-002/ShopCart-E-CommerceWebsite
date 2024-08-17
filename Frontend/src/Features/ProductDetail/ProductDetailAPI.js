@@ -21,7 +21,7 @@ export function fetchProductDetailById(productId) {
   });
 }
 
-export function updateProduct(_id, fieldsToBeUpdated) {
+export function updateProduct(_id, fieldsToBeUpdated,navigate) {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -42,6 +42,7 @@ export function updateProduct(_id, fieldsToBeUpdated) {
 
       if (error?.response?.data?.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }

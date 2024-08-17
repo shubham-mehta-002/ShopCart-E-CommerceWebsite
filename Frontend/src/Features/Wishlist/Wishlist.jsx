@@ -6,24 +6,26 @@ import {
   fetchAllWishlistItemsAsync,
 } from "./WishlistSlice";
 import { removeFromWishlistAsync, selectWishlistStatus } from "./WishlistSlice";
-import { selectLoggedInUser } from "../Auth/AuthSlice";
 import { Loader } from "../../utils/Loader";
+import { useNavigate } from "react-router-dom";
+import { v4 as uuid} from "uuid"
 
 export function Wishlist() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const wishlistItems = useSelector(selectWishlistItems);
   const status = useSelector(selectWishlistStatus);
 
   useEffect(() => {
-    dispatch(fetchAllWishlistItemsAsync());
+    dispatch(fetchAllWishlistItemsAsync({navigate}));
   }, [dispatch]);
 
   return (
-    <div className="wrapper w-full sm:w-[90%] p-3 sm:p-10 box-border mx-auto my-10 bg-white flex flex-col gap-4">
+    <div className="wrapper w-full sm:w-[90%] p-3 sm:p-0 box-border mx-auto my-10 bg-white flex flex-col gap-4">
       <div className="header text-5xl mb-7 font-bold">Wishlist</div>
 
       {/* wishlist items */}
-      <div className="wishlist-items-wrapper flex flex-col gap-3">
+      <div className="wishlist-items-wrapper flex flex-col gap-3 mb-10 ">
         {status === "loading" ? (
           <Loader />
         ) : wishlistItems.length === 0 ? (
@@ -38,13 +40,16 @@ export function Wishlist() {
             </div>
           </>
         ) : (
-          <div className="md:mx-16 products-container w-full grid grid-cols-2 vsm:grid-cols-2 xl:grid-cols-4 gap-y-5 gap-x-0  ">
+          <div className="md:ml-10 flex items-center justify-center">
+            <div className="products-container flex justify-start flex-wrap gap-5 sm:gap-12">
             {wishlistItems?.map((product) => (
               <WishlistItemCard
+              key={uuid()}
                 {...product}
-                className="h-[300px] sm:h-[340px] sm:w-72"
+                className="h-[310px] sm:h-[340px] w-40 sm:w-56"
               />
             ))}
+            </div>
           </div>
         )}
       </div>
@@ -59,33 +64,35 @@ export function WishlistItemCard({
   title,
   brand,
   discountPercentage,
-  stock,
   price,
-  deleted,
+
 }) {
   const dispatch = useDispatch();
-  const user = useSelector(selectLoggedInUser);
+  const navigate = useNavigate()
 
   function removeButtonClickHandler(e) {
     e.stopPropagation();
-    dispatch(removeFromWishlistAsync({ productId: _id }));
+    dispatch(removeFromWishlistAsync({ productId: _id ,navigate}));
   }
 
   return (
     <div
-      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border ${className} flex flex-col justify-between `}
+      onClick={()=>navigate(`/products/${_id}`)}
+      className={`hover:cursor-pointer text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border ${className} flex flex-col h-full`}
     >
-      <div className="content-wrapper flex flex-col my-1 h-[80%] justify-between">
-        <div className="image-wrapper h-[70%]">
+      <div className="content-wrapper flex flex-col h-full">
+        {/* Image Section */}
+        <div className="image-wrapper h-[200px] flex items-center justify-center mb-2">
           <img
             src={thumbnail}
             alt={title}
-            className="h-full w-full rounded-md bg-[#ccced2] hover:bg-[#CDD1D7]"
+            className="h-full w-full rounded-md"
           />
         </div>
-
-        <div className="product-details h-[18%] flex flex-row">
-          <div className="details w-[85%]">
+  
+        {/* Product Details Section */}
+        <div className="product-details flex flex-col flex-grow mb-2">
+          <div className="details mb-1">
             <div className="brand text-md font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
               {brand}
             </div>
@@ -93,27 +100,32 @@ export function WishlistItemCard({
               {title}
             </div>
           </div>
+  
+          {/* Price Section */}
+          <div className="price flex flex-row">
+            <span className="text-sm font-bold">
+              ${Math.floor(((100 - discountPercentage) / 100) * price)}
+            </span>
+            <div className="flex items-center">
+              <span className="text-sm font-semibold ml-2 text-[#949596]">
+                $<strike>{price}</strike>
+              </span>
+              <span className="text-sm font-semibold ml-1 text-[#5a65e4]">
+                ({discountPercentage}% OFF)
+              </span>
+            </div>
+          </div>
         </div>
-
-        <div className="price h-[7%] whitespace-nowrap overflow-hidden text-ellipsis">
-          <span className="text-sm font-bold">
-            ${Math.floor(((100 - discountPercentage) / 100) * price)}
-          </span>
-          <span className="text-sm font-semibold ml-2 text-[#949596]">
-            $<strike>{price}</strike>
-          </span>
-          <span className="text-sm font-semibold ml-1 text-[#5a65e4]">
-            ({discountPercentage}% OFF)
-          </span>
-        </div>
+  
+        {/* Remove Button */}
+        <button
+          className="h-[32px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-1"
+          onClick={(e) => removeButtonClickHandler(e)}
+        >
+          Remove
+        </button>
       </div>
-
-      <button
-        className="hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-1"
-        onClick={(e) => removeButtonClickHandler(e)}
-      >
-        Remove
-      </button>
     </div>
   );
+  
 }

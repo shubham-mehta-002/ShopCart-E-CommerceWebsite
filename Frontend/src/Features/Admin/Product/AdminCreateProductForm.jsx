@@ -6,10 +6,13 @@ import {
   fetchAllCategoriesAsync,
   selectCategories,
   selectBrands,
+  addBrandAsync,
+  addCategoryAsync
 } from "../../Product/ProductSlice";
 import { uploadOnCloudinary } from "../../../utils/uploadOnCloudinary";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { createProductAsync } from "../AdminSlice";
+import { useNavigate } from "react-router-dom";
 
 export function AdminCreateProductForm() {
   const dispatch = useDispatch();
@@ -32,7 +35,11 @@ export function AdminCreateProductForm() {
 
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
+  const [brand, setBrand] = useState('');
+  const [category, setCategory] = useState('');
 
+  const navigate = useNavigate()
+  
   useEffect(() => {
     dispatch(fetchAllBrandsAsync());
     dispatch(fetchAllCategoriesAsync());
@@ -235,8 +242,36 @@ export function AdminCreateProductForm() {
       ...data,
       stock: totalStock,
     };
-    dispatch(createProductAsync({ product }));
+    dispatch(createProductAsync({ product ,navigate}));
   };
+
+  async function addBrandHandler(e){
+    if(brand.trim()=== ""){
+      alert("Enter a value")
+      return 
+    }
+    try{
+      const label = brand 
+      await dispatch(addBrandAsync({label,navigate}))
+      setBrand("")
+    }catch(err){
+      console.log("Error : ",{err})
+    }
+  }
+
+  async function addCategoryHandler(e){
+    if(category.trim()=== ""){
+      alert("Enter a value")
+      return 
+    }
+    try{
+      const label = category 
+      await dispatch(addCategoryAsync({label,navigate}))
+      setCategory("")
+    }catch(err){
+      console.log("Error : ",{err})
+    }
+  }
 
   return (
     <div className="wrapper sm:mx-16 my-5 bg-white box-border p-4">
@@ -268,7 +303,7 @@ export function AdminCreateProductForm() {
             <div className="w-full flex flex-row">
               <label className="font-medium text-sm">Price ($)</label>
               <input
-                type="number"
+                type="decimal"
                 {...register("price", { ...validations.price })}
                 className={`focus:border-indigo-600 px-2 mt-2 w-full h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none ${
                   errors.price ? "border-red-500" : ""
@@ -376,12 +411,42 @@ export function AdminCreateProductForm() {
           </div>
         </div>
 
+        {/* add brand and categories  */}
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-20">
+        <div className="flex flex-row gap-3 items-center">
+          <label className=" font-medium text-sm">Add Brand</label>
+          <input 
+            type = 'text'
+            value={brand}
+            onChange={(e) => setBrand(e.target.value)}
+            className="focus:border-indigo-600 px-2 w-[150px] h-8 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none" /> 
+          <button
+            className="h-4 w-30 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md text-white bg-[#4338CA]"
+            onClick={addBrandHandler}
+            >ADD</button>
+        </div>
+        
+        <div className="flex flex-row gap-3 items-center">
+          <label className=" font-medium text-sm">Add Category</label>
+          <input 
+            type = 'text'
+            onChange={(e) => setCategory(e.target.value)}
+            value={category}
+            className="focus:border-indigo-600 px-2 w-[150px] h-8 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none" /> 
+          <button
+            className="h-4 w-30 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md text-white bg-[#4338CA]"
+            onClick={addCategoryHandler}
+            
+            >ADD</button>
+        </div>
+        </div>
+
         {/* images */}
         <label className="font-medium text-sm">Images</label>
         <div className="brand mb-8 mt-2 flex-col gap-2 items-center">
           {new Array(4).fill(null).map((_, index) => (
             <>
-              <div className="image mt-2 w-[90%] " key={index}>
+              <div className="image mt-2 w-[90%]" key={index}>
                 <label>image {index + 1}</label>
                 <div className="hover:cursor-pointer flex items-center gap-2">
                   <input

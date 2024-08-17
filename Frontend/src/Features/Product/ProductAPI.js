@@ -1,6 +1,6 @@
 import axios from "axios";
 import { BASE_URL, ITEMS_PER_PAGE } from "../../constants";
-import { errorMessageToastNotificaton } from "../../utils/toastNotifications";
+import { successMessageToastNotificaton , errorMessageToastNotificaton } from "../../utils/toastNotifications";
 
 export function fetchAllProducts({ filter, sort, page, searchParameter ,admin}) {
   let queryString = "";
@@ -73,3 +73,63 @@ export function fetchAllBrands() {
     }
   });
 }
+
+export const addBrand = (label,navigate) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await axios.post(
+        `${BASE_URL}/brand/add`,
+        {
+          label,
+        },
+        { withCredentials: true }
+      );
+      if(response.data.success === true){
+        console.log({response})
+        successMessageToastNotificaton(response.data.message)
+      } 
+      resolve(response.data);
+    } catch (error) {
+      console.log("error while adding brand",{ error });
+      if(error.response.data.statusCode === 401){
+        errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
+      }else{
+      errorMessageToastNotificaton()
+      }
+
+      reject(error.message);
+    }
+  });
+};
+
+export const addCategory = (label,navigate) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await axios.post(
+        `${BASE_URL}/category/add`,
+        {
+          label,
+        },
+        { withCredentials: true }
+      );
+      if(response.data.success === true){
+        console.log({response})
+        successMessageToastNotificaton(response.data.message)
+      } 
+      resolve(response.data);
+    } catch (error) {
+      console.log("error while adding category",{ error });
+      if(error.response.data.statusCode === 401){
+        errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
+      }else if(error.response.data.statusCode === 409){
+        errorMessageToastNotificaton("Already exists")
+      }else{
+      errorMessageToastNotificaton()
+      }
+
+      reject(error.message);
+    }
+  });
+};

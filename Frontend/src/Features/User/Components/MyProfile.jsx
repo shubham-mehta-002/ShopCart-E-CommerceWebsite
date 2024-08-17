@@ -9,9 +9,11 @@ import { MdEdit } from "react-icons/md";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { useForm } from "react-hook-form";
 import { Loader } from "../../../utils/Loader";
+import { useNavigate } from "react-router-dom";
 
 export function MyProfile() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const [selectedAddressForUpdation, setSelectedAddressForUpdation] =
     useState(null);
@@ -97,7 +99,7 @@ export function MyProfile() {
     const newData = {
       address: userInfo.address.filter((_, index) => index !== addressIndex),
     };
-    dispatch(updateUserDetailsAsync({ newData }));
+    dispatch(updateUserDetailsAsync({ newData ,navigate}));
   }
 
   function setAddressInForm(addressIndex) {
@@ -136,7 +138,7 @@ export function MyProfile() {
       ],
     };
 
-    dispatch(updateUserDetailsAsync({ newData }));
+    dispatch(updateUserDetailsAsync({ newData ,navigate}));
   }
 
   function updateUserNameHandler() {
@@ -154,7 +156,7 @@ export function MyProfile() {
     const newData = {
       fullName: value,
     };
-    dispatch(updateUserDetailsAsync({ newData }));
+    dispatch(updateUserDetailsAsync({ newData,navigate }));
     setEditFields((prev) => ({ ...prev, name: !prev.name }));
   }
 
@@ -178,12 +180,12 @@ export function MyProfile() {
     const newData = {
       phoneNumber: value,
     };
-    dispatch(updateUserDetailsAsync({ newData }));
+    dispatch(updateUserDetailsAsync({ newData ,navigate}));
     setEditFields((prev) => ({ ...prev, phoneNumber: !prev.phoneNumber }));
   }
 
   useEffect(() => {
-    dispatch(fetchUserDetailsAsync());
+    dispatch(fetchUserDetailsAsync({navigate}));
   }, [dispatch]);
 
   return (
@@ -233,9 +235,9 @@ export function MyProfile() {
             )}
           </div>
 
-          <div className="name text-xl text-red-600 sm:pl-4 sm:p-0 font-bold my-4">
+         { userInfo.role === "admin" && <div className="name text-xl text-red-600 sm:pl-4 sm:p-0 font-bold my-4">
             Role :<span className="uppercase"> {userInfo.role}</span>
-          </div>
+          </div>}
 
           <div className="email text-lg font-bold sm:pl-4 sm:p-0 mb-4">
             Email Address :{" "}

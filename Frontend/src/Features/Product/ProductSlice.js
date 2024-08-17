@@ -3,6 +3,8 @@ import {
   fetchAllCategories,
   fetchAllBrands,
   fetchAllProducts,
+  addBrand,
+  addCategory
 } from "./ProductAPI";
 
 const initialState = {
@@ -68,6 +70,31 @@ export const fetchAllBrandsAsync = createAsyncThunk(
   }
 );
 
+export const addBrandAsync = createAsyncThunk(
+  "user/addBrand",
+  async ({ label ,navigate}) => {
+    try {
+      console.log({label})
+      const response = await addBrand(label,navigate);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+);
+
+export const addCategoryAsync = createAsyncThunk(
+  "user/addCategory",
+  async ({ label ,navigate}) => {
+    try {
+      console.log({label})
+      const response = await addCategory(label,navigate);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+);
 const productSlice = createSlice({
   name: "product",
   initialState,
@@ -114,7 +141,33 @@ const productSlice = createSlice({
       .addCase(fetchAllBrandsAsync.rejected, (state, action) => {
         (state.status.brands = "idle"),
           (state.error.brands = "Something went wrong !!");
-      });
+      })
+      
+      // add brand
+      .addCase(addBrandAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(addBrandAsync.fulfilled, (state ,action) => {
+        console.log({action})
+        state.filters.brands.push(action.payload)
+        state.status = "idle";
+      })
+      .addCase(addBrandAsync.rejected, (state ) => {
+        state.status = "idle";
+      })
+
+      // add category
+      .addCase(addCategoryAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(addCategoryAsync.fulfilled, (state ,action) => {
+        console.log({action})
+        state.filters.categories.push(action.payload)
+        state.status = "idle";
+      })
+      .addCase(addCategoryAsync.rejected, (state ) => {
+        state.status = "idle";
+      })
   },
 });
 
@@ -125,5 +178,6 @@ export const selectProducts = (state) => state.product.products;
 export const selectSearchParameters = (state) => state.product.searchParameters;
 export const selectCategories = (state) => state.product.filters.categories;
 export const selectBrands = (state) => state.product.filters.brands;
+
 
 export default productSlice.reducer;

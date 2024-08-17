@@ -5,6 +5,7 @@ import { AdminOrderTile } from "./AdminOrderTile"
 import { MdKeyboardArrowDown } from "react-icons/md";
 import {Pagination} from "../../Common/Pagination"
 import {Loader} from "../../../utils/Loader"
+import { useNavigate } from "react-router-dom";
 
 
 export function AdminOrders() {
@@ -14,6 +15,7 @@ export function AdminOrders() {
   console.log({fetchOrdersStatus})
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const [showSortMenu , setShowSortMenu] = useState(false)
   const sortMenuRef = useRef(null)
@@ -32,7 +34,7 @@ export function AdminOrders() {
   const [page , setPage] = useState(1)
 
   useEffect(()=>{
-    dispatch(fetchAllOrdersAsync({page,sort}))
+    dispatch(fetchAllOrdersAsync({page,sort,navigate}))
   },[dispatch , page,sort])
 
 
@@ -48,7 +50,6 @@ export function AdminOrders() {
     }
   },[])
 
-  console.log({orders})
 
   return (
     <>

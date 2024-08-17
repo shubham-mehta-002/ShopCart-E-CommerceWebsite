@@ -11,6 +11,23 @@ const fetchAllCategories = asyncHandler(async(req,res,next)=>{
       
 })
 
+const addCategory = asyncHandler((async(req,res,next)=>{
+    const {label} = req.body
+
+    const ifAlreadyExist = await Category.find({label})
+
+    if(ifAlreadyExist.length){
+        return next(new ApiError(409,"Category already exists"))
+    }
+
+    const newCategory = await Category.create({
+        label
+    })
+
+    return res.status(200).json(new ApiResponse(200,"Category Added successfully",newCategory))
+
+}))
+
 
 const seedCategory = async(req,res)=>{
     try{
@@ -23,5 +40,6 @@ const seedCategory = async(req,res)=>{
 
 module.exports= {
     fetchAllCategories,
-    seedCategory
+    seedCategory,
+    addCategory
 }

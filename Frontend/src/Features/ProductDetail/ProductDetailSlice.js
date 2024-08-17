@@ -9,9 +9,9 @@ const initialState = {
 
 export const updateProductAsync = createAsyncThunk(
   "product/updateProductAsync",
-  async ({ _id, fieldsToBeUpdated }) => {
+  async ({ _id, fieldsToBeUpdated ,navigate}) => {
     try {
-      const response = await updateProduct(_id, fieldsToBeUpdated);
+      const response = await updateProduct(_id, fieldsToBeUpdated,navigate);
       return { data: response.data, _id, fieldsToBeUpdated };
     } catch (error) {
       console.log("error while updating product", { error });

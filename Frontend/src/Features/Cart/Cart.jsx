@@ -20,7 +20,7 @@ export function Cart() {
       <div className="header text-5xl font-bold">Cart</div>
 
       {/* cart items */}
-      <div className="cart-items-wrapper flex flex-col gap-3">
+      <div className="cart-items-wrapper flex flex-col gap-3 mr-2">
         {state?.cartItems?.length === 0 ? (
           <>
             <div className=" text-3xl my-10 font-bold flex items-center justify-center">
@@ -41,7 +41,7 @@ export function Cart() {
 
       {/* price and checkout section */}
       {state?.cartItems?.length > 0 && (
-        <div className="totalPrice flex flex-col gap-3">
+        <div className="totalPrice flex flex-col ml-5 gap-3">
           {/* price */}
           <div className="subTotal flex justify-between items-center">
             <span className="font-semibold text-base">Subtotal</span>

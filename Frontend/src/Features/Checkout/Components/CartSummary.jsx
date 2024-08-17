@@ -16,7 +16,7 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
   const dispatch = useDispatch();
   const cartState = useSelector(selectCartState);
   const orderStatus = useSelector(selectOrderPlacedStatus);
-  // console.log({orderStatus})
+  console.log({orderStatus})
   const { orderId, isOrderPlaced } = useSelector(selectCurrentOrderDetails);
 
   const navigate = useNavigate();
@@ -90,12 +90,8 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
       phoneNumber,
     };
 
+    dispatch(createOrderAsync({ orderDetails ,navigate}))
 
-    if(paymentMethod.toLowerCase() === "cash"){
-      dispatch(createOrderAsync({ orderDetails }))
-    }else if(paymentMethod.toLowerCase() === "card"){
-      dispatch(createOrderAsync({ orderDetails }))
-    }
   }
 
 

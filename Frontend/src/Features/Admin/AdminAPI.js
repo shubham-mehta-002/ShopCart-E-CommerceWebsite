@@ -2,7 +2,7 @@ import axios from "axios";
 import { BASE_URL, ITEMS_PER_PAGE } from "../../constants";
 import { successMessageToastNotificaton , errorMessageToastNotificaton} from "../../utils/toastNotifications";
 
-export const fetchAllOrders = ({sort,page=1}) => {
+export const fetchAllOrders = ({sort,page=1,navigate}) => {
 
   let queryString = ""
 
@@ -22,11 +22,13 @@ export const fetchAllOrders = ({sort,page=1}) => {
         withCredentials: true,
       });
       resolve(response.data);
+
     } catch (error) {
       console.log("error whiile fetching all orders",{ error });
 
-      if(error.response.data.error.statusCode === 401){
+      if(error.response.data.statusCode === 401){
         errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
       }else{
       errorMessageToastNotificaton()
       }
@@ -35,7 +37,7 @@ export const fetchAllOrders = ({sort,page=1}) => {
   });
 };
 
-export const fetchOrderById = (orderId) => {
+export const fetchOrderById = (orderId ,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.get(`${BASE_URL}/orders/${orderId}`, {
@@ -44,13 +46,19 @@ export const fetchOrderById = (orderId) => {
       resolve(response.data);
     } catch (error) {
       console.log("error while fetching order details ",{ error });
+      if(error.response.data.statusCode === 401){
+        errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
+      }else{
       errorMessageToastNotificaton()
+      }
+      
       reject(error.message);
     }
   });
 };
 
-export const updateOrderById = ({ orderId, updatedOrderDetails }) => {
+export const updateOrderById = ({ orderId, updatedOrderDetails ,navigate}) => {
 
   return new Promise(async (resolve, reject) => {
     try {
@@ -69,18 +77,18 @@ export const updateOrderById = ({ orderId, updatedOrderDetails }) => {
       resolve(response.data);
     } catch (error) {
       console.log("error while updaing order details",{error})
-      if(error.response.data.error.statusCode === 401){
+      if(error.response.data.statusCode === 401){
         errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
       }else{
       errorMessageToastNotificaton()
       }
-      errorMessageToastNotificaton()
       reject(error.message);
     }
   });
 };
 
-export const createProduct = (product) => {
+export const createProduct = (product,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -96,9 +104,15 @@ export const createProduct = (product) => {
       resolve(response.data);
     } catch (error) {
       console.log("error while creating product",{ error });
+      if(error.response.data.statusCode === 401){
+        errorMessageToastNotificaton("Unauthorized")
+        navigate("/login")
+      }else{
       errorMessageToastNotificaton()
+      }
 
       reject(error.message);
     }
   });
 };
+

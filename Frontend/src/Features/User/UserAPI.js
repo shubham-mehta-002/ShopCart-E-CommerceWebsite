@@ -5,7 +5,7 @@ import {
   errorMessageToastNotificaton,
 } from "../../utils/toastNotifications";
 
-export const fetchUserOrders = () => {
+export const fetchUserOrders = (navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.get(`${BASE_URL}/orders`, {
@@ -15,8 +15,9 @@ export const fetchUserOrders = () => {
       resolve(response.data);
     } catch (error) {
       console.log("error while fetching user orders", { error });
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }
@@ -25,7 +26,7 @@ export const fetchUserOrders = () => {
   });
 };
 
-export const fetchUserDetails = () => {
+export const fetchUserDetails = (navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.get(`${BASE_URL}/user`, {
@@ -35,8 +36,9 @@ export const fetchUserDetails = () => {
       resolve(response.data);
     } catch (error) {
       console.log("error while fetching user details", { error });
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }
@@ -45,7 +47,7 @@ export const fetchUserDetails = () => {
   });
 };
 
-export const updateUserDetails = (newData) => {
+export const updateUserDetails = (newData,navigate) => {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -60,8 +62,9 @@ export const updateUserDetails = (newData) => {
       resolve({ data: response.data, newData });
     } catch (error) {
       console.log("error while updating user details", { error });
-      if (error.response.data.error.statusCode === 401) {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Unauthorized");
+        navigate("/login")
       } else {
         errorMessageToastNotificaton();
       }
