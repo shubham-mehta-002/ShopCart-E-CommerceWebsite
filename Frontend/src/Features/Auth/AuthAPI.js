@@ -47,7 +47,7 @@ export function loginUser(email, password,navigate) {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
-        `http://localhost:4000/auth/login`,
+        `${BASE_URL}/auth/login`,
         {
           email,
           password,
