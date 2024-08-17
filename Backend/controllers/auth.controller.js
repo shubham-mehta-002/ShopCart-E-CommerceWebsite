@@ -77,9 +77,9 @@ const loginUser = asyncHandler(async(req,res,next)=>{
     const loggedInUser = await User.findById(user._id).select("role _id")
     return res
         .status(200)
-        .cookie("accessToken",accessToken, {httpOnly:true ,secure:true ,maxAge:process.env.ACCESS_TOKEN_EXPIRY }) 
-        .cookie("refreshToken",refreshToken,{httpOnly:true ,secure:true ,maxAge:process.env.REFRESH_TOKEN_EXPIRY})  
-        .cookie("loggedInUserInfo", JSON.stringify({role:loggedInUser.role , userId: loggedInUser._id}),{httpOnly:false ,secure:true ,maxAge:process.env.REFRESH_TOKEN_EXPIRY })
+        .cookie("accessToken",accessToken, {httpOnly:true ,secure:true ,maxAge:process.env.ACCESS_TOKEN_EXPIRY,sameSite: 'None', }) 
+        .cookie("refreshToken",refreshToken,{httpOnly:true ,secure:true ,maxAge:process.env.REFRESH_TOKEN_EXPIRY,sameSite: 'None',})  
+        .cookie("loggedInUserInfo", JSON.stringify({role:loggedInUser.role , userId: loggedInUser._id}),{httpOnly:false ,secure:true ,maxAge:process.env.REFRESH_TOKEN_EXPIRY,sameSite: 'None', })
         .json(new ApiResponse(200,"User logged in successfully",null))
        
 }
