@@ -69,7 +69,7 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+# dot environment variables file
 .env
 .env.test
 .env.production
