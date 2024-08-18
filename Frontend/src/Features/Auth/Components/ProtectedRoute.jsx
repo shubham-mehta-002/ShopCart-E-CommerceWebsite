@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 export function ProtectedRoute({ children }) {
 
-  console.log(Cookies)
+  console.log(Cookies.get("loggedInUserInfo"))
   if (!Cookies.get("loggedInUserInfo")) {
       console.log("DA")
     return <Navigate to="/login"></Navigate>;
