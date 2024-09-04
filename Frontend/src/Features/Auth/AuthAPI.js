@@ -162,7 +162,7 @@ export function resetPassword({ password, token, email }) {
       resolve(response.data);
     } catch (error) {
       console.log("error suring password reset", { error });
-      if (error.response.data.message === "Token Invalid") {
+      if (error.response.data.statusCode === 401) {
         errorMessageToastNotificaton("Token Invalid");
       } else {
         errorMessageToastNotificaton("Something went wrong ");

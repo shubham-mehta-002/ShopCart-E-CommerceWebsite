@@ -108,6 +108,8 @@ const productSlice = createSlice({
       // fetch products
       .addCase(fetchAllProductsAsync.pending, (state) => {
         state.status.products = "loading";
+        state.products = null;
+        state.totalProducts = 0;
       })
       .addCase(fetchAllProductsAsync.fulfilled, (state, action) => {
         state.status.products = "idle";

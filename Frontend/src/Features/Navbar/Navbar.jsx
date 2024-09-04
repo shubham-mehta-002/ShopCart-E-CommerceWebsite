@@ -36,11 +36,21 @@ export function Navbar({ searchParameter, setSearchParameter }) {
     ];
   }
 
-  const mobileViewMenuOption = [
-    { name: "Products", link: "/products" },
-    { name: "Wishlist", link: "/wishlist" },
-    { name: "Cart", link: "/cart" },
-  ];
+  let mobileViewMenuOption = []
+  if(role === "admin"){
+    mobileViewMenuOption=[
+      { name: "Products", link: "/products" },
+      { name: "Orders", link: "/admin/orders" },
+    ]
+  }else{
+    mobileViewMenuOption = [
+      { name: "Products", link: "/products" },
+      { name: "Wishlist", link: "/wishlist" },
+      { name: "Cart", link: "/cart" },
+    ];
+  
+  }
+  
 
   let profileOptions = [];
   if (role === "admin") {

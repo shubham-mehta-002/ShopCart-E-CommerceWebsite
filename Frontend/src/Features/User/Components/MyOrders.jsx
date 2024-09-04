@@ -33,7 +33,7 @@ export function MyOrders() {
             </>
           ) : (
             <div className="order-wrapper sm:ml-10 mt-8">
-            <div className="header text-5xl mb-8  font-bold">My Orders</div>
+            <div className="header text-5xl mb-8 ml-3 font-bold">My Orders</div>
             <hr className="border-1 w-[90%] border-gray-400 "/>
             {orders && orders.map((order) => (
               <OrderTile key={uuid()} order={order} />

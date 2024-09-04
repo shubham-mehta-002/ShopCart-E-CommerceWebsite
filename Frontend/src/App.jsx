@@ -26,7 +26,7 @@ import {
   PageNotFound
 } from "./Pages";
 
-import { ProtectedRoute, AdminProtectedRoute, PublicRoute } from "./Features";
+import { ProtectedRoute, AdminProtectedRoute, PublicRoute  , UserProtectedRotues} from "./Features";
 import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
         },
         {
           index: true,
-          element: <ProductListPage />,
+          element: <Navigate to="/products" />,
         },
         {
           path: "products",
@@ -54,41 +54,41 @@ function App() {
         {
           path: "cart",
           element: (
-            <ProtectedRoute>
+            <UserProtectedRotues>
               <CartPage />
-            </ProtectedRoute>
+            </UserProtectedRotues>
           ),
         },
         {
           path: "wishlist",
           element: (
-            <ProtectedRoute>
+            <UserProtectedRotues>
               <WishlistPage />
-            </ProtectedRoute>
+            </UserProtectedRotues>
           ),
         },
         {
           path: "checkout",
           element: (
-            <ProtectedRoute>
+            <UserProtectedRotues>
               <CheckoutPage />
-            </ProtectedRoute>
+            </UserProtectedRotues>
           ),
         },
         {
           path: "order-success/:orderId",
           element: (
-            <ProtectedRoute>
+            <UserProtectedRotues>
               <OrderSuccessPage />
-            </ProtectedRoute>
+            </UserProtectedRotues>
           ),
         },
         {
           path: "myOrders",
           element: (
-            <ProtectedRoute>
+            <UserProtectedRotues>
               <MyOrdersPage />
-            </ProtectedRoute>
+            </UserProtectedRotues>
           ),
         },
         {

@@ -183,7 +183,7 @@ export function ProductList() {
               No product found{" "}
             </div>
           ) : (
-            <div className="products-container w-full flex flex-wrap sm:gap-4 ">
+            <div className="products-container w-full flex flex-wrap sm:gap-4 justify-between sm:justify-normal">
               {state.products?.map((product) => (
                   <ProductCard
                     key={uuid()}

@@ -31,7 +31,7 @@ export function ProductImageSection({ images }) {
                 key={uuid()}
                 onClick={() => handleImageClick(index)}
                 src={images[index]}
-                className={`h-[130px] w-[75%] sm:mt-2  cursor-pointer rounded-md border-2 border-blue-200 object-fill`}
+                className={`h-[100px] sm:h-[130px] w-[33%] sm:w-[75%] sm:mt-2  cursor-pointer rounded-md border-2 border-blue-200 object-fill`}
                 alt={`product-image-${index + 1}`}
               ></img>
             ))}

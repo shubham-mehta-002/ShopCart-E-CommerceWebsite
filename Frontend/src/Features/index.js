@@ -17,6 +17,7 @@ export {ProductDetail} from './ProductDetail/Components/ProductDetail'
 export {ProductList} from './Product/ProductList'
 export {Checkout} from './Checkout/Components/Checkout'
 export {ProtectedRoute} from "./Auth/Components/ProtectedRoute"
+export { UserProtectedRotues } from "./Auth/Components/UserProtectedRoutes";
 export {PublicRoute} from "./Auth/Components/PublicRoute"
 export {ResetPassword} from "./Auth/Components/ResetPassword"
 export {MyOrders} from "./User/Components/MyOrders"

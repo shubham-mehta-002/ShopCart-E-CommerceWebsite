@@ -9,6 +9,7 @@ import {
   resetPasswordAsync,
   resetPasswordResetStatus,
 } from "../AuthSlice";
+import logo from "../../../assets/logo.png"
 
 export function ResetPassword() {
   const {
@@ -80,7 +81,7 @@ export function ResetPassword() {
         <div className="login-form-wrapper h-[90%] w-[90%] sm:w-full sm:max-w-md mx-auto ">
           <div className="image-wrapper flex items-center justify-center flex-col py-5">
             <img
-              src="https://mern-ecommerce-lyart.vercel.app/ecommerce.png"
+              src={logo}
               alt="logo"
               className="h-20 w-20"
             />

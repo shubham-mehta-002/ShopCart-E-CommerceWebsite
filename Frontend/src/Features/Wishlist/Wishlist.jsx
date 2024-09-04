@@ -103,14 +103,14 @@ export function WishlistItemCard({
   
           {/* Price Section */}
           <div className="price flex flex-row">
-            <span className="text-sm font-bold">
+            <span className="text-sm font-bold ">
               ${Math.floor(((100 - discountPercentage) / 100) * price)}
             </span>
             <div className="flex items-center">
               <span className="text-sm font-semibold ml-2 text-[#949596]">
                 $<strike>{price}</strike>
               </span>
-              <span className="text-sm font-semibold ml-1 text-[#5a65e4]">
+              <span className="text-sm font-semibold ml-1 text-[#5a65e4] whitespace-nowrap overflow-hidden text-ellipsis">
                 ({discountPercentage}% OFF)
               </span>
             </div>

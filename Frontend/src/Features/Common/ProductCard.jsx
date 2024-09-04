@@ -75,10 +75,10 @@ export function ProductCard({
 
   return (
     <div
-      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border rounded-md flex flex-col justify-between  w-[40vw] md:w-64 `}
+      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border rounded-md flex flex-col justify-between  w-[44vw] md:w-64 `}
     >
-      <div className="content-wrapper flex flex-col my-1 h-[250px] justify-between">
-        <div className="image-wrapper flex justify-center h-[70%]">
+      <div className="content-wrapper flex flex-col my-1 h-[230px] justify-between">
+        <div className="image-wrapper flex justify-center h-[70%] flex-shrink-0">
           <img
             onClick={clickHandler}
             src={thumbnail}
