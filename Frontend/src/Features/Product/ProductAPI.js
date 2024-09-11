@@ -37,7 +37,7 @@ export function fetchAllProducts({ filter, sort, page, searchParameter ,admin}) 
   }
 
   queryString = queryString.slice(0, -1);
-
+console.log(`${BASE_URL}/products?${queryString}`)
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.get(`${BASE_URL}/products?${queryString}`);
