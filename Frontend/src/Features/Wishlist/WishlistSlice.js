@@ -72,8 +72,8 @@ const wishlistSlice = createSlice({
       })
       .addCase(addToWishlistAsync.fulfilled, (state, action) => {
         if (
-          state.wishlistItems.find(
-            (item) => item._id.toString() !== action.payload._id.toString()
+          !state.wishlistItems.find(
+            (item) => item._id.toString() === action.payload._id.toString()
           )
         ) {
           state.wishlistItems.push(action.payload);
