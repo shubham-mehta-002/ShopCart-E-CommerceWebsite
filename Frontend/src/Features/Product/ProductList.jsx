@@ -183,14 +183,21 @@ export function ProductList() {
               No product found{" "}
             </div>
           ) : (
-            <div className="products-container w-full flex flex-wrap sm:gap-4 justify-between sm:justify-normal">
-              {state.products?.map((product) => (
+            // <div className="products-container w-full flex flex-wrap sm:gap-4 justify-between sm:justify-normal">
+             <div className="products-container w-full grid grid-cols-2 md:grid-cols-3  "> 
+              
+              {state.products?.map((product,index) => (
+                <div ley={index} className="flex items-center justify-center mb-2"> 
                   <ProductCard
-                    key={uuid()}
                     {...product}
+
                   />
+                   </div>
               ))}
-            </div>
+             
+
+            {/* </div> */}
+            </div>  
           )}
 
           <hr className="mt-10 border-gray-400"></hr>

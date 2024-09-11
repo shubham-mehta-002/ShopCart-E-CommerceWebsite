@@ -75,7 +75,7 @@ export function ProductCard({
 
   return (
     <div
-      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border rounded-md flex flex-col justify-between  w-[44vw] md:w-64 `}
+      className={`text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border rounded-md flex flex-col justify-between  w-[42vw] max-w-64 sm:w-[44vw] md:w-64 `}
     >
       <div className="content-wrapper flex flex-col my-1 h-[230px] justify-between">
         <div className="image-wrapper flex justify-center h-[70%] flex-shrink-0">
@@ -83,7 +83,7 @@ export function ProductCard({
             onClick={clickHandler}
             src={thumbnail}
             alt={title}
-            className="hover:cursor-pointer h-full w-[70%] rounded-md object-fit "
+            className="hover:cursor-pointer h-full sm:w-[70%] rounded-md object-fit "
           />
         </div>
 
