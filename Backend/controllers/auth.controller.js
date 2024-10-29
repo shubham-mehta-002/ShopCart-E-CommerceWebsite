@@ -78,6 +78,9 @@ const loginUser = asyncHandler(async (req, res, next) => {
   );
 
   const loggedInUser = await User.findById(user._id).select("role _id");
+
+  console.log(req)
+  
   return res
     .status(200)
 
