@@ -41,7 +41,7 @@ function App() {
         },
         {
           // index: true,
-          path:"/"
+          path:"/",
           element: <Navigate to="/products" />,
         },
         {
