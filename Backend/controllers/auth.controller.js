@@ -108,9 +108,7 @@ const loginUser = asyncHandler(async (req, res, next) => {
         path: "/",
         secure: true,
         maxAge: process.env.REFRESH_TOKEN_EXPIRY,
-        sameSite: "None",
-        domain: process.env.CLIENT_URL,
-        path: "/",
+        sameSite: "None"
       }
     )
 
