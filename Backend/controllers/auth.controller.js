@@ -92,8 +92,6 @@ const loginUser = asyncHandler(async (req, res, next) => {
       path: "/",
       maxAge: process.env.ACCESS_TOKEN_EXPIRY,
       sameSite: "None",
-      domain: process.env.CLIENT_URL,
-      path: "/",
     })
     .cookie("refreshToken", refreshToken, {
       httpOnly: true,
@@ -101,8 +99,6 @@ const loginUser = asyncHandler(async (req, res, next) => {
       path: "/",
       maxAge: process.env.REFRESH_TOKEN_EXPIRY,
       sameSite: "None",
-      domain: process.env.CLIENT_URL,
-      path: "/",
     })
     .cookie(
       "loggedInUserInfo",
