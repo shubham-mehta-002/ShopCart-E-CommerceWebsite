@@ -40,7 +40,8 @@ function App() {
           element: <Navigate to="/products" />,
         },
         {
-          index: true,
+          // index: true,
+          path:"/"
           element: <Navigate to="/products" />,
         },
         {
