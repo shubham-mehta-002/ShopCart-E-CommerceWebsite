@@ -36,13 +36,8 @@ function App() {
       element: <RootPage />,
       children: [
         {
-          path: "home",
-          element: <Navigate to="/products" />,
-        },
-        {
-          // index: true,
-          path:"/",
-          element: <Navigate to="/products" />,
+          path: "/",
+          element: <ProductListPage />,
         },
         {
           path: "products",
