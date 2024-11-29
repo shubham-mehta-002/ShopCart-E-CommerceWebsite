@@ -156,6 +156,7 @@ export function resetPassword({ password, token, email }) {
         token,
         email,
       });
+      console.log({response})
       if (response.data.success === true) {
         successMessageToastNotificaton("Password Updated !! ");
       }

@@ -6,12 +6,15 @@ export function Pagination({ totalDocs, page, setPage }) {
     const pageNumberArray = [];
     for (let i = 0; i < numberOfPages; i++) pageNumberArray.push(i + 1);
   
+    console.log({page})
+
     function handlePage(page) {
+      console.log({page})
       setPage(page);
     }
-    useEffect(() => {
-      setPage(1);
-    }, [totalDocs]);
+    // useEffect(() => {
+    //   setPage(1);
+    // }, [totalDocs]);
     
     return (
       <div className="my-10 w-full flex sm:flex-row justify-between flex-col">
