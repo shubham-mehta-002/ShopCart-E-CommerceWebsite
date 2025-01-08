@@ -8,48 +8,50 @@ import {
 import { removeFromWishlistAsync, selectWishlistStatus } from "./WishlistSlice";
 import { Loader } from "../../utils/Loader";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuid} from "uuid"
+import { v4 as uuid } from "uuid"
 
 export function Wishlist() {
+
   const dispatch = useDispatch();
   const navigate = useNavigate()
   const wishlistItems = useSelector(selectWishlistItems);
   const status = useSelector(selectWishlistStatus);
 
   useEffect(() => {
-    dispatch(fetchAllWishlistItemsAsync({navigate}));
+    dispatch(fetchAllWishlistItemsAsync({ navigate }));
   }, [dispatch]);
 
   return (
-    <div className="wrapper w-full sm:w-[90%] p-3 sm:p-0 box-border mx-auto my-10 bg-white flex flex-col gap-4">
-      <div className="header text-5xl mb-7 font-bold">Wishlist</div>
+    <div className="wrapper w-full sm:w-[90%] p-5 mx-auto my-10 bg-gray-50 shadow-lg rounded-xl">
+      {/* Header */}
+      <div className="header text-center mb-8">
+        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-transparent bg-clip-text leading-tight tracking-wide drop-shadow-lg">
+          My Wishlist
+        </h1>
 
-      {/* wishlist items */}
-      <div className="wishlist-items-wrapper flex flex-col gap-3 mb-10 ">
+      </div>
+
+      {/* Wishlist Items */}
+      <div className="wishlist-items-wrapper">
         {status === "loading" ? (
           <Loader />
         ) : wishlistItems.length === 0 ? (
-          <>
-            <div className="text-3xl my-10 font-bold flex items-center justify-center">
+          <div className="text-center my-10">
+            <p className="text-xl font-semibold text-gray-600">
               Seems like you didn't add anything yet!
-            </div>
-            <div className="flex items-center justify-center">
-              <span className="font-semibold text-center text-lg text-[rgb(79,70,229)] hover:text-[#6366F1] hover:cursor-pointer">
-                <Link to="/products">Continue Exploring</Link>
-              </span>
-            </div>
-          </>
+            </p>
+            <Link
+              to="/products"
+              className="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-indigo-700"
+            >
+              Continue Exploring
+            </Link>
+          </div>
         ) : (
-          <div className="md:ml-10 flex items-center justify-center">
-            <div className="products-container flex justify-start flex-wrap gap-5 sm:gap-12">
-            {wishlistItems?.map((product) => (
-              <WishlistItemCard
-              key={uuid()}
-                {...product}
-                className="h-[310px] sm:h-[340px] w-40 sm:w-56"
-              />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {wishlistItems.map((product) => (
+              <WishlistItemCard key={uuid()} {...product} />
             ))}
-            </div>
           </div>
         )}
       </div>
@@ -65,67 +67,53 @@ export function WishlistItemCard({
   brand,
   discountPercentage,
   price,
-
 }) {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function removeButtonClickHandler(e) {
     e.stopPropagation();
-    dispatch(removeFromWishlistAsync({ productId: _id ,navigate}));
+    dispatch(removeFromWishlistAsync({ productId: _id, navigate }));
   }
 
   return (
     <div
-      onClick={()=>navigate(`/products/${_id}`)}
-      className={`hover:cursor-pointer text-black px-2 py-1 border-2 border-[#E5E7EB] border-solid box-border ${className} flex flex-col h-full`}
+      onClick={() => navigate(`/products/${_id}`)}
+      className={`p-4 bg-white rounded-lg shadow-md transition hover:shadow-lg hover:scale-105 ${className}`}
     >
-      <div className="content-wrapper flex flex-col h-full">
-        {/* Image Section */}
-        <div className="image-wrapper h-[200px] flex items-center justify-center mb-2">
-          <img
-            src={thumbnail}
-            alt={title}
-            className="h-full w-full rounded-md"
-          />
-        </div>
-  
-        {/* Product Details Section */}
-        <div className="product-details flex flex-col flex-grow mb-2">
-          <div className="details mb-1">
-            <div className="brand text-md font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
-              {brand}
-            </div>
-            <div className="title text-sm whitespace-nowrap overflow-hidden text-ellipsis">
-              {title}
-            </div>
-          </div>
-  
-          {/* Price Section */}
-          <div className="price flex flex-row">
-            <span className="text-sm font-bold ">
-              ${Math.floor(((100 - discountPercentage) / 100) * price)}
-            </span>
-            <div className="flex items-center">
-              <span className="text-sm font-semibold ml-2 text-[#949596]">
-                $<strike>{price}</strike>
-              </span>
-              <span className="text-sm font-semibold ml-1 text-[#5a65e4] whitespace-nowrap overflow-hidden text-ellipsis">
-                ({discountPercentage}% OFF)
-              </span>
-            </div>
-          </div>
-        </div>
-  
-        {/* Remove Button */}
-        <button
-          className="h-[32px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-1"
-          onClick={(e) => removeButtonClickHandler(e)}
-        >
-          Remove
-        </button>
+      {/* Thumbnail */}
+      <div className="relative h-40 flex justify-center items-center mb-4">
+        <img
+          src={thumbnail}
+          alt={title}
+          className="h-full w-auto object-contain rounded-md"
+        />
       </div>
+
+      {/* Product Info */}
+      <div className="flex flex-col gap-2">
+        <div className="text-sm font-medium text-gray-500">{brand}</div>
+        <div className="text-lg font-semibold text-gray-800 truncate">
+          {title}
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-lg font-bold text-indigo-600">
+            ${Math.floor(((100 - discountPercentage) / 100) * price)}
+          </span>
+          <span className="text-sm text-gray-400 line-through">${price}</span>
+          <span className="text-sm text-green-600">
+            ({discountPercentage}% OFF)
+          </span>
+        </div>
+      </div>
+
+      {/* Remove Button */}
+      <button
+        onClick={(e) => removeButtonClickHandler(e)}
+        className="mt-4 w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition"
+      >
+        Remove
+      </button>
     </div>
   );
-  
 }
