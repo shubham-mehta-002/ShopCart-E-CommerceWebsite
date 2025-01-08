@@ -1,4 +1,4 @@
-const mongoDB_URI = `mongodb+srv://shubhammehta212:${process.env.MONGO_DB_PASSWORD}@cluster0.nwyjwzv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+const mongoDB_URI = `${process.env.MONGO_URI}`
 
 const BASE_URL = "http://localhost:5173"
 
