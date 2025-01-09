@@ -76,9 +76,8 @@ We welcome contributions to make ShopCart even better! Here’s how you can help
 
 ## 🔍 Find Me Here
 
-- **LinkedIn**: [Shubham Mehta](https://www.linkedin.com/in/shubham-mehta-6b8115284)
-- **GitHub**: [@shubham-mehta-002](https://github.com/shubham-mehta-002)
-- **Twitter**: [@mehtashubham002](https://x.com/mehtashubham002)
-- **Blogs**: [Shubham Mehta on Hashnode](https://shubham-mehta.hashnode.dev/)
-- **Email**: mehta.shubham002@gmail.com
-
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/shubham-mehta-6b8115284) 
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/shubham-mehta-002) 
+[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?logo=twitter&logoColor=white&style=for-the-badge)](https://x.com/mehtashubham002) 
+[![Hashnode](https://img.shields.io/badge/-Hashnode-2962FF?logo=hashnode&logoColor=white&style=for-the-badge)](https://shubham-mehta.hashnode.dev/) 
+[![Email](https://img.shields.io/badge/-Email-D14836?logo=gmail&logoColor=white&style=for-the-badge)](mailto:mehta.shubham002@gmail.com)
