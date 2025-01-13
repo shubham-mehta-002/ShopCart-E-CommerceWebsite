@@ -24,6 +24,11 @@ An interactive Single Page Application (SPA) offering all the essential and adva
 - **🔑 Secure Data**: Encrypted passwords in the backend for enhanced security.
 
 ---
+## 🚀 Future Updates
+
+- **⚡ Payment Gateway Integration**: Enable secure online payments directly through the platform.
+
+---
 
 ## 🛠️ Tech Stack
 
@@ -37,12 +42,73 @@ An interactive Single Page Application (SPA) offering all the essential and adva
 
 
 ---
+## 💻 Getting Started
 
-## 🚀 Future Updates
+### Prerequisites
 
-- **⚡ Payment Gateway Integration**: Enable secure online payments directly through the platform.
+Before you begin, ensure that you have the following installed:
 
+1. **Node.js**: [Download Node.js](https://nodejs.org)
+2. **MongoDB**: [Download MongoDB](https://www.mongodb.com)
+3. **Git**: [Download Git](https://git-scm.com)
+
+### 🚀 Running ShopCart on Your Local Machine
+
+Follow these steps to get ShopCart running on your local machine:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/shubham-mehta-002/ShopCart-E-CommerceWebsite.git
+    ```
+
+2. **Navigate to the project directory**:
+    ```bash
+    cd ShopCart-E-CommerceWebsite
+    ```
+
+3. **Install dependencies for both backend and frontend**:
+
+    - Install backend dependencies:
+      ```bash
+      cd Backend
+      npm install
+      ```
+
+    - Install frontend dependencies:
+      ```bash
+      cd ../Frontend
+      npm install
+      ```
+
+4. **Set up environment variables**: Create `.env` file in backend with the necessary values.  
+   Here's a sample configuration:
+
+    **Backend `.env`:**
+    ```bash
+    # Backend Environment Variables
+    PORT=
+    MONGODB_URI=
+
+    
+    ...(refer from .env.example file in Backend folder)
+    ```
+
+
+5. **Run the project**:
+    - Run the backend server:
+      ```bash
+      cd Backend
+      npm run dev
+      ```
+    - Run the frontend:
+      ```bash
+      cd ../Frontend
+      npm run dev
+      ```
 ---
+
+
+
 
 ## 👤 Contributing
 
@@ -73,6 +139,7 @@ We welcome contributions to make ShopCart even better! Here’s how you can help
 - Provide detailed descriptions in your pull requests.
 
 ---
+
 
 ## 🔍 Find Me Here
 
