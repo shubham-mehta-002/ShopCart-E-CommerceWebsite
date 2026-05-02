@@ -11,7 +11,9 @@ import Cookies from "js-cookie";
 const initialState = {
   error: null,
   status: "idle",
-  loggedInUser: { userId: null, role: null },
+  loggedInUser: Cookies.get("loggedInUserInfo")
+    ? JSON.parse(Cookies.get("loggedInUserInfo"))
+    : { userId: null, role: null },
   isUserRegistered: false,
   role: null,
   mailSent: false,
@@ -32,9 +34,9 @@ export const registerUserAsync = createAsyncThunk(
 
 export const loginUserAsync = createAsyncThunk(
   "auth/loginUser",
-  async ({ email,password ,navigate }) => {
+  async ({ email, password, navigate }) => {
     try {
-      const response = await loginUser(email, password,navigate);
+      const response = await loginUser(email, password, navigate);
       return response;
     } catch (error) {
       throw error;

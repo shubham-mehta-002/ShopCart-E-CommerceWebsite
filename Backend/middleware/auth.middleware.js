@@ -1,23 +1,23 @@
 const jwt = require('jsonwebtoken');
 const { generateAccessAndRefreshTokens } = require('../controllers/auth.controller');
 const User = require('../models/user.model');
-const { ApiError} =  require("../utils/ApiError")
+const { ApiError } = require("../utils/ApiError")
 
 const verifyJWT = async (req, res, next) => {
     try {
-        const { accessToken , refreshToken , loggedInUserInfo} = req.cookies;
-        if((!refreshToken)){
+        const { accessToken, refreshToken, loggedInUserInfo } = req.cookies;
+        if ((!refreshToken)) {
             return next(new ApiError(401, "Unauthorized"))
         }
         if (accessToken && loggedInUserInfo) {
-            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async(error, decoded) => {
+            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async (error, decoded) => {
                 if (error) {
                     return next(new ApiError(401, "Something went wrong"))
                 } else {
                     const { userId } = decoded;
                     const fetchedUser = await User.findById(userId).select("refreshToken")
-                    if(fetchedUser.refreshToken !== refreshToken ){
-                        return new ApiError(401, "Unauthorized")
+                    if (fetchedUser.refreshToken !== refreshToken) {
+                        return next(new ApiError(401, "Unauthorized"))
                     }
                     req.body.user = { id: userId };
                     next();
@@ -27,7 +27,7 @@ const verifyJWT = async (req, res, next) => {
             return renewTokens(req, res, next); // Pass next to renewTokens
         }
     } catch (error) {
-        console.log({error})
+        console.log({ error })
         return res.status(500).json({ success: false, message: "Something went wrong!" });
     }
 };
@@ -36,22 +36,22 @@ const verifyJWT = async (req, res, next) => {
 
 const verifyAdminJWT = async (req, res, next) => {
     try {
-        const { accessToken , refreshToken ,loggedInUserInfo} = req.cookies;
-        if((!refreshToken)){
+        const { accessToken, refreshToken, loggedInUserInfo } = req.cookies;
+        if ((!refreshToken)) {
             return next(new ApiError(401, "Unauthorized"))
         }
         if (accessToken && loggedInUserInfo) {
-            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async(error, decoded) => {
+            jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, async (error, decoded) => {
                 if (error) {
                     return next(new ApiError(401, "Something went wrong"))
                 } else {
-                    const { userId ,role} = decoded;
-                    if(role!=="admin"){
+                    const { userId, role } = decoded;
+                    if (role !== "admin") {
                         return next(new ApiError(401, "Unauthorized"))
                     }
                     const fetchedUser = await User.findById(userId).select("refreshToken")
-                    if(fetchedUser.refreshToken !== refreshToken ){
-                        return new ApiError(401, "Unauthorized")
+                    if (fetchedUser.refreshToken !== refreshToken) {
+                        return next(new ApiError(401, "Unauthorized"))
                     }
                     req.body.user = { id: userId };
                     next();
@@ -61,7 +61,7 @@ const verifyAdminJWT = async (req, res, next) => {
             return renewTokens(req, res, next); // Pass next to renewTokens
         }
     } catch (error) {
-        console.log({error})
+        console.log({ error })
         return res.status(500).json({ success: false, message: "Something went wrong!" });
     }
 };
@@ -81,9 +81,9 @@ const renewTokens = async (req, res, next) => {
             }
             user.refreshToken = newRefreshToken;
             await user.save({ validateBeforeSave: false });
-            res.cookie("accessToken", newAccessToken, { maxAge: 600000, secure: true, httpOnly: true });
-            res.cookie("refreshToken", newRefreshToken, { maxAge: 1200000, secure: true, httpOnly: true });
-            res.cookie("loggedInUserInfo",JSON.stringify({userId ,role:user.role}),{ maxAge: 1200000, secure: true, httpOnly:false})
+            res.cookie("accessToken", newAccessToken, { maxAge: 600000, secure: true, httpOnly: true, sameSite: "None", path: "/" });
+            res.cookie("refreshToken", newRefreshToken, { maxAge: 1200000, secure: true, httpOnly: true, sameSite: "None", path: "/" });
+            res.cookie("loggedInUserInfo", JSON.stringify({ userId, role: user.role }), { maxAge: 1200000, secure: true, httpOnly: false, sameSite: "None", path: "/" })
             // Set the user ID in the request body to continue to the next middleware
             req.body.user = { id: userId };
             next();
@@ -93,4 +93,4 @@ const renewTokens = async (req, res, next) => {
     }
 };
 
-module.exports = { verifyJWT , verifyAdminJWT };
+module.exports = { verifyJWT, verifyAdminJWT };

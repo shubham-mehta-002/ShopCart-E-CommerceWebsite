@@ -84,19 +84,15 @@ const loginUser = asyncHandler(async (req, res, next) => {
     .cookie("accessToken", accessToken, {
       httpOnly: true,
       secure: true,
-      path: "/",
-      maxAge: process.env.ACCESS_TOKEN_EXPIRY,
+      maxAge: parseInt(process.env.ACCESS_TOKEN_COOKIE_MAXAGE),
       sameSite: "None",
-      domain: process.env.CLIENT_URL,
       path: "/",
     })
     .cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: true,
-      path: "/",
-      maxAge: process.env.REFRESH_TOKEN_EXPIRY,
+      maxAge: parseInt(process.env.REFRESH_TOKEN_COOKIE_MAXAGE),
       sameSite: "None",
-      domain: process.env.CLIENT_URL,
       path: "/",
     })
     .cookie(
@@ -104,11 +100,9 @@ const loginUser = asyncHandler(async (req, res, next) => {
       JSON.stringify({ role: loggedInUser.role, userId: loggedInUser._id }),
       {
         httpOnly: false,
-        path: "/",
         secure: true,
-        maxAge: process.env.REFRESH_TOKEN_EXPIRY,
+        maxAge: parseInt(process.env.REFRESH_TOKEN_COOKIE_MAXAGE),
         sameSite: "None",
-        domain: process.env.CLIENT_URL,
         path: "/",
       }
     )
@@ -130,13 +124,15 @@ const logoutUser = asyncHandler(async (req, res, next) => {
   const options = {
     httpOnly: true,
     secure: true,
+    sameSite: "None",
+    path: "/",
   };
 
   return res
     .status(200)
     .clearCookie("accessToken", options)
     .clearCookie("refreshToken", options)
-    .clearCookie("loggedInUserInfo", options)
+    .clearCookie("loggedInUserInfo", { ...options, httpOnly: false })
     .json(new ApiResponse(200, "Successfully Logged Out"));
 });
 

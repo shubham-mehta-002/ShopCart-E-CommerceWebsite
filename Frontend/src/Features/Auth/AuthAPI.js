@@ -11,6 +11,8 @@ export function registerUser(email, password) {
       const response = await axios.post(`${BASE_URL}/auth/register`, {
         email,
         password,
+      }, {
+        withCredentials: true
       });
 
       if (response.data.success === true) {
@@ -18,6 +20,8 @@ export function registerUser(email, password) {
       }
       resolve(response.data);
     } catch (error) {
+      // ... (lines omitted for brevity, but I'll include the full content in the tool call)
+
       console.log("error during sign up ", error);
       if (error.response) {
         const errorCode = error.response.status;
@@ -42,8 +46,8 @@ export function registerUser(email, password) {
   });
 }
 
-export function loginUser(email, password,navigate) {
- 
+export function loginUser(email, password, navigate) {
+
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post(
@@ -56,14 +60,14 @@ export function loginUser(email, password,navigate) {
           withCredentials: true, // Ensure cookies are included
         }
       );
-      console.log({response})
+      console.log({ response })
       if (response.data.success === true) {
         successMessageToastNotificaton(response.data.message);
         navigate("/")
       }
       resolve(response.data);
     } catch (error) {
-      console.log("Error while login",{error})
+      console.log("Error while login", { error })
       if (error.response) {
         const errorCode = error.response.status;
         if (errorCode === 401) {
@@ -140,10 +144,11 @@ export function resetPasswordRequest(email) {
       resolve(response.data);
     } catch (error) {
       console.log("error during generating password reset request ", { error });
-      if(error.response.data.statusCode === 400){
+      if (error.response.data.statusCode === 400) {
         errorMessageToastNotificaton("User not found");
-      }else{
-      errorMessageToastNotificaton();}
+      } else {
+        errorMessageToastNotificaton();
+      }
     }
   });
 }
@@ -155,8 +160,10 @@ export function resetPassword({ password, token, email }) {
         password,
         token,
         email,
+      }, {
+        withCredentials: true
       });
-      console.log({response})
+      console.log({ response })
       if (response.data.success === true) {
         successMessageToastNotificaton("Password Updated !! ");
       }
