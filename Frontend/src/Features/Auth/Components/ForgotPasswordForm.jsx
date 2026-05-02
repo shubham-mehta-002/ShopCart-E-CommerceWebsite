@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { resetPasswordRequestAsync, selectMailSentStatus } from "../AuthSlice";
-import logo from "../../../assets/logo.png"
+import { resetPasswordRequestAsync, selectMailSentStatus, selectAuthState } from "../AuthSlice";
+import logo from "../../../assets/logo-transparent.png"
 
 export function ForgotPasswordForm() {
   const {
@@ -13,6 +13,7 @@ export function ForgotPasswordForm() {
 
   const dispatch = useDispatch();
   const mailSentStatus = useSelector(selectMailSentStatus);
+  const authState = useSelector(selectAuthState);
 
   const validations = {
     email: {
@@ -43,7 +44,7 @@ export function ForgotPasswordForm() {
             <img
               src={logo}
               alt="logo"
-              className="size-32"
+              className="size-44"
             />
             <div className="mt-8 px-4 text font-bold text-2xl text-center">
               Enter email to reset password
@@ -71,9 +72,20 @@ export function ForgotPasswordForm() {
               )}
             </div>
 
-            <button className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold">
-              {!mailSentStatus ? "Send Mail" : "Sending Mail"}
+            <button
+              className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={mailSentStatus || authState.status === "loading"}
+            >
+              {authState.status === "loading" ? "Sending..." : mailSentStatus ? "Email Sent!" : "Send Mail"}
             </button>
+            {mailSentStatus && (
+              <p className="text-green-600 text-sm text-center -mt-2">
+                Check your inbox — password reset link has been sent.
+              </p>
+            )}
+            {authState.error && !mailSentStatus && (
+              <p className="text-red-500 text-sm text-center -mt-2">{authState.error}</p>
+            )}
 
             <div className="signup-link mt-5 text-center">
               <span className=" text-center text-sm text-gray-500  hover:cursor-pointer">

@@ -9,26 +9,26 @@ const initialState = {
 
 export const updateProductAsync = createAsyncThunk(
   "product/updateProductAsync",
-  async ({ _id, fieldsToBeUpdated ,navigate}) => {
+  async ({ _id, fieldsToBeUpdated ,navigate}, { rejectWithValue }) => {
     try {
       const response = await updateProduct(_id, fieldsToBeUpdated,navigate);
       return { data: response.data, _id, fieldsToBeUpdated };
     } catch (error) {
       console.log("error while updating product", { error });
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const fetchProductDetailByIdAsync = createAsyncThunk(
   "productDetail/fetchProductDetailById",
-  async (productId) => {
+  async (productId, { rejectWithValue }) => {
     try {
       const response = await fetchProductDetailById(productId);
       return response;
     } catch (error) {
       console.log("error while fetching product detail", { error });
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );

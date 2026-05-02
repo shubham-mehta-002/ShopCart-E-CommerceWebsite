@@ -13,36 +13,36 @@ const initialState = {
 
 export const fetchAllWishlistItemsAsync = createAsyncThunk(
   "cart/fetchAllWishlistItems",
-  async ({navigate}) => {
+  async ({navigate}, { rejectWithValue }) => {
     try {
       const response = await fetchAllWishlistItems(navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const addToWishlistAsync = createAsyncThunk(
   "cart/addToWishlist",
-  async ({ productId,navigate }) => {
+  async ({ productId,navigate }, { rejectWithValue }) => {
     try {
       const response = await addToWishlist(productId,navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const removeFromWishlistAsync = createAsyncThunk(
   "cart/removeFromWishlist",
-  async ({ productId ,navigate}) => {
+  async ({ productId ,navigate}, { rejectWithValue }) => {
     try {
       const response = await removeFromWishlist(productId,navigate);
       return { data: response.data, productId };
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
@@ -61,8 +61,8 @@ const wishlistSlice = createSlice({
         state.wishlistItems = action.payload;
         state.status = "idle";
       })
-      .addCase(fetchAllWishlistItemsAsync.rejected, (state, error) => {
-        console.log("error while fetching wishlist items", { error });
+      .addCase(fetchAllWishlistItemsAsync.rejected, (state, action) => {
+        state.error = action.payload;
         state.status = "idle";
       })
 
@@ -80,8 +80,8 @@ const wishlistSlice = createSlice({
         }
         state.status = "idle";
       })
-      .addCase(addToWishlistAsync.rejected, (state, error) => {
-        console.log("error while adding to wishlist", { error });
+      .addCase(addToWishlistAsync.rejected, (state, action) => {
+        state.error = action.payload;
         state.status = "idle";
       })
 
@@ -95,8 +95,8 @@ const wishlistSlice = createSlice({
         );
         state.status = "idle";
       })
-      .addCase(removeFromWishlistAsync.rejected, (state, error) => {
-        console.log("error while removing from wishlist", { error });
+      .addCase(removeFromWishlistAsync.rejected, (state, action) => {
+        state.error = action.payload;
         state.status = "idle";
       });
   },

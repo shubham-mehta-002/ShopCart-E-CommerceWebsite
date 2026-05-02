@@ -22,48 +22,48 @@ const initialState = {
 
 export const fetchUserDetailsAsync = createAsyncThunk(
   "order/fetchUserDetails",
-  async ({navigate}) => {
+  async ({navigate}, { rejectWithValue }) => {
     try {
       const response = await fetchUserDetails(navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const addUserAddressAsync = createAsyncThunk(
   "order/addUserAddress",
-  async ({ addressDetails }) => {
+  async ({ addressDetails }, { rejectWithValue }) => {
     try {
       const response = await addUserAddress(addressDetails);
       return { data: response.data, addressDetails };
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const createOrderAsync = createAsyncThunk(
   "order/createOrder",
-  async ({ orderDetails , orderItems}) => {
+  async ({ orderDetails , orderItems}, { rejectWithValue }) => {
     try {
       const response = await createOrder(orderDetails);
       return { data: response.data, orderDetails };
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const fetchUserOrdersAsync = createAsyncThunk(
   "order/fetchUserOrders",
-  async () => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await fetchUserOrders();
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );

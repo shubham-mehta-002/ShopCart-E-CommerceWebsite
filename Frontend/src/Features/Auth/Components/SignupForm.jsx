@@ -6,7 +6,7 @@ import { useState , useEffect} from "react";
 import { useSelector , useDispatch} from 'react-redux'
 import { registerUserAsync , resetRegistrationStatus} from "../AuthSlice";
 import {selectRegistrationStatus , selectAuthState , selectLoggedInUser } from '../AuthSlice'
-import logo from "../../../assets/logo.png"
+import logo from "../../../assets/logo-transparent.png"
 
 
 export function SignupForm() {
@@ -88,7 +88,7 @@ export function SignupForm() {
             <img
               src={logo}
               alt="logo"
-              className="size-32"
+              className="size-44"
             />
             <div className="mt-8 px-4 text font-bold text-3xl text-center">
               Create a new Account
@@ -174,11 +174,14 @@ export function SignupForm() {
             </div>
 
             {/* signup button */}
-            <button className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
-            disabled={isSubmitting}
+            <button className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
+            disabled={isSubmitting || signUpState.status === "loading"}
             >
-              {signUpState.status !== "idle" ? "Signing In" : "Sign Up"}
+              {signUpState.status === "loading" ? "Signing up..." : "Sign Up"}
             </button>
+            {signUpState.error && (
+              <p className="text-red-500 text-sm text-center -mt-2">{signUpState.error}</p>
+            )}
 
             {/* login page link  */}
             <div className="signup-link mt-5 text-center">

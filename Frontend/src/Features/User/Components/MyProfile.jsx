@@ -24,6 +24,7 @@ export function MyProfile() {
   });
 
   const [filedValue, setFiledValue] = useState({ name: "", phoneNumber: "" });
+  const [inlineError, setInlineError] = useState("");
   const { userInfo, status, error } = useSelector(selectUserState);
 
   const {
@@ -120,7 +121,7 @@ export function MyProfile() {
       data.state === userInfo.address[selectedAddressForUpdation].state &&
       data.pincode === userInfo.address[selectedAddressForUpdation].pinCode
     ) {
-      alert("Change some value before updating ...");
+      setInlineError("Change some value before updating.");
       return;
     }
 
@@ -143,14 +144,15 @@ export function MyProfile() {
 
   function updateUserNameHandler() {
     const value = filedValue.name;
+    setInlineError("");
 
     if (value.trim() === "") {
-      alert("Name can't be empty");
+      setInlineError("Name can't be empty");
       return;
     }
     const namePattern = /^[A-Za-z ]+$/;
     if (!namePattern.test(value)) {
-      alert("Enter a valid name");
+      setInlineError("Enter a valid name");
       return;
     }
     const newData = {
@@ -162,18 +164,19 @@ export function MyProfile() {
 
   function updateUserPhoneNumberHandler() {
     const value = filedValue.phoneNumber;
+    setInlineError("");
 
     if (value.trim() === "") {
-      alert("phone number can't be empty");
+      setInlineError("Phone number can't be empty");
       return;
     }
     if (value.length !== 10) {
-      alert("Enter a valid 10 digit number");
+      setInlineError("Enter a valid 10 digit number");
       return;
     }
     const phoneNumberPattern = /[0-9]{10}/;
     if (!phoneNumberPattern.test(value)) {
-      alert("Enter a valid phone number");
+      setInlineError("Enter a valid phone number");
       return;
     }
 
@@ -220,14 +223,15 @@ export function MyProfile() {
                 <input
                   type="text"
                   className="focus:border-indigo-600 px-2 w-[200px] h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none text-lg"
-                  value={filedValue.number}
+                  value={filedValue.name}
                   onChange={(e) =>
                     setFiledValue((prev) => ({ ...prev, name: e.target.value }))
                   }
                 />
                 <button
                   onClick={(e) => updateUserNameHandler(e)}
-                  className="h-9 w-[50px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
+                  disabled={status === "loading"}
+                  className="h-9 w-[50px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   Save
                 </button>
@@ -276,7 +280,8 @@ export function MyProfile() {
                   className="focus:border-indigo-600 px-2 w-[200px] h-9 bg-[#FFFFFF] rounded-md border-2 border-[#D1D5DB] outline-none text-lg"
                 />
                 <button
-                  className="h-9 w-[50px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
+                  disabled={status === "loading"}
+                  className="h-9 w-[50px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
                   onClick={(e) => updateUserPhoneNumberHandler(e)}
                 >
                   Save
@@ -362,19 +367,23 @@ export function MyProfile() {
                 </div>
               </div>
 
+              {(inlineError || error) && (
+                <p className="text-red-500 text-sm mb-2">{inlineError || error}</p>
+              )}
               <div className="button-wrapper flex flex-row justify-end">
                 <button
                   type="button"
                   className="h-5 w-20 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md"
-                  onClick={() => reset()}
+                  onClick={() => { reset(); setInlineError(""); }}
                 >
                   Reset
                 </button>
                 <button
                   type="submit"
-                  className="h-5 w-30 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md text-white bg-[#4338CA]"
+                  disabled={status === "loading"}
+                  className="h-5 w-30 px-3 py-4 flex items-center justify-center rounded-md font-semibold text-md text-white bg-[#4338CA] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Update Address
+                  {status === "loading" ? "Saving..." : "Update Address"}
                 </button>
               </div>
             </form>

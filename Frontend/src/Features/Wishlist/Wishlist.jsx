@@ -46,6 +46,7 @@ export function Wishlist() {
               <WishlistItemCard
               key={uuid()}
                 {...product}
+                wishlistStatus={status}
                 className="h-[310px] sm:h-[340px] w-40 sm:w-56"
               />
             ))}
@@ -65,7 +66,7 @@ export function WishlistItemCard({
   brand,
   discountPercentage,
   price,
-
+  wishlistStatus,
 }) {
   const dispatch = useDispatch();
   const navigate = useNavigate()
@@ -119,8 +120,9 @@ export function WishlistItemCard({
   
         {/* Remove Button */}
         <button
-          className="h-[32px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-1"
+          className="h-[32px] hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold px-4 py-1 disabled:opacity-60 disabled:cursor-not-allowed"
           onClick={(e) => removeButtonClickHandler(e)}
+          disabled={wishlistStatus === "loading"}
         >
           Remove
         </button>

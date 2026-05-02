@@ -29,7 +29,7 @@ const initialState = {
 
 export const fetchAllProductsAsync = createAsyncThunk(
   "product/fetchAllProducts",
-  async ({ filter, page, sort, searchParameter ,role}) => {
+  async ({ filter, page, sort, searchParameter ,role}, { rejectWithValue }) => {
     try {
       const response = await fetchAllProducts({
         filter,
@@ -41,57 +41,57 @@ export const fetchAllProductsAsync = createAsyncThunk(
 
       return response;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const fetchAllCategoriesAsync = createAsyncThunk(
   "product/fetchAllCategoriesFilter",
-  async () => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await fetchAllCategories();
       return response.data.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const fetchAllBrandsAsync = createAsyncThunk(
   "product/fetchAllBrandsFilter",
-  async () => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await fetchAllBrands();
       return response.data.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const addBrandAsync = createAsyncThunk(
   "user/addBrand",
-  async ({ label ,navigate}) => {
+  async ({ label ,navigate}, { rejectWithValue }) => {
     try {
       console.log({label})
       const response = await addBrand(label,navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const addCategoryAsync = createAsyncThunk(
   "user/addCategory",
-  async ({ label ,navigate}) => {
+  async ({ label ,navigate}, { rejectWithValue }) => {
     try {
       console.log({label})
       const response = await addCategory(label,navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );

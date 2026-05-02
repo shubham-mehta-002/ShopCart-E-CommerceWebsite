@@ -10,7 +10,7 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchParameters } from "../Product/ProductSlice";
 import { selectLoggedInUser } from "../Auth/AuthSlice";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo-transparent.png"
 
 export function Navbar({ searchParameter, setSearchParameter }) {
   const [showMobileViewMenu, setShowMobileViewMenu] = useState(false); // for responsive menu
@@ -112,11 +112,11 @@ export function Navbar({ searchParameter, setSearchParameter }) {
         <div className="flex ">
           <div className="flex w-[40%] flex-row gap-10 items-center justify-start">
             <Link to="/">
-              <div className=" image h-14 w-12 mr-2 flex items-center">
+              <div className="image h-14 w-14 mr-2 flex items-center">
                 <img
                   src={logo}
                   alt="logo"
-                  className="size-max"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </Link>

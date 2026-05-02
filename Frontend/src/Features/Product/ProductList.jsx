@@ -184,15 +184,9 @@ export function ProductList() {
             </div>
           ) : (
             // <div className="products-container w-full flex flex-wrap sm:gap-4 justify-between sm:justify-normal">
-             <div className="products-container w-full grid grid-cols-2 md:grid-cols-3  "> 
-              
-              {state.products?.map((product,index) => (
-                <div ley={index} className="flex items-center justify-center mb-2"> 
-                  <ProductCard
-                    {...product}
-
-                  />
-                   </div>
+             <div className="products-container w-full grid grid-cols-2 md:grid-cols-3 gap-3">
+              {state.products?.map((product, index) => (
+                <ProductCard key={index} {...product} />
               ))}
              
 

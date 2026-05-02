@@ -8,8 +8,9 @@ import {
   selectPasswordResetStatus,
   resetPasswordAsync,
   resetPasswordResetStatus,
+  selectAuthState,
 } from "../AuthSlice";
-import logo from "../../../assets/logo.png"
+import logo from "../../../assets/logo-transparent.png"
 
 export function ResetPassword() {
   const {
@@ -49,6 +50,7 @@ export function ResetPassword() {
   };
 
   const resetPasswordStatus = useSelector(selectPasswordResetStatus);
+  const authState = useSelector(selectAuthState);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -83,7 +85,7 @@ export function ResetPassword() {
             <img
               src={logo}
               alt="logo"
-              className="h-20 w-20"
+              className="size-44"
             />
             <div className="mt-8 px-4 text font-bold text-3xl text-center">
               Reset Password
@@ -152,11 +154,14 @@ export function ResetPassword() {
 
             {/* reset button */}
             <button
-              className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
-              disabled={isSubmitting}
+              className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={isSubmitting || authState.status === "loading"}
             >
-              {resetPasswordStatus ? "Resetting Password" : "Reset Password"}
+              {authState.status === "loading" ? "Resetting..." : "Reset Password"}
             </button>
+            {authState.error && (
+              <p className="text-red-500 text-sm text-center -mt-2">{authState.error}</p>
+            )}
 
             {/* login page link  */}
             <div className="signup-link mt-5 text-center">

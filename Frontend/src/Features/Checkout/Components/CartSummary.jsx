@@ -2,6 +2,7 @@ import { ProductTile } from "../../Common/ProductTile";
 import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
 import { fetchAllCartItemsAsync } from "../../Cart/CartSlice";
 import { useEffect } from "react";
 import { selectCartState } from "../../Cart/CartSlice";
@@ -16,8 +17,8 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
   const dispatch = useDispatch();
   const cartState = useSelector(selectCartState);
   const orderStatus = useSelector(selectOrderPlacedStatus);
-  console.log({orderStatus})
   const { orderId, isOrderPlaced } = useSelector(selectCurrentOrderDetails);
+  const [validationError, setValidationError] = useState("");
 
   const navigate = useNavigate();
 
@@ -56,8 +57,9 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
   };
 
   function createOrderHandler() {
+    setValidationError("");
     if (selectedAddressIndex === null) {
-      alert("Select address");
+      setValidationError("Please select a delivery address.");
       return;
     }
 
@@ -70,15 +72,15 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
     const phoneNumberError = validatePhoneNumber(phoneNumber);
 
     if (fullNameError) {
-      alert(fullNameError);
+      setValidationError(fullNameError);
       return;
     }
     if (emailError) {
-      alert(emailError);
+      setValidationError(emailError);
       return;
     }
     if (phoneNumberError) {
-      alert(phoneNumberError);
+      setValidationError(phoneNumberError);
       return;
     }
 
@@ -159,13 +161,16 @@ export function CartSummary({ selectedAddressIndex, paymentMethod, watch }) {
               <div className="checkout">
                 <button
                   disabled={orderStatus === "loading"}
-                  className="h-8 w-full px-3 py-5 flex items-center justify-center rounded-md border-2 border-gray-400 font-semibold text-lg text-white bg-[#4338CA]"
+                  className="h-8 w-full px-3 py-5 flex items-center justify-center rounded-md border-2 border-gray-400 font-semibold text-lg text-white bg-[#4338CA] disabled:opacity-60 disabled:cursor-not-allowed"
                   onClick={createOrderHandler}
                 >
-                  {orderStatus === "loading" ? "Ordering " : "Order Now"}
+                  {orderStatus === "loading" ? "Ordering..." : "Order Now"}
                 </button>
               </div>
             </Link>
+            {validationError && (
+              <p className="text-red-500 text-sm -mt-1">{validationError}</p>
+            )}
             <div className="flex items-center justify-center">
               <span className="text-center text-sm text-gray-500 hover:cursor-pointer">
                 or

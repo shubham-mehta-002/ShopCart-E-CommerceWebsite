@@ -19,6 +19,9 @@ export function Cart() {
     <div className="wrapper w-full sm:w-[90%] p-3 sm:p-10 box-border mx-auto my-10 bg-white flex flex-col gap-4">
       <div className="header text-5xl font-bold">Cart</div>
 
+      {state?.error && (
+        <p className="text-red-500 text-sm my-2">{state.error}</p>
+      )}
       {/* cart items */}
       <div className="cart-items-wrapper flex flex-col gap-3 mr-2">
         {state?.cartItems?.length === 0 ? (

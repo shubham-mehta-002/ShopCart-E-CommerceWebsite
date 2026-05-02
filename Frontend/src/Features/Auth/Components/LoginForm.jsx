@@ -9,7 +9,7 @@ import {
   selectLoggedInUser,
   selectAuthState,
 } from "../AuthSlice";
-import logo from "../../../assets/logo.png"
+import logo from "../../../assets/logo-transparent.png"
 
 
 export function LoginForm() {
@@ -69,7 +69,7 @@ export function LoginForm() {
             <img
               src={logo}
               alt="logo"
-              className="size-32"
+              className="size-44"
             />
             <div className="mt-8 px-4 text font-bold text-3xl text-center">
               Log in to your account
@@ -135,11 +135,14 @@ export function LoginForm() {
 
             {/* login Button */}
             <button
-              className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold"
-              disabled={loginState.status !== "idle"}
+              className="h-9 w-full hover:bg-[#6366F1] bg-[rgb(79,70,229)] rounded-md border-2 text-white outline-none text-sm font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={loginState.status === "loading"}
             >
-              {loginState.status !== "idle" ? "Logging" : "Log in"}
+              {loginState.status === "loading" ? "Logging in..." : "Log in"}
             </button>
+            {loginState.error && (
+              <p className="text-red-500 text-sm text-center -mt-2">{loginState.error}</p>
+            )}
 
             {/* sign up link */}
             <div className="signup-link mt-5 text-center">

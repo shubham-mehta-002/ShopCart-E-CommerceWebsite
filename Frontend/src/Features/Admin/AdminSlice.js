@@ -16,48 +16,48 @@ const initialState = {
 
 export const fetchAllOrdersAsync = createAsyncThunk(
   "user/fetchAllOrders",
-  async ({ filter, sort, page ,navigate}) => {
+  async ({ filter, sort, page ,navigate}, { rejectWithValue }) => {
     try {
       const response = await fetchAllOrders({ sort, page ,navigate});
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const fetchOrderByIdAsync = createAsyncThunk(
   "user/fetchOrderById",
-  async ({ orderId ,navigate}) => {
+  async ({ orderId ,navigate}, { rejectWithValue }) => {
     try {
       const response = await fetchOrderById(orderId,navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const updateOrderByIdAsync = createAsyncThunk(
   "user/updateOrderById",
-  async ({ orderId, updatedOrderDetails ,navigate}) => {
+  async ({ orderId, updatedOrderDetails ,navigate}, { rejectWithValue }) => {
     try {
       const response = await updateOrderById({ orderId, updatedOrderDetails,navigate });
       return { data: response.data, updatedOrderDetails };
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const createProductAsync = createAsyncThunk(
   "user/createProduct",
-  async ({ product ,navigate}) => {
+  async ({ product ,navigate}, { rejectWithValue }) => {
     try {
       const response = await createProduct(product,navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
@@ -79,7 +79,7 @@ const orderSlice = createSlice({
         state.status = "idle";
       })
       .addCase(fetchAllOrdersAsync.rejected, (state, action) => {
-        state.error = action.error.message;
+        state.error = action.payload;
         state.status = "idle";
       })
 
@@ -92,7 +92,7 @@ const orderSlice = createSlice({
         state.status = "idle";
       })
       .addCase(fetchOrderByIdAsync.rejected, (state, action) => {
-        state.error = action.error.message;
+        state.error = action.payload;
         state.status = "idle";
       })
 
@@ -109,7 +109,7 @@ const orderSlice = createSlice({
         state.status = "idle";
       })
       .addCase(updateOrderByIdAsync.rejected, (state, action) => {
-        state.error = action.error.message;
+        state.error = action.payload;
         state.status = "idle";
       })
 

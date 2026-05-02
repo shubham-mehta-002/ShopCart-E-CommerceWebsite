@@ -14,48 +14,48 @@ const initialState = {
 
 export const fetchAllCartItemsAsync = createAsyncThunk(
   "cart/fetchAllCartItems",
-  async () => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await fetchAllCartItems();
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const addItemToCartAsync = createAsyncThunk(
   "cart/addItemToCartAsync",
-  async ({ productDetails ,navigate }) => {
+  async ({ productDetails ,navigate }, { rejectWithValue }) => {
     try {
       const response = await addItemToCart(productDetails,navigate);
       return { data: response.data, productDetails };
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const reduceCartItemQuantityAsync = createAsyncThunk(
   "cart/reduceCartItemQuantityAsync",
-  async ({ productDetails ,navigate}) => {
+  async ({ productDetails ,navigate}, { rejectWithValue }) => {
     try {
       const response = await reduceCartItemQuantity(productDetails,navigate);
       return { data: response.data, productDetails };
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const removeCartItemAsync = createAsyncThunk(
   "cart/removeCartItemAsync",
-  async ({ productDetails ,navigate}) => {
+  async ({ productDetails ,navigate}, { rejectWithValue }) => {
     try {
       const response = await removeCartItem(productDetails,navigate);
       return { data: response.data, productDetails };
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
@@ -75,7 +75,7 @@ const cartSlice = createSlice({
         state.status = "idle";
       })
       .addCase(fetchAllCartItemsAsync.rejected, (state, action) => {
-        state.error = action.error.message;
+        state.error = action.payload;
         state.status = "idle";
       })
 
@@ -110,7 +110,7 @@ const cartSlice = createSlice({
       .addCase(addItemToCartAsync.rejected, (state, action) => {
         state.status = "idle";
 
-        state.error = action.error.message;
+        state.error = action.payload;
       })
 
       // to reduce quantity
@@ -150,7 +150,7 @@ const cartSlice = createSlice({
       .addCase(reduceCartItemQuantityAsync.rejected, (state, action) => {
         state.status = "idle";
 
-        state.error = action.error.message;
+        state.error = action.payload;
       })
 
       // remove from cart
@@ -171,7 +171,7 @@ const cartSlice = createSlice({
         state.status = "idle";
       })
       .addCase(removeCartItemAsync.rejected, (state, action) => {
-        state.error = action.error.message;
+        state.error = action.payload;
         state.status = "idle";
       });
   },

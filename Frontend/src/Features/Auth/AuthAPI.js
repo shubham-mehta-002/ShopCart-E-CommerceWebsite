@@ -144,11 +144,15 @@ export function resetPasswordRequest(email) {
       resolve(response.data);
     } catch (error) {
       console.log("error during generating password reset request ", { error });
-      if (error.response.data.statusCode === 400) {
-        errorMessageToastNotificaton("User not found");
+      let message;
+      if (error.response?.data?.statusCode === 400) {
+        message = "No account found with this email";
+        errorMessageToastNotificaton(message);
       } else {
-        errorMessageToastNotificaton();
+        message = error.response?.data?.message || error.message || "Something went wrong";
+        errorMessageToastNotificaton(message);
       }
+      reject(message);
     }
   });
 }
@@ -175,6 +179,7 @@ export function resetPassword({ password, token, email }) {
       } else {
         errorMessageToastNotificaton("Something went wrong ");
       }
+      reject(error.response?.data?.message || error.message);
     }
   });
 }

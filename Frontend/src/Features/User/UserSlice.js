@@ -13,37 +13,37 @@ const initialState = {
 
 export const fetchUserOrdersAsync = createAsyncThunk(
   "user/fetchUserOrders",
-  async ({navigate}) => {
+  async ({navigate}, { rejectWithValue }) => {
     try {
       const response = await fetchUserOrders(navigate);
 
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const fetchUserDetailsAsync = createAsyncThunk(
   "user/fetchUserDetails",
-  async ({navigate}) => {
+  async ({navigate}, { rejectWithValue }) => {
     try {
       const response = await fetchUserDetails(navigate);
       return response.data;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
 
 export const updateUserDetailsAsync = createAsyncThunk(
   "user/updateUserDetails",
-  async ({ newData ,navigate}) => {
+  async ({ newData ,navigate}, { rejectWithValue }) => {
     try {
       const response = await updateUserDetails(newData,navigate);
       return response;
     } catch (error) {
-      throw error;
+      return rejectWithValue(typeof error === 'string' ? error : (error?.response?.data?.message || error?.message || 'Something went wrong'));
     }
   }
 );
@@ -63,7 +63,7 @@ const orderSlice = createSlice({
         state.status = "idle";
       })
       .addCase(fetchUserOrdersAsync.rejected, (state, action) => {
-        state.error = action.error.message;
+        state.error = action.payload;
         state.status = "idle";
       })
 
@@ -76,7 +76,7 @@ const orderSlice = createSlice({
         state.status = "idle";
       })
       .addCase(fetchUserDetailsAsync.rejected, (state, action) => {
-        state.error = action.error.message;
+        state.error = action.payload;
         state.status = "idle";
       })
 
@@ -90,6 +90,7 @@ const orderSlice = createSlice({
       })
       .addCase(updateUserDetailsAsync.rejected, (state, action) => {
         state.status = "idle";
+        state.error = action.payload;
       });
   },
 });
