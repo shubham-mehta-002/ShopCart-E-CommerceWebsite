@@ -35,6 +35,10 @@ app.get('/',(req,res)=>{
     res.send("This is home page")
 })
 
+app.get('/health',(req,res)=>{
+    res.status(200).json({ status: 'ok', uptime: process.uptime(), timestamp: new Date().toISOString() })
+})
+
 
 
 // import routes
